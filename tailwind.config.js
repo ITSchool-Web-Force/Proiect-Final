@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         nunito: ["nunito", "sans-serif"],
       },
+      borderRadius: {
+        extraLarge: "8rem",
+      },
     },
   },
   plugins: [],

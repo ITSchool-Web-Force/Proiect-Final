@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .btn {
+    @apply w-1/2 h-12  text-black uppercase text-xl;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

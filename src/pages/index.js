@@ -1,14 +1,21 @@
 import Head from "next/head";
 import Modal from "@/components/Modal";
+import ProfilePic from "../../public/assets/profile-pic.jpg";
+import Skills from "@/components/Skills";
 
 //react icons
 import { GiMoonBats } from "react-icons/gi";
-import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
-import { useState } from "react";
+import {
+  AiFillLinkedin,
+  AiFillGithub,
+  AiFillCodeSandboxCircle,
+} from "react-icons/ai";
+import React, { useState } from "react";
 
 //to include an img in next you have to import the next/image component
 import Image from "next/image";
 import jslogo from "../../public/javascript-logo.svg";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
@@ -46,44 +53,37 @@ export default function Home() {
           <Modal open={openModal} onClose={() => setOpenModal(false)}>
             fdsf
           </Modal>
-          <div className="text-center p-10">
-            <h2 className="text-5xl py-2 text-violet-700 font-semibold">
-              Octavian Busuioc
+          <div className="text-center p-4">
+            <h2 className="text-5xl py-2 font-semibold">
+              Hi, I'm <span className="text-violet-700">Octavian Busuioc</span>
             </h2>
-            <h3 className="text-2xl py-2">Developer and web editor</h3>
-            <p className="text-md py-5 leading-7 text-gray-600">
+            <h3 className="text-2xl pt-2">Developer and web editor</h3>
+            <p className="text-md py-3 leading-7 text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
               tincidunt purus. Maecenas molestie augue a consectetur pharetra.
               Etiam eu.
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16">
+          <p className="uppercase text-sm tracking-widest text-gray-600 text-center">
+            you can reach me hear:
+          </p>
+          <div className="text-5xl flex justify-center py-3  gap-16">
             <AiFillGithub />
             <AiFillLinkedin />
+            <AiFillCodeSandboxCircle />
           </div>
-        </section>
-
-        <section>
-          <div>
-            <h3 className="text-3xl py-1">Services I offer</h3>
-            <p className="text-md py-5 leading-7 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur
-              <span className="text-fuchsia-500">adipiscing elit</span>. Nunc
-              sed tincidunt purus. Maecenas molestie
-              <span className="text-fuchsia-500">augue a consectetur</span>
-              pharetra. Etiam eu.
-            </p>
-            <p className="text-md py-5 leading-7 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed
-              tincidunt purus. Maecenas molestie augue a consectetur pharetra.
-              Etiam eu.
-            </p>
-          </div>
-          <div>
-            <div></div>
+          <div className="py-3">
+            <Image
+              src={ProfilePic}
+              alt="profile picture"
+              priority
+              className="w-[18rem] h-[15rem] object-cover rounded-tl-extraLarge rounded-br-extraLarge mx-auto"
+            />
           </div>
         </section>
       </main>
+      <Projects />
+      <Skills />
     </>
   );
 }
