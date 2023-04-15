@@ -1,25 +1,68 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const Skills = () => {
-  const [activeTab, setActiveTab] = useState("soft");
+//import data from object
+import SoftSkills from "../data/soft-skills.json";
+import HardSkills from "../data/hard-skills.json";
 
-  const setBg = (active) =>
-    activeTab === active ? "bg-[#f3e523]" : "bg-[#d4d4d4]";
+function Skills() {
+  const [toggleState, setToggleState] = useState(1);
+
+  const toggleTab = (index) => {
+    setToggleState(index);
+  };
 
   return (
-    <div className="flex">
-      {["soft", "hard"].map((el) => (
+    <div className="container">
+      <div className="bloc-tabs">
         <button
-          key={el}
-          type="button"
-          className={`btn ${setBg(el)}`}
-          onClick={() => setActiveTab(el)}
+          className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(1)}
         >
-          {el} Skills
+          SOFT SKILLS
         </button>
-      ))}
+        <button
+          className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
+          onClick={() => toggleTab(2)}
+        >
+          HARD SKILLS
+        </button>
+      </div>
+
+      <div className="content-tabs">
+        <div
+          className={toggleState === 1 ? "content  active-content" : "content"}
+        >
+          {SoftSkills.map((record) => {
+            return (
+              <div key={record.id} className="left-list">
+                <ul className="py-2 gap-5">
+                  <li className="skill">
+                    <span> {record.icon}</span> {record.skill}
+                  </li>
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+
+        <div
+          className={toggleState === 2 ? "content  active-content" : "content"}
+        >
+          {HardSkills.map((record) => {
+            return (
+              <div key={record.id} className="right-list">
+                <ul className="py-2 gap-5">
+                  <li className="skill">
+                    <span> {record.icon}</span> {record.skill}
+                  </li>
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
-};
+}
 
 export default Skills;

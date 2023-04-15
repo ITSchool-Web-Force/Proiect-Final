@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "icon": "⏳",
+    "skill": "Time management"
+  },
+  {
+    "id": 2,
+    "icon": "🤝",
+    "skill": "Teamwork"
+  },
+  {
+    "id": 3,
+    "icon": "💡",
+    "skill": "Creative Problem Solving"
+  },
+  {
+    "id": 4,
+    "icon": "👥",
+    "skill": "Collaboration"
+  },
+  {
+    "id": 5,
+    "icon": "🧐",
+    "skill": "Decision-making"
+  },
+  {
+    "id": 6,
+    "icon": "💬",
+    "skill": "Effective Commnunication"
+  },
+  {
+    "id": 7,
+    "icon": "👂",
+    "skill": "Active Listening"
+  }
+]

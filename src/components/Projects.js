@@ -1,7 +1,5 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import Image from "next/image";
-import Link from "next/link";
 import SportAddictsImg from "../../public/assets/sport-addicts.png";
 
 const Projects = () => {
