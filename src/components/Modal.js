@@ -1,6 +1,7 @@
-import React, { Children } from "react";
+import React from "react";
+import Experience from "./Experience";
 
-const Modal = ({ open, onClose, children }) => {
+const Modal = ({ open, onClose }) => {
   if (!open) return null;
 
   //function, so that you can interact with the modal and not close it when u click it
@@ -10,18 +11,20 @@ const Modal = ({ open, onClose, children }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center"
+      className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center z-10 scroll-bar"
       id="wrapper"
       onClick={handleCLose}
     >
-      <div className="w-[600px] flex flex-col">
+      <div className="flex flex-col">
         <button
           className="text-white text-xl place-self-end"
           onClick={() => onClose()}
         >
           &#10005;
         </button>
-        <div className="bg-white p-2 rounded">{children}</div>
+        <div className="bg-white p-2 rounded scroll-div h-[400px]">
+          <Experience />
+        </div>
       </div>
     </div>
   );

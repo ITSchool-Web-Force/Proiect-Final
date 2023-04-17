@@ -8,6 +8,11 @@
   }
 }
 
+.scroll-div {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

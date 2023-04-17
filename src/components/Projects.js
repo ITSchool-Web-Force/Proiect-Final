@@ -10,7 +10,7 @@ const Projects = () => {
           Projects
         </p>
         <h2 className="py-4 sm:text-4xl">What I've Built</h2>
-        <div className="grid md:-grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             title="Sport Addicts"
             backgroundImg={SportAddictsImg}

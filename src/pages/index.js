@@ -50,9 +50,7 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <Modal open={openModal} onClose={() => setOpenModal(false)}>
-            fdsf
-          </Modal>
+          <Modal open={openModal} onClose={() => setOpenModal(false)}></Modal>
           <div className="text-center p-4">
             <h2 className="text-5xl py-2 font-semibold">
               Hi, I'm <span className="text-violet-700">Octavian Busuioc</span>
