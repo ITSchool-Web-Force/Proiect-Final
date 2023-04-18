@@ -1,5 +1,10 @@
 import React from "react";
 
+//Framer Motion library for React
+import { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
+import LiIcon from "./LiIcon";
+
 const Details = ({
   position,
   company,
@@ -12,8 +17,11 @@ const Details = ({
   bulletThree,
   bulletFour,
 }) => {
+  const ref = useRef(null);
+
   return (
     <li className="my-8 first:mt-0 last:mb:0 w-[80%] mx-auto flex flex-col items-center justify-between">
+      <LiIcon reference={ref} />
       <div>
         <h3 className="capitalize font-bold text-2xl">
           {position}&nbsp;
@@ -42,13 +50,22 @@ const Details = ({
 };
 
 const Experience = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center start"],
+  });
+
   return (
     <div className="">
       <h2 className="font-bold text-4xl mb-10 w-full text-center">
         Work Experience
       </h2>
-      <div className="mx-auto relative">
-        <div className="absolute left-8 top-0 w-[4px] h-full bg-[black] origin-top" />
+      <div ref={ref} className="mx-auto relative">
+        <motion.div
+          style={{ scaleY: scrollYProgress }}
+          className="absolute left-4 top-0 w-[4px] h-full bg-[black] origin-top"
+        />
 
         <ul className="">
           <Details
@@ -58,7 +75,30 @@ const Experience = () => {
             time="march 2023 - Present"
             address="Bulevardul Iuliu Maniu, nr. 7, Corp A, Sc. 1, Et. 1, Sector 6, Bucuresti"
             about="online shop specialized in compression stockings, stockings /
-           tights for women and children, tights as well as shapewear. "
+           tights for women and children, tights as well as shapewear.
+           
+
+           online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.
+           online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.
+           online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.
+           online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.
+           online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.online shop specialized in compression stockings, stockings /
+           tights for women and children, tights as well as shapewear.
+           
+           "
             bulletOne="&bull; creating discount codes for vouchers using 2Performant"
             bulletTwo="&bull; adding meta tags to provide additional information about a
            page to search engines and other clients"
