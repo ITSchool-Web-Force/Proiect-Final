@@ -1,5 +1,7 @@
 import React from "react";
 import Experience from "./Experience";
+import Education from "./Education";
+import Courses from "./Courses";
 
 const Modal = ({ open, onClose }) => {
   if (!open) return null;
@@ -24,6 +26,8 @@ const Modal = ({ open, onClose }) => {
         </button>
         <div className="bg-white p-2 rounded scroll-div h-[400px]">
           <Experience />
+          <Education />
+          <Courses />
         </div>
       </div>
     </div>

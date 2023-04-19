@@ -30,7 +30,11 @@ function Skills() {
 
       <div className="content-tabs">
         <div
-          className={toggleState === 1 ? "content  active-content" : "content"}
+          className={
+            toggleState === 1
+              ? "content  active-content dark:bg-gray-900"
+              : "content"
+          }
         >
           {SoftSkills.map((record) => {
             return (
@@ -46,7 +50,11 @@ function Skills() {
         </div>
 
         <div
-          className={toggleState === 2 ? "content  active-content" : "content"}
+          className={
+            toggleState === 2
+              ? "content  active-content dark:bg-gray-900"
+              : "content"
+          }
         >
           {HardSkills.map((record) => {
             return (

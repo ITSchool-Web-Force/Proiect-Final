@@ -1,6 +1,8 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
 import SportAddictsImg from "../../public/assets/sport-addicts.png";
+import DentalClinicImg from "../../public/assets/dental-clinic.png";
+import PersonalPortofolioImg from "../../public/assets/portofolio.png";
 
 const Projects = () => {
   return (
@@ -14,7 +16,17 @@ const Projects = () => {
           <ProjectItem
             title="Sport Addicts"
             backgroundImg={SportAddictsImg}
-            tech="javascript, supabase, css, html"
+            tech="javascript, parcel, supabase, css, html"
+          />
+          <ProjectItem
+            title="Dental Clinic"
+            backgroundImg={DentalClinicImg}
+            tech="css, html"
+          />
+          <ProjectItem
+            title="Personal Portofolio"
+            backgroundImg={PersonalPortofolioImg}
+            tech="React, Next.Js, Framer, Tailwind, css, html"
           />
         </div>
       </div>
