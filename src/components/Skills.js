@@ -12,7 +12,7 @@ function Skills() {
   };
 
   return (
-    <div className="container">
+    <div className="container" id="skills">
       <div className="bloc-tabs">
         <button
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}

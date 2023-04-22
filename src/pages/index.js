@@ -3,6 +3,7 @@ import Modal from "@/components/Modal";
 import ProfilePic from "../../public/assets/profile-pic.jpg";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import NavBar from "@/components/NavBar";
 
 //react icons
 import { GiMoonBats } from "react-icons/gi";
@@ -15,7 +16,6 @@ import React, { useState } from "react";
 
 //to include an img in next you have to import the next/image component
 import Image from "next/image";
-import jslogo from "../../public/javascript-logo.svg";
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
@@ -31,13 +31,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NavBar />
       <main className="bg-white px-10 dark:bg-gray-900">
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
-            <div className="flex gap-2">
-              <h1 className="text-xl font-nunito">Js trooper</h1>
-              <Image src={jslogo} alt="javascript logo" width={30} />
-            </div>
+          <nav className="py-10 mb-12 flex justify-between px-32">
+            <div className="flex gap-2"></div>
             <ul className="flex items-center">
               <li>
                 <GiMoonBats
@@ -57,31 +55,35 @@ export default function Home() {
             </ul>
           </nav>
           <Modal open={openModal} onClose={() => setOpenModal(false)}></Modal>
-          <div className="text-center p-4">
-            <h2 className="text-5xl py-2 font-semibold">
-              Hi, I'm <span className="text-violet-700">Octavian Busuioc</span>
-            </h2>
-            <h3 className="text-2xl pt-2">Developer and web editor</h3>
-            <p className="text-md py-3 leading-7 text-gray-600">
-              Seeking Junior Front End developer jobs | Interships | HTML / CSS
-              / SASS , Javascript , PHP , MySQL, React, Next.Js | quick learner
+          <div id="about">
+            <div className="text-center p-4">
+              <h2 className="text-5xl py-2 font-semibold">
+                Hi, I'm{" "}
+                <span className="text-violet-700">Octavian Busuioc</span>
+              </h2>
+              <h3 className="text-2xl pt-2">Developer and web editor</h3>
+              <p className="text-md py-3 leading-7 text-gray-600">
+                Seeking Junior Front End developer jobs | Interships | HTML /
+                CSS / SASS , Javascript , PHP , MySQL, React, Next.Js | quick
+                learner
+              </p>
+            </div>
+            <p className="uppercase text-sm tracking-widest text-gray-600 text-center">
+              you can reach me hear:
             </p>
-          </div>
-          <p className="uppercase text-sm tracking-widest text-gray-600 text-center">
-            you can reach me hear:
-          </p>
-          <div className="text-5xl flex justify-center py-3  gap-16">
-            <AiFillGithub />
-            <AiFillLinkedin />
-            <AiFillCodeSandboxCircle />
-          </div>
-          <div className="py-3">
-            <Image
-              src={ProfilePic}
-              alt="profile picture"
-              priority
-              className="w-[18rem] h-[15rem] object-cover rounded-tl-extraLarge rounded-br-extraLarge mx-auto"
-            />
+            <div className="text-5xl flex justify-center py-3  gap-16">
+              <AiFillGithub />
+              <AiFillLinkedin />
+              <AiFillCodeSandboxCircle />
+            </div>
+            <div className="py-3">
+              <Image
+                src={ProfilePic}
+                alt="profile picture"
+                priority
+                className="w-[18rem] h-[15rem] object-cover rounded-tl-extraLarge rounded-br-extraLarge mx-auto"
+              />
+            </div>
           </div>
         </section>
       </main>
