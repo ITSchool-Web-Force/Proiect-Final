@@ -1,0 +1,18 @@
+.nav_button {
+    text-decoration: none;
+    color: #7E7E7E;
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+.nav_button:hover {
+    color: green;
+    font-weight:bold;
+    background-color: rgb(238, 243, 243);
+    padding-inline:1rem;
+    padding-block: 0.3rem;
+    border:2px solid rgba(16, 99, 99, 0.5);
+    padding: 4px 10px;
+    margin: 5px 0 5px 4px;
+    border-radius: 1rem;
+    border: transparent 1px solid;
+}

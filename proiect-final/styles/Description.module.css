@@ -1,0 +1,11 @@
+.description_text {
+    font-size: large;
+    font-weight: bold;
+    color: green;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid grey;
+    padding: 1rem;
+    background-color: antiquewhite;
+    border-radius: 1rem;
+}

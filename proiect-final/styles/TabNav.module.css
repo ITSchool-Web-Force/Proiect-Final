@@ -1,0 +1,36 @@
+.tab_nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.tab_nav_elements {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.tab_nav_button {
+    font-size: large;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: rgb(227, 207, 207);
+    cursor: pointer;
+}
+.tab_nav_button:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem rgba(139, 141, 141, 0.5);
+
+}
+.current_tab {
+    font-size: large;
+    font-weight: bold;
+    max-width: 80%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1rem;
+    border-radius: 2rem;
+
+}
+
+  

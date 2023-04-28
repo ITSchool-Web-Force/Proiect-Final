@@ -1,0 +1,49 @@
+.image_properties {
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
+}
+.image_name {
+    font-size: large;
+    font-weight: bold;
+}
+.image_price {
+    font-size: medium;
+}
+.image_display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 1rem;
+    background-color: rgb(238, 235, 235);
+}
+.image_display:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem rgba(212, 214, 214, 0.5);
+}
+.productdiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: white;
+    padding: 2rem;
+    
+}
+.basket_image_properties {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem;
+}
