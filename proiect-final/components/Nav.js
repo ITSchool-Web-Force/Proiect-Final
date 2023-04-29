@@ -11,6 +11,6 @@ export default function Nav() {
         <MyButton mybutton={{value:"home", link:"./"}}/>
         <MyButton mybutton={{value:"about", link:"./about"}}/>
         <MyButton mybutton={{value:"contact", link:"./contact"}}/>
-        <MyButton mybutton={{value:"shop", link:"./contact"}}/>
+        <MyButton mybutton={{value:"shop", link:"./shopping_cart"}}/>
     </div>
 }

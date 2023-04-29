@@ -1,11 +1,9 @@
 .description_text {
     font-size: large;
     font-weight: bold;
-    color: green;
-    width: 90%;
+    text-align: center;
+    width: 70vw;
     margin: 0 auto;
-    border: 1px solid grey;
     padding: 1rem;
-    background-color: antiquewhite;
     border-radius: 1rem;
 }

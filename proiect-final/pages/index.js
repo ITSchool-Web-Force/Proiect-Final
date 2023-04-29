@@ -5,7 +5,7 @@ import Description from "@/components/Description"
 import about from "@/pages/about"
 import TabNav from "@/components/TabNav"
 import Footer from "@/components/Footer"
-import ProductList from "@/components/ProductDisplay"
+import ProductList from "@/components/Product"
 
 <link
   rel="stylesheet"

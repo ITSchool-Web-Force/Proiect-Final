@@ -1,9 +1,9 @@
-import ProductDisplay from "./ProductDisplay";
+import Product from "./Product";
 
 export default function ProductList() {
     return <>
     <div>
-    <ProductDisplay />
+    <Product />
    
     </div>
     
