@@ -1,9 +1,12 @@
 import Product from "./Product";
+import Header from "./Header";
 
 
 export default function Basket(props) {
-   const {cartItems, onAdd, addRemove} = props;
+   const {counter} = props;
     return <>
+      <div>{counter}</div>
+      <Header />
     
   </>
 }

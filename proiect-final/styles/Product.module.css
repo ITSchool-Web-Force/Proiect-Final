@@ -1,21 +1,22 @@
 .image_size {
-    height: 15rem;
-    width: 15rem;
-    border: 5px solid red;
+    height: auto;
+    width: 20vw;
 }
 
 .prod {
-    
     width: 20vw;
-    background-color: pink;
+    height: auto;
     border-radius: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.prod:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem rgba(139, 141, 141, 0.5);
+}
 .button {
-    background-color: aqua;
+    background-color:rgb(220, 216, 216);
     border-radius: 0.7rem;
     padding: 0.1rem 0.8rem;
 }

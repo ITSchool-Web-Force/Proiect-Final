@@ -10,7 +10,7 @@ export default function TabNav() {
     return <div className={style.components}> 
         <div className={style.tab_nav}>
             <button className={style.tab_nav_button} onClick={() => setActive(!active)}>
-                Despre noi {(active)}
+                About us {(active)}
             </button>
             <button className={style.tab_nav_button} onClick={() => setActive(!active)}>
                 May promotions {(active)}

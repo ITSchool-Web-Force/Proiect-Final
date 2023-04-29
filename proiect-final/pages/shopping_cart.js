@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { useState, Fragment } from "react";
 import Product from "@/components/Product";
 import style from "../styles/Product.module.css"
+import Basket from "@/components/Basket";
 
 
 
@@ -13,7 +14,7 @@ export default function ShoppingCart() {
   
   return <>
     <Nav />
-    <Product/>
+    <Basket/>
     <Footer />
     </>
 }
