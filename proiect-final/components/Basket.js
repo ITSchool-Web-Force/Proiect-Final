@@ -27,7 +27,7 @@ export default function Basket(props) {
             </div>
 
             <div className={style.row}>
-              {item.qty} x ${item.price.toFixed(2)}
+              {item.qty} x ${itemsPrice.toFixed(2)}
             </div>
           </div>
         ))}
@@ -45,7 +45,7 @@ export default function Basket(props) {
             </div>
             <hr />
             <div className={style.row}>
-              <button onClick={() => alert('Implement Checkout!')}>
+              <button>
                 Checkout
               </button>
             </div>
