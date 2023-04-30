@@ -6,6 +6,7 @@ import about from "@/pages/about"
 import TabNav from "@/components/TabNav"
 import Footer from "@/components/Footer"
 import Product from "@/components/Product"
+import App from "@/components/App"
 
 <link
   rel="stylesheet"
@@ -19,7 +20,7 @@ export default function Home() {
     <Nav />
     <MyCarousel />
     <TabNav />
-    <Product />
+    <App />
     <Footer />
   </>
 }

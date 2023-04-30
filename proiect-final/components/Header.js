@@ -1,24 +1,20 @@
 import React from 'react';
+import style from "../styles/Header.module.css"
 
 export default function Header(props) {
+  
   return (
-    <header className="block row center">
-      <div>
-        <a href="#/">
-          <h1>Small Shopping Cart</h1>
-        </a>
-      </div>
-      <div>
-        <a href="#/cart">
+    
+      <div className={style.cart_button}>
+        <a href="#/cart" className={style.cart}>
           Cart{' '}
           {props.countCartItems ? (
-            <button className="badge">{props.countCartItems}</button>
+            <button className={style.button}>{props.countCartItems}</button>
           ) : (
             ''
           )}
         </a>{' '}
-        <a href="#/signin"> SignIn</a>
       </div>
-    </header>
+    
   );
 }

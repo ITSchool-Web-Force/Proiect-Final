@@ -1,0 +1,20 @@
+.basket {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row {
+    width: 30vw;
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.col-2 {
+    background-color: red;
+    font-weight: bold;
+    border: 1px solid black;
+}

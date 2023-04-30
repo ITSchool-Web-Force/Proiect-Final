@@ -6,36 +6,28 @@ import data from "./data";
 import Image from "next/image";
 
 
-export default function Product() {
-    const [counter, setCounter] = useState(0);
-    const {products} = data;
+export default function Product(props) {
+    const { product, onAdd, name, image, price } = props;
     
     return <>
-    <div className={style.product_container}>
-        {products.map((product) => <Fragment key={product.id}>
+        <div className={style.product_container}>
             <div className={style.prod}>
                 <div className={style.name_price}>
-                    <div className={style.product_name}>{product.name}</div>
-                    <div className={style.product_price}>{product.price}$</div>
+                    <div className={style.product_name}>{name}</div>
+                    <div className={style.product_price}>{price}$</div>
                 </div>
-            
-                    <Image className={style.image_size} src={product.image} width={300} height={300} alt="image">
-                    </Image>
-                
+                <Image className={style.image_size} src={image} width={300} height={300} alt="image">
+                </Image>
                 <div className={style.button_counter}>
                     <button className={style.button}
-                        onClick={() => setCounter(counter+1)
+                        onClick={() => onAdd(product)
                         }
                     >
-                        Add product
+                        Add to cart
                     </button>
-                    <div>{counter}</div>
                 </div>
             </div>
-        </Fragment>
-         )}
-     </div>
+        </div>
     </>
-    console.log("product.image");
 }
 
