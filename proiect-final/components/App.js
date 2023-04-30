@@ -7,6 +7,7 @@ import Basket from "./Basket";
 export default function App() {
     const {products} = data;
     const [cartItems, setCartItems] = useState([]);
+    
 
     const onAdd = (product) => {
         const exist = cartItems.find((item) => item.id === product.id);
@@ -43,6 +44,7 @@ export default function App() {
         }
         };
 
+        
     useEffect(() => {
         setCartItems(localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : []);
     },[]);

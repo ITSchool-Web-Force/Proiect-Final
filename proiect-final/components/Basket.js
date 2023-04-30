@@ -1,12 +1,15 @@
 import Product from "./Product";
 import Header from "./Header";
 import style from "../styles/Basket.module.css"
+import CheckoutForm from "../components/CheckoutForm"
+import { useState } from "react";
 
 
 export default function Basket(props) {
   const { cartItems, onAdd, onRemove, item } = props;
   const { price } = props;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
+  const [active, setActive] = useState(false);
 
 
   return (
@@ -45,8 +48,8 @@ export default function Basket(props) {
             </div>
             <hr />
             <div className={style.row}>
-              <button>
-                Checkout
+              <button onClick={() => setActive(!active)} >
+                <CheckoutForm itemsPrice={itemsPrice}/>
               </button>
             </div>
           </>

@@ -13,7 +13,7 @@ export default function TabNav() {
                 About us {(active)}
             </button>
             <button className={style.tab_nav_button} onClick={() => setActive(!active)}>
-                May promotions {(active)}
+                Promotions {(active)}
             </button>
         </div>
         <div className={style.text}>
