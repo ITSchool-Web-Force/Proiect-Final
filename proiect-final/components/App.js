@@ -3,6 +3,7 @@ import data from "./data";
 import Header from "./Header";
 import Main from "./Main";
 import Basket from "./Basket";
+import Image from "next/image";
 
 export default function App() {
     const {products} = data;

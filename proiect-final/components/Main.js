@@ -1,5 +1,6 @@
 import Product from "./Product";
 import style from "../styles/Main.module.css"
+import Image from "next/image";
 
 
 export default function Main(props) {
