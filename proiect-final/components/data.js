@@ -17,7 +17,7 @@ const data = {
       },
       {
         id: '3',
-        name: 'Gerbera and lilies',
+        name: 'Gerbera & lilies',
         price: 300,
         image: '/gerbera_lilies.png',
         basket_image: '/basket_icon.jpg',
