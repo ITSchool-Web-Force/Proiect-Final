@@ -6,10 +6,10 @@ export default function Main(props) {
     const { products, onAdd } = props;
     return (
       <main>
-        <h2 className={style.title_b}>Our bouquets</h2>
-        <div className={style.product_style}>
+        <h2 className={style.title_products}>Our bouquets</h2>
+        <div className={style.product_list}>
           {products.map((product) => (
-            <Product key={product.id} 
+            <Product key={product.id} className={style.product}
               product={product} 
               name={product.name} 
               price={product.price} 

@@ -1,16 +1,23 @@
 
-.product_style {
+.product_list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
 }
-.title_b {
+.title_products {
     text-align: center;
     margin: 3rem;
-    padding: 0.5rem;
     color: palevioletred;
     font-family: cursive;
+}
+.product {
+    width: 80%;
+}
+@media (min-width: 400px) {
+    .product {
+        width: 40%;
+    }
 }

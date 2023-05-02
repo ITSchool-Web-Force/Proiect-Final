@@ -16,7 +16,7 @@ export default function Product(props) {
                     <div className={style.product_name}>{name}</div>
                     <div className={style.product_price}>{price}$</div>
                 </div>
-                <Image className={style.image_size} src={image} width={300} height={300} alt="image">
+                <Image className={style.image_size} src={image} width={250} height={250} alt="image">
                 </Image>
                 <div className={style.button_counter}>
                     <button className={style.button}

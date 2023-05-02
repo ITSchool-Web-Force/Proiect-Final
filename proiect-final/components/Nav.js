@@ -17,7 +17,6 @@ export default function NavBar() {
     <Navbar bg="light" expand="lg">
       <Container>
         <Logo />
-        
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto justify-content-end flex-grow-1 pe-3">

@@ -1,15 +1,11 @@
-.image_size {
-    height: auto;
-    width: 20vw;
-}
 .prod {
-    width: 20vw;
     height: auto;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-inline: auto;
 }
 .prod:hover {
     box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem rgba(139, 141, 141, 0.5);
@@ -35,8 +31,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 20vw;
-    font-size: 10.5rem;
+    font-size: 1rem;
 }
 
 .button_counter {
@@ -50,4 +45,7 @@
 .product_name, .product_price {
     font-size: 1rem;
     font-weight: bold;
+}
+.image_size {
+    object-fit: contain;
 }

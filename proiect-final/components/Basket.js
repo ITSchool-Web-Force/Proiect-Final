@@ -6,8 +6,7 @@ import { useState } from "react";
 
 
 export default function Basket(props) {
-  const { cartItems, onAdd, onRemove, item } = props;
-  const { price } = props;
+  const { cartItems, onAdd, onRemove} = props;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   const [active, setActive] = useState(false);
 
