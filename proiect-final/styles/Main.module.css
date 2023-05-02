@@ -1,3 +1,4 @@
+
 .product_style {
     display: flex;
     flex-direction: row;
@@ -6,7 +7,10 @@
     gap: 2rem;
     flex-wrap: wrap;
 }
-.title {
+.title_b {
     text-align: center;
     margin: 3rem;
+    padding: 0.5rem;
+    color: palevioletred;
+    font-family: cursive;
 }

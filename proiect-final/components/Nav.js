@@ -1,3 +1,5 @@
+
+
 import MyButton from "./MyButton";
 import style from "../styles/Nav.module.css";
 import about from "../pages/about";
@@ -5,12 +7,28 @@ import Logo from "./Logo"
 import index from "../pages/index"
 
 
-export default function Nav() {
-    return <div className={style.nav}>
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+export default function NavBar() {
+  return (
+    <Navbar bg="light" expand="lg">
+      <Container>
         <Logo />
-        <MyButton mybutton={{value:"home", link:"./"}}/>
-        <MyButton mybutton={{value:"about", link:"./about"}}/>
-        <MyButton mybutton={{value:"contact", link:"./contact"}}/>
-        <MyButton mybutton={{value:"shop", link:"./shopping_cart"}}/>
-    </div>
+        
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto justify-content-end flex-grow-1 pe-3">
+            <h4><Nav.Link href="./">home</Nav.Link></h4>
+            <h4><Nav.Link href="./about">about</Nav.Link></h4>
+            <h4><Nav.Link href="./contact">contact</Nav.Link></h4>
+            <h4><Nav.Link href="./shopping_cart">shop</Nav.Link></h4>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
+

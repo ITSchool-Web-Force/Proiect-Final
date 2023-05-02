@@ -7,7 +7,7 @@ import Image from "next/image";
 
 
 export default function Product(props) {
-    const { product, onAdd, name, image, price } = props;
+    const { product, onAdd, name, image, price, basket_image} = props;
     
     return <>
         <div className={style.product_container}>
@@ -23,7 +23,7 @@ export default function Product(props) {
                         onClick={() => onAdd(product)
                         }
                     >
-                        Add to cart
+                        Add
                     </button>
                 </div>
             </div>

@@ -21,10 +21,10 @@ export default function Basket(props) {
           <div key={item.id} className={style.row}>
             <div className={style.row}>{item.name}</div>
             <div className={style.row}>
-              <button onClick={() => onRemove(item)} className="remove">
+              <button onClick={() => onRemove(item)}>
                 -
               </button>{' '}
-              <button onClick={() => onAdd(item)} className="add">
+              <button onClick={() => onAdd(item)}>
                 +
               </button>
             </div>

@@ -70,10 +70,10 @@ export default function CheckoutForm(props) {
 
 
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" bg="light" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" bg="light" onClick={handleClose}>
             Send order
           </Button>
         </Modal.Footer>
