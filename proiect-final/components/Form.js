@@ -23,7 +23,7 @@ export default function Form() {
                 <label for="val1">I read the terms and conditions</label>
             </div>
             <div className={style.btn_group}>
-                <button className={style.button_style} type="reset" value="Reseteaza formular">Reset the form</button>
+                <button className={style.button_style} type="reset" value="Reset the form">Reset the form</button>
                 <button className={style.button_style} type="submit" id="submit" value="Trimite">Send</button>
             </div>
         </form>
