@@ -8,6 +8,12 @@
   }
 }
 
+@layer base {
+  .btn-projects {
+    @apply px-8 py-2 mt-4 bg-gradient-to-r from-fuchsia-800 to-violet-500 text-white rounded-md;
+  }
+}
+
 .scroll-div {
   overflow: hidden;
   overflow-y: scroll;
@@ -34,24 +40,20 @@ a {
   text-decoration: none;
 }
 
-.container {
+.container-skills {
   display: flex;
   flex-direction: column;
   position: relative;
   height: 500px;
   background: #f1f1f1;
   margin: 100px auto 0;
-  border: 1px solid rgba(0, 0, 0, 0.274);
 }
 
-.left-list {
+.container-testimonials {
   display: flex;
-  justify-content: flex-start;
-}
-
-.right-list {
-  display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+  margin: 100px auto 0;
 }
 
 .bloc-tabs {
@@ -103,6 +105,16 @@ button {
   display: none;
 }
 
-.active-content {
-  display: block;
+.active-left-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 150px 150px 200px;
+  justify-content: start;
+}
+
+.active-right-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 150px 150px 200px;
+  justify-content: end;
 }

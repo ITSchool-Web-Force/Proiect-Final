@@ -3,7 +3,9 @@ import Modal from "@/components/Modal";
 import ProfilePic from "../../public/assets/profile-pic.jpg";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
+import ScrollToTop from "react-scroll-to-top";
 
 //react icons
 import { GiMoonBats } from "react-icons/gi";
@@ -12,10 +14,14 @@ import {
   AiFillGithub,
   AiFillCodeSandboxCircle,
 } from "react-icons/ai";
+import { FaFreeCodeCamp } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
+
 import React, { useState } from "react";
 
 //to include an img in next you have to import the next/image component
 import Image from "next/image";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   const [openModal, setOpenModal] = useState(false);
@@ -58,10 +64,10 @@ export default function Home() {
           <div id="about">
             <div className="text-center p-4">
               <h2 className="text-5xl py-2 font-semibold">
-                Hi, I'm{" "}
+                Hi<span>👋</span>, my name is{" "}
                 <span className="text-violet-700">Octavian Busuioc</span>
               </h2>
-              <h3 className="text-2xl pt-2">Developer and web editor</h3>
+              <h3 className="text-2xl pt-2">I'm a Developer and Web Editor</h3>
               <p className="text-md py-3 leading-7 text-gray-600">
                 Seeking Junior Front End developer jobs | Interships | HTML /
                 CSS / SASS , Javascript , PHP , MySQL, React, Next.Js | quick
@@ -72,9 +78,27 @@ export default function Home() {
               you can reach me hear:
             </p>
             <div className="text-5xl flex justify-center py-3  gap-16">
-              <AiFillGithub />
-              <AiFillLinkedin />
-              <AiFillCodeSandboxCircle />
+              <a href="https://github.com/Octavian-Busuioc" target="_blank">
+                <AiFillGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/octavian-busuioc-6883b5216/"
+                target="_blank"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a
+                href="https://codesandbox.io/u/Octavian-Busuioc"
+                target="_blank"
+              >
+                <AiFillCodeSandboxCircle />
+              </a>
+              <a
+                href="https://www.freecodecamp.org/OctavianBusuioc"
+                target="_blank"
+              >
+                <FaFreeCodeCamp />
+              </a>
             </div>
             <div className="py-3">
               <Image
@@ -90,7 +114,10 @@ export default function Home() {
       <div className="dark:bg-gray-900">
         <Projects />
         <Skills />
+        <Testimonials />
       </div>
+      <Footer />
+      <ScrollToTop smooth component={<FaArrowUp className="mx-3" />} />
     </div>
   );
 }

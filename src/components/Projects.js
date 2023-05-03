@@ -17,16 +17,19 @@ const Projects = () => {
             title="Sport Addicts"
             backgroundImg={SportAddictsImg}
             tech="javascript, parcel, supabase, css, html"
+            projectUrl="/sportAddicts"
           />
           <ProjectItem
             title="Dental Clinic"
             backgroundImg={DentalClinicImg}
             tech="css, html"
+            projectUrl="/dentalClinic"
           />
           <ProjectItem
             title="Personal Portofolio"
             backgroundImg={PersonalPortofolioImg}
             tech="React, Next.Js, Framer, Tailwind, css, html"
+            projectUrl="/"
           />
         </div>
       </div>

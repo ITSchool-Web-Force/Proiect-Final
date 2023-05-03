@@ -13,7 +13,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className="w-full bg-white right-0 z-10">
+      <nav className="w-full bg-[#bcbbbb] right-0 z-10">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -65,6 +65,11 @@ const NavBar = () => {
                 <li className="pb-6 text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                   <Link href="#skills" onClick={() => setNavBar(!navbar)}>
                     Skills
+                  </Link>
+                </li>
+                <li className="pb-6 text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#testimonials" onClick={() => setNavBar(!navbar)}>
+                    Testimonials
                   </Link>
                 </li>
               </ul>
