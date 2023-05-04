@@ -3,10 +3,15 @@ import Header from "./Header";
 import style from "../styles/Basket.module.css"
 import CheckoutForm from "../components/CheckoutForm"
 import { useState } from "react";
+import SiteContextProvider from "@/contexts/SiteContext";
+import { useContext } from "react";
+import { SiteContext } from "@/contexts/SiteContext";
 
 
 export default function Basket(props) {
-  const { cartItems, onAdd, onRemove} = props;
+  const cartItems = useContext (SiteContext);
+
+  const {onAdd, onRemove} = props;
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   const [active, setActive] = useState(false);
 

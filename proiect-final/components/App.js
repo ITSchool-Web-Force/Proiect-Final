@@ -4,6 +4,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Basket from "./Basket";
 import Image from "next/image";
+import SiteContextProvider from "@/contexts/SiteContext";
 
 export default function App() {
     const {products} = data;
@@ -51,16 +52,18 @@ export default function App() {
     },[]);
 
     return (
-        <div className="App">
-            <Header countCartItems={cartItems.length}></Header>
-            <div className="row">
-            <Main products={products} onAdd={onAdd}></Main>
-            <Basket
-                cartItems={cartItems}
-                onAdd={onAdd}
-                onRemove={onRemove}                
-            ></Basket>
+        <SiteContextProvider>
+            <div className="App">
+                <Header countCartItems={cartItems.length}></Header>
+                <div className="row">
+                <Main products={products} onAdd={onAdd}></Main>
+                <Basket
+                    cartItems={cartItems}
+                    onAdd={onAdd}
+                    onRemove={onRemove}                
+                ></Basket>
+                </div>
             </div>
-        </div>
+        </SiteContextProvider>
         );
     }

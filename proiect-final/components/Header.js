@@ -1,7 +1,10 @@
 import React from 'react';
 import style from "../styles/Header.module.css"
+import { useContext } from 'react';
+import {SiteContext} from '@/contexts/SiteContext';
 
 export default function Header(props) {
+  const cartItems = useContext (SiteContext);
   
   return (
     
