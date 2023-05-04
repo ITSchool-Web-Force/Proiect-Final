@@ -1,0 +1,23 @@
+// Header-ul
+
+.theheader {
+    margin-inline: 0.5em;
+    margin-block-start: 0.5em;
+    grid-row: 1/2;
+    border-radius: 0.5em;
+    background-color: var(--secondary-color);
+    transition: background-color 0.5s ease;
+    max-height: 15em; 
+    text-align: center;
+    .wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr 0.6fr;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        @media screen and (min-width: 48em) {
+                grid-template-rows: 1fr;
+                grid-template-columns: 0.7fr 1fr 1fr;
+        }  
+    }
+}
+   

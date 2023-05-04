@@ -1,0 +1,15 @@
+.container {
+    margin-inline: 0.5em;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    row-gap: 1em;
+    min-height: 80vh;
+    @media screen and (min-width: 48em) {
+        grid-template-rows: 1fr;
+        grid-template-columns: 3fr 1.5fr;
+        column-gap: 1.5em;
+        width: 90%;
+        margin-inline: auto;
+    }
+}

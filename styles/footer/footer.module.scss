@@ -1,0 +1,12 @@
+.theFooter  {
+    margin-inline: 0.5em;
+    margin-block-end: 0.5em;
+    grid-row: 3/4;
+    border-radius: 0.5em;
+    background-color: var(--secondary-color);
+    .info {
+        text-align: center;
+        padding: 1em;
+        font-weight: bold;
+    }
+}
