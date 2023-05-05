@@ -28,6 +28,13 @@ export async function getServerSideProps(context) {
             .range(0, HowMany-1)
             .order('created_at',  {ascending: false} )
             ;
+
+    if (error || !data || data.length === 0) {
+        return {
+            notFound: true,
+        };
+    }
+
     return {
         props: {
             data,

@@ -52,7 +52,6 @@ function Navbar() {
                         <li><a href="/add">Adaugă</a></li>
                         {!isLogged && <li><a href="/auth">Logare</a></li>}
                         {!isLogged && <li><a href="/reg">Inregistrare</a></li>}
-                        {isLogged && <li><a href="/account">Contul Meu</a></li>}
                         {isLogged && <li><a onClick={signOut}>Delogare</a></li>}
                     </ul>
                 </nav>

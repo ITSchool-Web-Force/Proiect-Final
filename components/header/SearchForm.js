@@ -11,17 +11,11 @@ function SearchForm() {
     const [value, setValue] = useState('');
     const [expressions, setExpressions] = useState([]);
 
-    const onChange = (event) => {
+    function onChange(event) {
         setValue(event.target.value);
     }
 
-    const onSearch = (searchTerm, event) => {
-        console.log("search ", searchTerm);
-        event.preventDefault();
-        setValue(searchTerm)
-    }  
-
-    /*useEffect(() => {
+    useEffect(() => {
             getData();
     }, [value]);
 
@@ -29,15 +23,15 @@ function SearchForm() {
         const { data, error } = await supabase
             .from('expressions')
             .select()
+            .ilike('expression', `%${value}%`)
     
         if (error) {
             throw error;
         }
-
         if(data) {
             setExpressions(data);
         }
-    }*/
+    }
 
     return <>
         <div className={styles.theSearch}>
@@ -47,13 +41,13 @@ function SearchForm() {
                     <SearchSvg/>
                 </button>
             </form> 
-            {value && <div className={styles.dropdown}>
+            {value && (expressions.length > 0 && <div className={styles.dropdown}>
                     {expressions.map((item) => ( 
                     <div className='' key={item.expression}>
                             {item.expression}
                     </div>
                     ))}
-            </div>}
+            </div>)}
         </div>
     </>
 }

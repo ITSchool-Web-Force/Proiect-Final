@@ -1,19 +1,17 @@
 import LikeSvg from "../../../svgs/like";
 import DislikeSvg from "../../../svgs/dislike";
 
-import styles from "../../../styles/container/card.module.scss";
+import styles from "../../../styles/container/expressionprofile.module.scss"
 
 import NoSSRWrapper from "../../../components/nossr"
 
-import { useEffect, useState } from 'react';
-
 import { useUser } from '@supabase/auth-helpers-react'
 
-import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 import { supabase } from '../../../utilities/supabase';
 
-function ExpressionCard ( {expressionData} ) {
+function ExpressionCard ( {expressionData, id} ) {
 
     const [isLiked, setIsLiked] = useState(false);
     const [isDisliked, setIsDisliked] = useState(false);
@@ -21,15 +19,14 @@ function ExpressionCard ( {expressionData} ) {
     const [likes, setLikes] = useState(false);
     const [dislikes, setDislikes] = useState(false);
 
-    const user = useUser();
-    const router = useRouter();
+    const user = useUser(); 
 
     async function getLikeStatus() {
 
         const dataLikes = await supabase
             .from('likes')
             .select()
-            .eq('user_id', user.id)
+            .eq('user_id', id)
             .eq('post_id', expressionData.id)
 
         if(dataLikes.error) {
@@ -42,7 +39,7 @@ function ExpressionCard ( {expressionData} ) {
         const dataDisLikes = await supabase
             .from('dislikes')
             .select()
-            .eq('user_id', user.id)
+            .eq('user_id', id)
             .eq('post_id', expressionData.id)
 
         if(dataDisLikes.error) {
@@ -102,7 +99,7 @@ function ExpressionCard ( {expressionData} ) {
                     .from('likes')
                     .insert([{
                         post_id: expressionData.id, 
-                        user_id: user.id
+                        user_id: id
                     }])
 
                 if(error) {
@@ -115,7 +112,7 @@ function ExpressionCard ( {expressionData} ) {
                 const { error } = await supabase
                     .from('likes')
                     .delete()
-                    .eq('user_id', user.id)
+                    .eq('user_id', id)
                     .eq('post_id', expressionData.id)
 
                 if(error) {
@@ -141,7 +138,7 @@ function ExpressionCard ( {expressionData} ) {
                     .from('dislikes')
                     .insert([{
                         post_id: expressionData.id, 
-                        user_id: user.id
+                        user_id: id
                     }])
 
                 if(error) {
@@ -154,7 +151,7 @@ function ExpressionCard ( {expressionData} ) {
                 const { error } = await supabase
                     .from('dislikes')
                     .delete()
-                    .eq('user_id', user.id)
+                    .eq('user_id', id)
                     .eq('post_id', expressionData.id)
 
                 if(error) {
@@ -166,25 +163,14 @@ function ExpressionCard ( {expressionData} ) {
         }
     }
 
-    function authorClick(username) {
-        router.push(`/user/${username}`);
-    }
-    function expressionClick(data) {
-        
-        const expressionName = encodeURI(data)
-
-        router.push(`/${expressionName}`);
-    }
 
     return <>
         <div className={styles.expressionCard}>
                 
-            <a className={styles.expression} onClick={() => expressionClick(expressionData.expression)}>{expressionData.expression}</a>
+            <div className={styles.expression}>{expressionData.expression}</div>
             <div className={styles.explication}>{expressionData.explication}</div>
             <div className={styles.example}>{expressionData.example}</div>
-            <div className={styles.cardInfo}>adăugat de 
-                <span className={styles.author} onClick={() => authorClick(expressionData.author)}> {expressionData.author} </span>
-                pe
+            <div className={styles.cardInfo}>adăugat pe
                 <span className={styles.date}> {expressionData.date}</span>
             </div>
                 <div className={styles.likesSystem}>
