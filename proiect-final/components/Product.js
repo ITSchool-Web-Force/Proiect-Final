@@ -7,7 +7,7 @@ import Image from "next/image";
 
 
 export default function Product(props) {
-    const { product, onAdd, name, image, price, basket_image} = props;
+    const { product, onAdd, name, image, price, basket_image } = props;
     
     return <>
         <div className={style.product_container}>
@@ -25,8 +25,6 @@ export default function Product(props) {
                 </div>
                 <Image className={style.image_size} src={image} width={250} height={250} alt="image">
                 </Image>
-                
-                
             </div>
         </div>
     </>

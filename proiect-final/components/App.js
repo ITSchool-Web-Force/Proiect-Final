@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import data from "./data";
 import Header from "./Header";
-import Main from "./Main";
+import ProductGroup from "./ProductGroup";
 import Basket from "./Basket";
 import Image from "next/image";
 
 
 export default function App() {
-    const {products} = data;
     const [cartItems, setCartItems] = useState([]);
-    
 
     const onAdd = (product) => {
         const exist = cartItems.find((item) => item.id === product.id);
@@ -46,17 +44,15 @@ export default function App() {
         }
         };
 
-        
     useEffect(() => {
         setCartItems(localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : []);
     },[]);
 
     return (
-        
             <div className="App">
                 <Header countCartItems={cartItems.length}></Header>
                 <div className="row">
-                <Main products={products} onAdd={onAdd}></Main>
+                <ProductGroup onAdd={onAdd}></ProductGroup>
                 <Basket
                     cartItems={cartItems}
                     onAdd={onAdd}
@@ -64,6 +60,5 @@ export default function App() {
                 ></Basket>
                 </div>
             </div>
-       
         );
     }

@@ -1,13 +1,12 @@
 import Product from "./Product";
 import style from "../styles/Main.module.css"
 import Image from "next/image";
+import data from "./data";
 
-
-
-export default function Main(props) {
-  
-    const { products, onAdd } = props;
-    return (
+export default function ProductGroup(props) {
+   const { products } = data;
+   const { onAdd } = props;
+    return <>
       <main>
         <h2 className={style.title_products}>Our bouquets</h2>
         <div className={style.product_list}>
@@ -23,5 +22,5 @@ export default function Main(props) {
           ))}
         </div>
       </main>
-    );
+    </>
   }
