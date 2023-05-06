@@ -4,7 +4,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Basket from "./Basket";
 import Image from "next/image";
-import SiteContextProvider from "@/contexts/SiteContext";
+
 
 export default function App() {
     const {products} = data;
@@ -52,7 +52,7 @@ export default function App() {
     },[]);
 
     return (
-        <SiteContextProvider>
+        
             <div className="App">
                 <Header countCartItems={cartItems.length}></Header>
                 <div className="row">
@@ -64,6 +64,6 @@ export default function App() {
                 ></Basket>
                 </div>
             </div>
-        </SiteContextProvider>
+       
         );
     }
