@@ -15,7 +15,7 @@ export default function CheckoutForm(props) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="success" onClick={handleShow}>
         Checkout
       </Button>
 
@@ -70,10 +70,10 @@ export default function CheckoutForm(props) {
 
 
         <Modal.Footer>
-          <Button variant="secondary" bg="light" onClick={handleClose}>
+          <Button variant="dark" bg="light" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="primary" bg="light" onClick={handleClose}>
+          <Button variant="success" bg="light" onClick={handleClose}>
             Send order
           </Button>
         </Modal.Footer>

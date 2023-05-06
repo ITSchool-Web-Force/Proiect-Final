@@ -46,7 +46,7 @@ export default function Basket(props) {
             </div>
             <hr />
             <div className={style.row}>
-              <button onClick={() => setActive(!active)} >
+              <button className={style.checkout_button} onClick={() => setActive(!active)} >
                 <CheckoutForm itemsPrice={itemsPrice}/>
               </button>
             </div>
