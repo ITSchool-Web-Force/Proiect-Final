@@ -10,12 +10,6 @@
 .prod:hover {
     box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem rgba(139, 141, 141, 0.5);
 }
-.button {
-    background-color:rgb(220, 216, 216);
-    border-radius: 0.7rem;
-    padding: 0.1rem 0.8rem;
-    font-size: 1rem;
-}
 .price_add {
     width: 100%;
     display: flex;
@@ -32,6 +26,7 @@
     align-items: center;
     gap: 1rem;
     font-size: 1rem;
+    padding-block: 1rem;
 }
 
 .button_counter {
@@ -48,4 +43,15 @@
 }
 .image_size {
     object-fit: contain;
+}
+.basket_image_size {
+    height: 1.5rem;
+    width: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+.mybutton {
+    background-color:white;
+    padding: 0;
+    border: none;
 }

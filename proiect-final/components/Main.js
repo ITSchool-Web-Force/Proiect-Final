@@ -17,6 +17,7 @@ export default function Main(props) {
               name={product.name} 
               price={product.price} 
               image={product.image} 
+              basket_image={product.basket_image}
               onAdd={onAdd}>
             </Product>
           ))}

@@ -43,7 +43,7 @@ const data = {
       },
       {
         id: '4',
-        name: 'White roses and freesia',
+        name: 'Roses & freesia',
         price: 65,
         image: white_roses_freesia,
         basket_image: basket_icon,
@@ -113,7 +113,7 @@ const data = {
       },
       {
         id: '14',
-        name: 'Colored chrisantemum',
+        name: 'Chrisantemum',
         price: 87,
         image: colored_chrisantemum,
         basket_image: basket_icon,
