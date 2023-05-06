@@ -3,6 +3,7 @@
     object-fit: contain;
     background-repeat: no-repeat;
     margin-inline: auto;
+    height: 100%;
 }
 .title {
     text-align: center;
@@ -66,7 +67,6 @@
     padding: 0.2rem 0.8rem;
     font-weight: bold;
 }
-
 @media (min-width: 400px) {
     .form_group {
         width: 80vw;
