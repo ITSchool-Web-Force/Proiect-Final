@@ -4,11 +4,10 @@ import style from "../styles/Footer.module.css"
 export default function Footer() {
   return <>
     <div className={style.footer}>
-      <div className={style.footer_text}> © Copyright 2023 Diana FLOWER SHOP
-      <div id={style.footer_contact}>
-        <p>flowershop@gmail.com</p>
+      <div> © Copyright 2023 
+            designed with <span className={style.heart}>&#10084;</span> by Diana
       </div>
-      </div>
+      <p>flowershop@gmail.com</p>
     </div>
   </>
 };

@@ -1,5 +1,5 @@
 import Product from "./Product";
-import style from "../styles/Main.module.css"
+import style from "../styles/ProductGroup.module.css"
 import Image from "next/image";
 import data from "./data";
 

@@ -1,7 +1,6 @@
 
 import { useState, Fragment } from "react"
 import style from "../styles/Product.module.css"
-import shopping_cart from "../pages/shopping_cart"
 import data from "./data";
 import Image from "next/image";
 

@@ -55,3 +55,10 @@
     padding: 0;
     border: none;
 }
+.basket_image_size:active {
+    height: 1.7rem;
+    width: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    border: 2px solid black;
+}

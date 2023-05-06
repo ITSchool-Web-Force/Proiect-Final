@@ -1,6 +1,3 @@
-
-
-import MyButton from "./MyButton";
 import style from "../styles/Nav.module.css";
 import about from "../pages/about";
 import Logo from "./Logo"
@@ -23,7 +20,6 @@ export default function NavBar() {
             <h4><Nav.Link href="./">home</Nav.Link></h4>
             <h4><Nav.Link href="./about">about</Nav.Link></h4>
             <h4><Nav.Link href="./contact">contact</Nav.Link></h4>
-            <h4><Nav.Link href="./shopping_cart">shop</Nav.Link></h4>
           </Nav>
         </Navbar.Collapse>
       </Container>
