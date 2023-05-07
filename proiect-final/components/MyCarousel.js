@@ -1,8 +1,8 @@
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import florist from "../images/florist.jpg"
-import flower_shop from "../images/flower_shop.jpg"
-import flower_shop_entrance from "../images/flower_shop_entrance.jpg"
+import florist from "../images/florist.png"
+import flower_shop from "../images/flower_shop.png"
+import flower_shop_entrance from "../images/flower_shop_entrance.png"
 import style from "@/styles/MyCarousel.module.css"
 
 

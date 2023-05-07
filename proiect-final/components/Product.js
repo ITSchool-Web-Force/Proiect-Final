@@ -15,8 +15,7 @@ export default function Product(props) {
                     <div className={style.product_name}>{name}</div>
                     <div className={style.product_price}>{price}$</div>
                     <button className={style.mybutton}
-                        onClick={() => onAdd(product)
-                        }
+                        onClick={() => onAdd(product)}
                     >
                         <Image className={style.basket_image_size} src={basket_image} width={250} height={250} alt="image">
                         </Image>

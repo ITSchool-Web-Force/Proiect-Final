@@ -13,7 +13,7 @@
 }
 .heart {
     font-size: 0.8rem;
-    animation: heart 3s infinite;
+    animation: heart 2s infinite;
     color: red;
 }
 
@@ -22,21 +22,10 @@
         animation-timing-function: linear;
         font-size: 1rem;
     }
-    40% {
-        animation-timing-function: linear;
-        font-size: 1.5rem;
-    }
-    60% {
-        animation-timing-function: linear;
-        font-size: 1.6rem;
-    }
-    80% {
-        animation-timing-function: linear;
-        font-size: 1.8rem;
-    }
+    
     100% {
         animation-timing-function: linear;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     
 }
