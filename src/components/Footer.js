@@ -9,9 +9,11 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="w-full font-medium text-lg bg-[#bcbbbb]">
-        <div className="py-4 flex items-center justify-around md:px-8">
-          <span>{getTheYear()} &copy; All Rights Reserved.</span>
+      <footer className="w-full font-medium text-lg bg-[#5a82ba]">
+        <div className="py-3 flex items-center justify-around md:px-8">
+          <span className="text-white">
+            {getTheYear()} &copy; All Rights Reserved.
+          </span>
         </div>
       </footer>
     </>

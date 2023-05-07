@@ -16,7 +16,7 @@ function Skills() {
       <p className="text-xl tracking-widest uppercase text-[#86198f] bg-white dark:bg-gray-900">
         Skills
       </p>
-      <h2 className="py-4 sm:text-4xl bg-white dark:bg-gray-900">
+      <h2 className="py-4 sm:text-4xl bg-white dark:bg-gray-900 dark:text-white">
         Skills I posssess
       </h2>
       <div className="bloc-tabs">
@@ -24,13 +24,13 @@ function Skills() {
           className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(1)}
         >
-          SOFT SKILLS
+          <span className="text-white">SOFT SKILLS</span>
         </button>
         <button
           className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(2)}
         >
-          HARD SKILLS
+          <span className="text-white">HARD SKILLS</span>
         </button>
       </div>
       <div className="content-tabs">

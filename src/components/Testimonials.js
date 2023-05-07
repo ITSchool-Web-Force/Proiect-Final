@@ -7,7 +7,7 @@ const Testimonials = () => {
         <p className="text-xl tracking-widest uppercase text-[#86198f] bg-white dark:bg-gray-900">
           Testimonials
         </p>
-        <h2 className="py-4 sm:text-4xl bg-white dark:bg-gray-900">
+        <h2 className="py-4 sm:text-4xl bg-white dark:bg-gray-900 dark:text-white">
           What other people say
         </h2>
 
@@ -30,7 +30,13 @@ const Testimonials = () => {
               development; and even back-end. He would be a powerhouse of an
               addition to any team looking for a skilled front-end developer."
             </p>
-            <p className="italic">- Alex Silviu Scripcariuc</p>
+            <p className="italic dark:text-[#86198f]">
+              - Alex Silviu Scripcariuc
+            </p>
+            <p className="dark:text-[#86198f]">
+              &#40;UX Designer with a passion for neuroscience and design
+              psychology &#41;
+            </p>
           </div>
           {/*Second Testimonial*/}
           <div className="mb-0">
@@ -48,7 +54,10 @@ const Testimonials = () => {
               technologies will take him very far in this field. Any employer
               would be happy to have you in their team, Octavian!"
             </p>
-            <p className="italic">- Diana Dinu</p>
+            <p className="italic dark:text-[#86198f]">- Diana Dinu</p>
+            <p className="dark:text-[#86198f]">
+              &#40;Aspiring front-end developer&#41;
+            </p>
           </div>
         </div>
       </div>

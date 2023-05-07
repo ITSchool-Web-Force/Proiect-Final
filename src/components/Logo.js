@@ -9,7 +9,7 @@ const Logo = () => {
       {/* LOGO */}
       <Link href="/">
         <div className="flex gap-2">
-          <h1 className="text-xl font-nunito text-white">Js trooper</h1>
+          <h1 className="text-xl font-nunito text-white">Js coder</h1>
           <Image src={JsLogo} alt="javascript logo" width={30} height={30} />
         </div>
       </Link>

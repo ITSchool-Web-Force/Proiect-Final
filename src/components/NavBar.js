@@ -13,15 +13,15 @@ const NavBar = () => {
 
   return (
     <div>
-      <nav className="w-full bg-[#bcbbbb] right-0 z-10">
+      <nav className="w-full bg-[#5a82ba] right-0 z-10">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <div className="flex items-center justify-between md:py-5 md:block">
               {/* LOGO */}
               <Link href="/">
                 <div className="flex gap-2">
-                  <h1 className="text-xl font-nunito">Js trooper</h1>
-                  <Image src={jslogo} alt="javascript logo" width={30} />
+                  <h1 className="text-xl text-white font-nunito">Js coder</h1>
+                  <Image src={jslogo} alt="javascript logo" width={25} />
                 </div>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
@@ -52,24 +52,29 @@ const NavBar = () => {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="pb-6 text-xl text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-[#eeec44]  border-[#eeec44]  md:hover:text-[#eeec44] md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavBar(!navbar)}>
                     About
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#eeec44]  border-[#eeec44]  md:hover:text-[#eeec44] md:hover:bg-transparent">
                   <Link href="#projects" onClick={() => setNavBar(!navbar)}>
                     Projects
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#eeec44]  border-[#eeec44]  md:hover:text-[#eeec44] md:hover:bg-transparent">
                   <Link href="#skills" onClick={() => setNavBar(!navbar)}>
                     Skills
                   </Link>
                 </li>
-                <li className="pb-6 text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#eeec44]  border-[#eeec44]  md:hover:text-[#eeec44] md:hover:bg-transparent">
                   <Link href="#testimonials" onClick={() => setNavBar(!navbar)}>
                     Testimonials
+                  </Link>
+                </li>
+                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#eeec44]  border-[#eeec44]  md:hover:text-[#eeec44] md:hover:bg-transparent">
+                  <Link href="#contact" onClick={() => setNavBar(!navbar)}>
+                    Contact
                   </Link>
                 </li>
               </ul>
