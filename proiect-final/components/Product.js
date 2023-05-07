@@ -1,13 +1,10 @@
 
 import { useState, Fragment } from "react"
 import style from "../styles/Product.module.css"
-import data from "./data";
 import Image from "next/image";
 
 
-export default function Product(props) {
-    const { product, onAdd, name, image, price, basket_image } = props;
-    
+export default function Product ({product, onAdd, name, image, price, basket_image}) {
     return <>
         <div className={style.product_container}>
             <div className={style.prod}>

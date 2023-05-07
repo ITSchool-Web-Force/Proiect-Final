@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import data from "./data";
 import Header from "./Header";
 import ProductGroup from "./ProductGroup";
 import Basket from "./Basket";

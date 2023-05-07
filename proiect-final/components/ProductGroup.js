@@ -1,11 +1,10 @@
 import Product from "./Product";
 import style from "../styles/ProductGroup.module.css"
 import Image from "next/image";
-import data from "./data";
+import data from "./Data";
 
-export default function ProductGroup(props) {
+export default function ProductGroup({onAdd}) {
    const { products } = data;
-   const { onAdd } = props;
     return <>
       <main>
         <h2 className={style.title_products}>Our bouquets</h2>
