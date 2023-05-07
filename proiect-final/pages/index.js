@@ -5,7 +5,8 @@ import Description from "@/components/Description"
 import about from "@/pages/about"
 import TabNav from "@/components/TabNav"
 import Footer from "@/components/Footer"
-import Product from "@/components/Product"
+
+
 import App from "@/components/App"
 
 

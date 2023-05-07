@@ -1,4 +1,4 @@
-import Product from "./Product";
+
 import Header from "./Header";
 import style from "../styles/Basket.module.css"
 import CheckoutForm from "../components/CheckoutForm"
