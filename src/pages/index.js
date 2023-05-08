@@ -79,7 +79,7 @@ export default function Home() {
                 <span className="text-violet-700">Octavian Busuioc</span>
               </h2>
               <h3 className="text-2xl pt-2 dark:text-white">
-                I'm a Developer and Web Editor
+                I&apos;m a Developer and Web Editor
               </h3>
               <p className="text-md py-3 leading-7 text-gray-600 dark:text-white">
                 I build websites. Also seeking new job opportunities | HTML /

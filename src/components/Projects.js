@@ -14,7 +14,9 @@ const Projects = () => {
         <p className="text-xl tracking-widest uppercase text-[#86198f]">
           Projects
         </p>
-        <h2 className="py-4 sm:text-4xl dark:text-white">What I've Built</h2>
+        <h2 className="py-4 sm:text-4xl dark:text-white">
+          What I&apos;ve Built
+        </h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
             title="Sport Addicts"
@@ -35,7 +37,7 @@ const Projects = () => {
             projectUrl="/chuckNorrisRandomJokeGenerator"
           />
           <ProjectItem
-            title="80's Retrospective"
+            title="80s Retrospective"
             backgroundImg={musicEightisRetrospective}
             tech="css, html, sass, javascript"
             projectUrl="/eightisRetrospective"

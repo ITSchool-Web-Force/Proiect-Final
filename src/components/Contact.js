@@ -17,7 +17,7 @@ const Contact = () => {
           Contact
         </p>
         <h2 className="py-4 sm:text-4xl bg-white dark:bg-gray-900 dark:text-white">
-          Let's connect
+          Let&apos;s connect
         </h2>
 
         <div className="flex flex-col lg:gap-x-8 lg:flex-row">
