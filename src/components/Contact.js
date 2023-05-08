@@ -3,6 +3,13 @@ import React from "react";
 import { contact } from "../data/contact.js";
 
 const Contact = () => {
+  const ref = React.useRef();
+
+  function reset(ev) {
+    ev.preventDefault();
+    ref.current.reset();
+  }
+
   return (
     <>
       <div className="container-testimonials max-w-[1240px]" id="contact">
@@ -39,6 +46,7 @@ const Contact = () => {
 
           {/* form */}
           <form
+            ref={ref}
             method="POST"
             action="https://getform.io/f/48da4e5d-722d-420e-a158-340e63225788"
             className="flex flex-col w-full max-w-[600px]"
@@ -72,12 +80,20 @@ const Contact = () => {
               placeholder="Your message"
               name="message"
             ></textarea>
-            <button
-              className="text-[#808080] rounded-lg 
+            <div className="grid grid-cols-4 gap-4 content-between">
+              <button
+                className="text-[#808080] rounded-lg 
               border-2 bg-violet-100 px-4 hover:bg-[#86198f] hover:text-white hover:bg-gradient-to-r from-[#a467b3] to-[#5a82ba] py-3 my-8 mx-auto flex items-center"
-            >
-              Send message
-            </button>
+              >
+                Send message
+              </button>
+              <button
+                className="text-[#808080] rounded-lg  border-2 bg-violet-100 px-4 hover:bg-[#ff0000] hover:text-white py-3 my-8 mx-auto flex items-center"
+                onClick={reset}
+              >
+                Reset
+              </button>
+            </div>
           </form>
         </div>
       </div>

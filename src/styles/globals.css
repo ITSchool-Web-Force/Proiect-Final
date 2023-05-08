@@ -122,3 +122,27 @@ button {
   grid-template-columns: 150px 150px 200px;
   justify-content: end;
 }
+
+@media (max-width: 600px) {
+  .active-right-content {
+    display: block;
+    direction: rtl;
+  }
+
+  .active-left-content {
+    display: block;
+  }
+
+  .social-media {
+    display: grid;
+    grid-template-columns: 150px 50px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+
+/* white-space property */
+div {
+  white-space: pre-wrap;
+}

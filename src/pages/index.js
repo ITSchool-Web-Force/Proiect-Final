@@ -31,6 +31,11 @@ export default function Home() {
   //dark theme
   const [darkMode, setDarkMode] = useState(false);
 
+  function NewlineText(props) {
+    const text = props.text;
+    return <div>{text}</div>;
+  }
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -42,8 +47,12 @@ export default function Home() {
       <NavBar />
       <main className="bg-white px-10 dark:bg-gray-900">
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between px-32">
-            <div className="flex gap-2"></div>
+          <nav className="py-10 mb-12 flex justify-between">
+            <div className="flex gap-2 text-md py-3 leading-7 text-gray-600 dark:text-white">
+              <NewlineText
+                text={"U want a website?\nYou came to the right place"}
+              />
+            </div>
             <ul className="flex items-center">
               <li>
                 <GiMoonBats
@@ -81,7 +90,7 @@ export default function Home() {
             <p className="uppercase text-sm tracking-widest text-gray-600 text-center dark:text-white">
               you can reach me hear:
             </p>
-            <div className="text-5xl flex justify-center py-3  gap-16 dark:text-white">
+            <div className="text-5xl flex justify-center py-3  gap-16 dark:text-white social-media">
               <a href="https://github.com/Octavian-Busuioc" target="_blank">
                 <AiFillGithub />
               </a>
