@@ -1,34 +1,31 @@
-
-import Header from "./Header";
 import style from "../styles/Basket.module.css"
-import CheckoutForm from "../components/CheckoutForm"
+import CheckoutForm from "./CheckoutForm"
 import { useState } from "react";
 
 
-export default function Basket(props) {
-  const {onAdd, onRemove, cartItems} = props;
+export default function ShoppingCart ({addProducts, deleteProducts, cartItems}) {
   const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
   const [active, setActive] = useState(false);
   
   return (
     <div className={style.basket}>
       <h2>Cart Items</h2>
-      <div>
+      <div className={style.cart}>
         {cartItems.length === 0 && <div>Cart is empty</div>}
         {cartItems.map((item) => (
           <div key={item.id} className={style.row}>
             <div className={style.row}>{item.name}</div>
             <div className={style.row}>
-              <button onClick={() => onRemove(item)}>
+              <button className={style.button_add_remove} onClick={() => deleteProducts(item)}>
                 -
               </button>{' '}
-              <button onClick={() => onAdd(item)}>
+              <button className={style.button_add_remove} onClick={() => addProducts(item)}>
                 +
               </button>
             </div>
 
             <div className={style.row}>
-              {item.qty} x ${itemsPrice.toFixed(2)}
+              {item.qty} x ${item.price.toFixed(2)}
             </div>
           </div>
         ))}

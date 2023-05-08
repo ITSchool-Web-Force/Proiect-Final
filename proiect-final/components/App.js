@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
-import Header from "./Header";
 import ProductGroup from "./ProductGroup";
-import Basket from "./Basket";
-import Image from "next/image";
+import ShoppingCart from "./ShoppingCart";
 
 
 export default function App() {
     const [cartItems, setCartItems] = useState([]);
 
-    const onAdd = (product) => {
-        const exist = cartItems.find((item) => item.id === product.id);
+    const addProducts = (product) => {
+        const exist = cartItems.find((x) => x.id === product.id);
         if (exist) {
             const newCartItems = (
-              cartItems.map((item) =>
-                item.id === product.id ? { ...exist, qty: exist.qty + 1 } : item
+              cartItems.map((x) =>
+                x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
               )
             );
             setCartItems(newCartItems);
@@ -25,17 +23,17 @@ export default function App() {
           }
         };
 
-    const onRemove = (product) => {
-        const exist = cartItems.find((item) => item.id === product.id);
+    const deleteProducts = (product) => {
+        const exist = cartItems.find((x) => x.id === product.id);
         if (exist.qty === 1) {
             const newCartItems = (
-                cartItems.filter((item) => item.id !== product.id));
+                cartItems.filter((x) => x.id !== product.id));
             setCartItems(newCartItems);
             localStorage.setItem("cartItems", JSON.stringify(newCartItems));
         } else {
             const newCartItems = (
-                cartItems.map((item) =>
-                item.id === product.id ? { ...exist, qty: exist.qty - 1 } : item
+                cartItems.map((x) =>
+                x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
             )
             );
             setCartItems(newCartItems);
@@ -48,16 +46,17 @@ export default function App() {
     },[]);
 
     return (
-            <div className="App">
-                <Header countCartItems={cartItems.length}></Header>
-                <div className="row">
-                <ProductGroup onAdd={onAdd}></ProductGroup>
-                <Basket
-                    cartItems={cartItems}
-                    onAdd={onAdd}
-                    onRemove={onRemove}                
-                ></Basket>
-                </div>
-            </div>
+        <div>
+            <ProductGroup 
+                cartItems={cartItems}
+                addProducts={addProducts} 
+                deleteProducts={deleteProducts}>
+            </ProductGroup>
+            <ShoppingCart
+                cartItems={cartItems}
+                addProducts={addProducts}
+                deleteProducts={deleteProducts}>                
+            </ShoppingCart>
+        </div>
         );
     }
