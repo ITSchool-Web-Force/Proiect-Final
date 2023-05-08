@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
+import Header from "./Header";
 import ProductGroup from "./ProductGroup";
-import ShoppingCart from "./ShoppingCart";
+import Basket from "./Basket";
+import Image from "next/image";
 
 
 export default function App() {
     const [cartItems, setCartItems] = useState([]);
 
-    const addProducts = (product) => {
-        const exist = cartItems.find((x) => x.id === product.id);
+    const onAdd = (product) => {
+        const exist = cartItems.find((item) => item.id === product.id);
         if (exist) {
             const newCartItems = (
-              cartItems.map((x) =>
-                x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+              cartItems.map((item) =>
+                item.id === product.id ? { ...exist, qty: exist.qty + 1 } : item
               )
             );
             setCartItems(newCartItems);
@@ -23,17 +25,17 @@ export default function App() {
           }
         };
 
-    const deleteProducts = (product) => {
-        const exist = cartItems.find((x) => x.id === product.id);
+    const onRemove = (product) => {
+        const exist = cartItems.find((item) => item.id === product.id);
         if (exist.qty === 1) {
             const newCartItems = (
-                cartItems.filter((x) => x.id !== product.id));
+                cartItems.filter((item) => item.id !== product.id));
             setCartItems(newCartItems);
             localStorage.setItem("cartItems", JSON.stringify(newCartItems));
         } else {
             const newCartItems = (
-                cartItems.map((x) =>
-                x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+                cartItems.map((item) =>
+                item.id === product.id ? { ...exist, qty: exist.qty - 1 } : item
             )
             );
             setCartItems(newCartItems);
@@ -46,17 +48,16 @@ export default function App() {
     },[]);
 
     return (
-        <div>
-            <ProductGroup 
-                cartItems={cartItems}
-                addProducts={addProducts} 
-                deleteProducts={deleteProducts}>
-            </ProductGroup>
-            <ShoppingCart
-                cartItems={cartItems}
-                addProducts={addProducts}
-                deleteProducts={deleteProducts}>                
-            </ShoppingCart>
-        </div>
+            <div className="App">
+                <Header countCartItems={cartItems.length}></Header>
+                <div className="row">
+                <ProductGroup onAdd={onAdd}></ProductGroup>
+                <Basket
+                    cartItems={cartItems}
+                    onAdd={onAdd}
+                    onRemove={onRemove}                
+                ></Basket>
+                </div>
+            </div>
         );
     }

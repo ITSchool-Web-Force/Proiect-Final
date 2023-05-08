@@ -12,6 +12,11 @@
     align-items: center;
     gap: 2rem;
 }
+.col-2 {
+    background-color: red;
+    font-weight: bold;
+    border: 1px solid black;
+}
 .final_order {
     margin-inline: auto;
     width: 15vw;
@@ -26,22 +31,4 @@
 .checkout_button {
     border:none;
     background-color: white;
-}
-.button_add_remove {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-    width: 2rem;
-    background-color:  rgb(216, 146, 186);
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    font-size: 1rem;
-}
-.cart {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
 }

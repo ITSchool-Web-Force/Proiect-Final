@@ -1,0 +1,21 @@
+.cart_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5rem;
+    margin-inline-end: 2rem;
+}
+.cart {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.button {
+    background-color: #f1abd1;
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.6rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

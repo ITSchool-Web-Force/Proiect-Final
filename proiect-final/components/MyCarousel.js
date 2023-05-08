@@ -16,8 +16,8 @@ function MyCarousel() {
           alt="Beautiful fresh flowers for you"
         />
         <Carousel.Caption>
-          <h3>Welcome to Diana's Flower Shop</h3>
-          <p>Beautiful fresh flowers for you</p>
+          <h3>Beautiful fresh flowers for you</h3>
+          <p>Fresh flowers every day</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item className={style.my_carousel}>
