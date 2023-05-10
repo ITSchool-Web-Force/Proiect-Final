@@ -8,7 +8,7 @@ export default function ProductGroup(props) {
   const {addProducts, deleteProducts, products, cartItems} = props; 
   
     return <>
-      <h2 className={style.title_products}>Our bouquets</h2>
+        <h2 className={style.title_products}>Our bouquets</h2>
         <div className={style.product_list}>
           {products.map((product) => (
             <Product key={product.id} className={style.product}
