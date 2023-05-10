@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import Header from "./Header";
 import ProductGroup from "./ProductGroup";
-import Basket from "./Basket";
-import Image from "next/image";
+import ShoppingCart from "./ShoppingCart";
+import data from "./data";
 
 
 export default function App() {
     const [cartItems, setCartItems] = useState([]);
+    const {products} = data;
 
     const onAdd = (product) => {
         const exist = cartItems.find((item) => item.id === product.id);
@@ -48,16 +48,18 @@ export default function App() {
     },[]);
 
     return (
-            <div className="App">
-                <Header countCartItems={cartItems.length}></Header>
-                <div className="row">
-                <ProductGroup onAdd={onAdd}></ProductGroup>
-                <Basket
-                    cartItems={cartItems}
-                    onAdd={onAdd}
-                    onRemove={onRemove}                
-                ></Basket>
-                </div>
-            </div>
+        <div>
+            <ProductGroup 
+                cartItems={cartItems}
+                addProducts={addProducts} 
+                deleteProducts={deleteProducts}
+                products={products}>
+            </ProductGroup>
+            <ShoppingCart
+                cartItems={cartItems}
+                addProducts={addProducts}
+                deleteProducts={deleteProducts}>                
+            </ShoppingCart>
+        </div>
         );
     }

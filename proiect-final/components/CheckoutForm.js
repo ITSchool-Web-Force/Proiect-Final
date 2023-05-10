@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import Basket from './Basket';
+import Basket from './ShoppingCart';
 import style from "../styles/Basket.module.css"
 
-export default function CheckoutForm(props) {
+export default function CheckoutForm (props) {
   const [show, setShow] = useState(false);
   const {itemsPrice} = props;
 
