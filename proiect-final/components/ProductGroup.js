@@ -1,10 +1,12 @@
 import style from "../styles/ProductGroup.module.css"
 import Image from "next/image";
-import data from "./data";
 import Product from "../components/Product"
+import ShoppingCart from "./ShoppingCart";
+import App from "./App";
 
-export default function ProductGroup({addProducts, deleteProducts, cartItems}) {
-   const { products } = data;
+export default function ProductGroup(props) {
+  const {addProducts, deleteProducts, products, cartItems} = props; 
+  
     return <>
       <h2 className={style.title_products}>Our bouquets</h2>
         <div className={style.product_list}>
@@ -15,7 +17,7 @@ export default function ProductGroup({addProducts, deleteProducts, cartItems}) {
               price={product.price} 
               image={product.image} 
               basket_image={product.basket_image}
-              item={cartItems.find((x)=> x.id === product.id)}
+              cartItems={cartItems}
               addProducts={addProducts}
               deleteProducts={deleteProducts}>
             </Product>

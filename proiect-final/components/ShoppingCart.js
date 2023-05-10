@@ -1,10 +1,13 @@
 import style from "../styles/Basket.module.css"
 import CheckoutForm from "./CheckoutForm"
 import { useState } from "react";
+import App from "./App";
+import Product from "./Product";
 
 
-export default function ShoppingCart ({addProducts, deleteProducts, cartItems}) {
-  const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
+export default function ShoppingCart (props) {
+  const {addProducts, deleteProducts, cartItems, item, price, name, id} = props;
+  const itemsPrice = price;
   const [active, setActive] = useState(false);
   
   return (
@@ -13,8 +16,8 @@ export default function ShoppingCart ({addProducts, deleteProducts, cartItems}) 
       <div className={style.cart}>
         {cartItems.length === 0 && <div>Cart is empty</div>}
         {cartItems.map((item) => (
-          <div key={item.id} className={style.row}>
-            <div className={style.row}>{item.name}</div>
+          <div key={id} className={style.row}>
+            <div className={style.row}>{name}</div>
             <div className={style.row}>
               <button className={style.button_add_remove} onClick={() => deleteProducts(item)}>
                 -
@@ -25,7 +28,7 @@ export default function ShoppingCart ({addProducts, deleteProducts, cartItems}) 
             </div>
 
             <div className={style.row}>
-              {item.qty} x ${item.price.toFixed(2)}
+              {cartItems.qty} x ${price}
             </div>
           </div>
         ))}
@@ -38,7 +41,7 @@ export default function ShoppingCart ({addProducts, deleteProducts, cartItems}) 
                 <strong>Final price</strong>
               </div>
               <div className={style.row}>
-                <strong>${itemsPrice.toFixed(1)}</strong>
+                <strong>${itemsPrice}</strong>
               </div>
             </div>
             <hr />

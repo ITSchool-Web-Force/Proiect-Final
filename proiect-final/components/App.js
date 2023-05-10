@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import ProductGroup from "./ProductGroup";
 import ShoppingCart from "./ShoppingCart";
+import data from "./data";
 
 
 export default function App() {
     const [cartItems, setCartItems] = useState([]);
+    const {products} = data;
 
     const addProducts = (product) => {
         const exist = cartItems.find((x) => x.id === product.id);
@@ -50,7 +52,8 @@ export default function App() {
             <ProductGroup 
                 cartItems={cartItems}
                 addProducts={addProducts} 
-                deleteProducts={deleteProducts}>
+                deleteProducts={deleteProducts}
+                products={products}>
             </ProductGroup>
             <ShoppingCart
                 cartItems={cartItems}
