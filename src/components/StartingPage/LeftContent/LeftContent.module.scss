@@ -1,0 +1,109 @@
+.leftSideContent {
+  width: 400px;
+  height: 650px;
+  background-color: white;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 179, 179);
+}
+
+.setIcons {
+  font-size: 2em;
+}
+.iconsText  {
+  color: rgb(0, 0, 0);
+  padding-top: 7px;
+  margin-left: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.flexIcons {
+  display: flex;
+  padding: 5px;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+.flexIcons:hover {
+  display: flex;
+  padding: 5px;
+  margin: 10px;
+  background-color: #e0e7e8;
+  border-radius: 20px;
+}
+.homePage {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.roundedImg {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+}
+.username {
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  align-items: center;
+}
+.seeMoreIcon {
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+}
+.moreIcons {
+  margin-left: 27px;
+}
+.dropIcon {
+  margin-left: 5px;
+  padding-top: 2px;
+}
+.seemoreButton {
+  width: 100px;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: 450;
+  font-size: 12px;
+}
+
+.seemoreHr {
+  margin: 20px 0;
+}
+
+.friendList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.friendListItem {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.friendImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}

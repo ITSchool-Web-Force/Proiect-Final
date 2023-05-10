@@ -1,0 +1,59 @@
+.menuData,
+.linkAdjust,
+.loginBtn {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+.headerControl {
+  height: 8vh;
+  background-color: #24252a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+.logo {
+  cursor: pointer;
+  font-family: monospace;
+  width: 5em;
+  overflow: hidden;
+  font-size: 1.5em;
+  white-space: nowrap;
+  // color: rgba(0, 136, 169, 1);
+  color: white;
+  padding-top: 10px;
+
+}
+.logo:hover {
+  color: rgba(0, 136, 169, 1);
+}
+.links {
+  list-style: none;
+  padding-top: 13px;
+  padding-right: 4em;
+}
+.links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.linkAdjust {
+  transition: all 0.3s ease 0s;
+}
+.linkAdjust:hover {
+  color: #0088a9;
+}
+
+.loginBtn {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.loginBtn:hover {
+  background-color: rgba(0, 136, 169, 0.5);
+}

@@ -1,0 +1,136 @@
+.containerMain {
+  width: 40vw;
+}
+
+.post {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  margin: 30px 0;
+}
+.postContainer {
+  padding: 10px;
+}
+.postTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.postTopLeft {
+  display: flex;
+  align-items: center;
+}
+.postProfileImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+
+.postUsername {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 10px;
+}
+.postDate {
+  font-size: 10px;
+}
+.postCenter {
+  margin: 20px 0;
+}
+
+.postImageCenter {
+  margin-top: 10px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+.postBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.postBottomLeft {
+  display: flex;
+  align-items: center;
+}
+.likeIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.likeCounter {
+  font-size: 15px;
+}
+.context-menu-dropdown {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: teal;
+}
+.deleteMenu {
+  height: 50px;
+  width: 100px;
+  font-size: 12px;
+  color: #302b28;
+  font-weight: 500;
+  background-color: #ecedf5;
+}
+.likeShare {
+  display: flex;
+  justify-content: space-between;
+}
+.likeShare a {
+  text-decoration: none;
+  font-size: small;
+  color: #302b28;
+}
+.postReaction {
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cfcece;
+}
+.postReaction a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #302b28;
+}
+
+.profileImgRounded {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-top: 2px;
+}
+.commentBoxContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.commentContent {
+  width: 100%;
+  margin-bottom: 10px;
+  input {
+    border: unset;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 15px;
+    font-size: small;
+    background-color: #f5f1f1;
+  }
+}
+.linkAdjust {
+  text-decoration: none;
+  color: inherit;
+}
+// .postReaction .linkAdjust.blue {
+//   color: rgb(11, 11, 177);
+// }
