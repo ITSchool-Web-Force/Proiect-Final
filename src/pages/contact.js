@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image"
 import Layout from "@/components/Layout";
+import Link from "next/link";
 
 
 const ContactPage = () => {
@@ -62,8 +63,8 @@ const ContactPage = () => {
       <input id="email" type="email" name="email" required />
       <label htmlFor="message">Message </label>
       <textarea id="message" name="message" required />
-      <button type="submit">Submit</button>
-      <a href="/" button type="reset">Back</a>
+      <button> Submit </button>
+      <Link href="/">  Back </Link>
     </form>
   );
 
