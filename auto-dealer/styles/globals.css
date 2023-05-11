@@ -26,9 +26,6 @@ p {
 /* FOOTER */
 
 .footer {
-  background-image: url("../images/footer-bg-dark.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 15rem;
   display: flex;
   justify-content: center;
@@ -36,6 +33,7 @@ p {
   align-items: center;
   gap: 1rem;
   padding-block-start: 1.25rem;
+  background-color: #000;
 }
 
 .footer-address,
