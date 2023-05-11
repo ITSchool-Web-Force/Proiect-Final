@@ -23,7 +23,7 @@ export default function Login() {
     const handleLogin = async (event) =>  {
         event.preventDefault();
         try {
-            const response = await axios.post("http://localhost:3001/auth/login", { email, password });
+            const response = await axios.post("https://baricare-app.herokuapp.com/auth/login", { email, password });
             setCookies("access_token", response.data.token);
             window.localStorage.setItem("userID", response.data.userID);
             router.push('/');

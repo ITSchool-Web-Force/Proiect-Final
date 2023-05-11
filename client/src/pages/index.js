@@ -14,7 +14,7 @@ export default function Home() {
 
     const fetchRecipes = async () => {
       try {
-        const promise = await axios.get("http://localhost:3001/recipes");
+        const promise = await axios.get("https://baricare-app.herokuapp.com/recipes");
         setRecipes(promise.data);
       } catch(error) {
         console.log(error);

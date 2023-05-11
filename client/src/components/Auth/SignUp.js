@@ -23,7 +23,7 @@ export default function SignUp() {
     const handleSignUp = async (event) =>  {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:3001/auth/register", { username, email, password });
+            await axios.post("https://baricare-app.herokuapp.com/auth/register", { username, email, password });
             notifySuccess();
             setTimeout(() => {
                 router.push('/login');

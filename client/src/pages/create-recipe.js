@@ -52,7 +52,7 @@ export default function createRecipe() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await axios.post("http://localhost:3001/recipes", recipe);
+            await axios.post("https://baricare-app.herokuapp.com/recipes", recipe);
             notifySuccess();
             setTimeout(() => {
                 router.push('/');
