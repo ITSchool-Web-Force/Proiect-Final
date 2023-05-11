@@ -16,7 +16,7 @@ function MyCarousel() {
           alt="Beautiful fresh flowers for you"
         />
         <Carousel.Caption>
-          <h3>Welcome to Diana's Flower Shop</h3>
+          <h3>Welcome to Diana Flower Shop</h3>
           <p>Beautiful fresh flowers for you</p>
         </Carousel.Caption>
       </Carousel.Item>

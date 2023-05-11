@@ -113,7 +113,7 @@ const data = {
       },
       {
         id: '14',
-        name: 'Chrisantemum',
+        name: 'SuperChrisantemum',
         price: 87,
         image: colored_chrisantemum,
         basket_image: basket_icon,
