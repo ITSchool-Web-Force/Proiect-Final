@@ -6,7 +6,7 @@ import React, { useContext, useState} from 'react';
 import { useEffect } from 'react';
 import Image from 'next/image';
 import Footer from '../pages/Footer'
-import Testimonial from './testimonials';
+
 
 
 const Layout = ({ children }) => {
@@ -69,7 +69,7 @@ const Layout = ({ children }) => {
       
       <div className="block sm:hidden bg-white ">
         <div className="flex flex-col">
-        <Link href="/" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">Home</Link>
+        <Link href="/index" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">Home</Link>
           <a href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">About us</a>
           <a href="/contact" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1"> Contact</a>
           <a href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">Shop</a>
@@ -81,14 +81,9 @@ const Layout = ({ children }) => {
     </div>
   </div>
 </div>
-
-                   
-             
-            
-
             <main className='container m-auto mt-4 px-4'>
                 {children}
-            <div><Testimonial/></div>
+            
             </main>
             <footer> <Footer/>
               </footer>

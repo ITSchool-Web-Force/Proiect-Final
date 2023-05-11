@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
 import { useRouter } from 'next/router';
-import OrderForm from '@/components/OrderForm';
+
 
 
 
@@ -23,7 +23,7 @@ export default function CartScreen () {
                 Cart is empty. <Link href = "/ Continue shopping" ></Link>
                 </div>
       ) : (
-        <div className="grid md:grid-cols-4 md:gap-5">
+        <div className="grid md:grid-cols-4 md:gap-5 mb-20">
           <div className="overflow-x-auto md:col-span-3">
             <table className="min-w-full ">
               <thead className="border-b">
@@ -72,8 +72,6 @@ export default function CartScreen () {
               
             </ul>
           </div>
-
-          <OrderForm/>
         </div>
       )}
     </Layout>

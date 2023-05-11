@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image"
 
+
 const ContactPage = () => {
   const [submitterName, setSubmitterName] = useState("");
   const router = useRouter();
@@ -61,6 +62,7 @@ const ContactPage = () => {
       <label htmlFor="message">Message </label>
       <textarea id="message" name="message" required />
       <button type="submit">Submit</button>
+      <a href="/" button type="reset">Back</a>
     </form>
   );
 
@@ -139,7 +141,7 @@ const ContactPage = () => {
         `}
       </style>
     </div>
+    
   );
-};
-
-export default ContactPage;
+}
+export default ContactPage

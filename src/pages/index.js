@@ -2,6 +2,7 @@ import Layout from '../components/Layout';
 import { Inter } from 'next/font/google';
 import ProductItem from '../components/ProductItem';
 import data from "../utils/data"
+import Testimonial from '@/components/testimonials';
 
 
 
@@ -16,7 +17,9 @@ export default function Home() {
           <ProductItem product={product} key={product.slug}></ProductItem>
         ))}
       </div>
-     
+
+      <div><Testimonial/></div>
      </Layout>
+     
      );
 }
