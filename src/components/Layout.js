@@ -22,11 +22,10 @@ const Layout = ({ children }) => {
         <Head>
             <title> Java Jive Coffee Shop</title>
             <meta name="description" content="best coffee shop"/>
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/coffee.ico" />
         </Head>
         
-        
-        
+
         <div className="bg-blue-500">
 	<div className="bg-white shadow">
     <div className="container mx-auto px-4">
