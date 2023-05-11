@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
         <div className="hidden sm:flex sm:items-center">
            <Link href="/" className="text-gray-800 text-sm font-semibold hover:text-red-600 mr-4">Home</Link>
           <a href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mr-4">About us</a>
-          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mr-4">Contact</a>
+          <a href="/contact" className="text-gray-800 text-sm font-semibold hover:text-red-600 mr-4">Contact</a>
           <a href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600">Shop</a>
         </div>
 
@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
         <div className="flex flex-col">
         <Link href="/" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">Home</Link>
           <a href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">About us</a>
-          <a href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1"> Contact</a>
+          <a href="/contact" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1"> Contact</a>
           <a href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">Shop</a>
           <div className="flex justify-between items-center border-t-2 pt-2">
 
