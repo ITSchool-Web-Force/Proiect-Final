@@ -1,5 +1,5 @@
-import { Navbar, About, Hero, Explore } from './components'
-import { SliderData } from './components/AboutSlider';
+import { Navbar, About, Hero, Explore } from '../components'
+import { SliderData } from '../components/AboutSlider';
 
 export default function Home() {
   return (

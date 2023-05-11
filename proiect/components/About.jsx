@@ -1,5 +1,5 @@
 'use client';
-import { SliderData } from "./AboutSlider";
+import { SliderData } from "@/components/AboutSlider";
 import { useState } from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight} from 'react-icons/fa'
 

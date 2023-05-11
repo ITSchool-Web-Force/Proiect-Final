@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, MyWork,PortofolioData } from './components'
+import { Navbar, MyWork,PortofolioData } from '../components'
 
 
 function work() {

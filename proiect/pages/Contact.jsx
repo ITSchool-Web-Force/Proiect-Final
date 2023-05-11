@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar,ContactWork } from './components'
+import { Navbar,ContactWork } from '../components'
 
 function Contact() {
   return (
