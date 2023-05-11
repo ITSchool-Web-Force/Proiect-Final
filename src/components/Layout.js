@@ -6,6 +6,7 @@ import React, { useContext, useState} from 'react';
 import { useEffect } from 'react';
 import Image from 'next/image';
 import Footer from '../pages/Footer'
+import Testimonial from './testimonials';
 
 
 const Layout = ({ children }) => {
@@ -32,7 +33,7 @@ const Layout = ({ children }) => {
       <div className="flex items-center justify-between py-4">
         <div>
           
-        <Image src="/image/logo.png" alt="best coffee" href="./"
+        <Image src="/image/logo.png" alt="best coffee" href="/"
                     width={200}
                     height={200}></Image>
         </div>
@@ -55,7 +56,7 @@ const Layout = ({ children }) => {
                     {cartItemsCount}
                   </span>
                     )} </Link>
-                        <Link href="/login"> LogIn</Link>
+                       
                     </div>
 
             
@@ -87,7 +88,7 @@ const Layout = ({ children }) => {
 
             <main className='container m-auto mt-4 px-4'>
                 {children}
-                
+            <div><Testimonial/></div>
             </main>
             <footer> <Footer/>
               </footer>
