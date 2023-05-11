@@ -3,7 +3,8 @@ import style from "../styles/Form.module.css"
 export default function Form() {
     return <>
         <div className={style.background}>
-        <form className={style.contact_form} name="contact-form" method="POST" data-netlify="true" action="contact/?success=true">
+        <form className={style.contact_form} method="POST" name="contact-form" action="contact/?success=true" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact-form" />
             <h1 className={style.title}>Contact us</h1>
             <label className={style.form_group}>
                 Name
