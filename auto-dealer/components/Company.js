@@ -33,14 +33,14 @@ function Company() {
         <div className="intro">
           <p>
             The business was born from a long heritage of dealing in Supercars,
-            stemming from the Cellini family's personal ownership of numerous
-            contemporary Lamborghini models over 30 years ago. This passion for
-            collecting Supercars inevitably led to more active buying and
-            selling of the cars, which in turn led to the establishment of CG
-            International as a separate trading entity. The success of the
-            business over many years trading, has led to its position as a
-            globally recognised centre of excellence for Supercar sales, with
-            thousands of satisfied customers all over the world.
+            stemming from the Cellini family&apos;s personal ownership of
+            numerous contemporary Lamborghini models over 30 years ago. This
+            passion for collecting Supercars inevitably led to more active
+            buying and selling of the cars, which in turn led to the
+            establishment of CG International as a separate trading entity. The
+            success of the business over many years trading, has led to its
+            position as a globally recognised centre of excellence for Supercar
+            sales, with thousands of satisfied customers all over the world.
           </p>
         </div>
         <Image

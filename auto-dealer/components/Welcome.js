@@ -24,12 +24,12 @@ function Welcome() {
           carried out by our teams in CG Car Clinic and CG Cars Garage. CG
           International also facilitates car trade-in. Choose from our existing
           fleet of luxury cars for sale in London and replace your vehicle in an
-          easy way. You can sell your used car to us or request one that isn't
-          included in our inventory. At CG International, we are committed to
-          offering the best experience to our customers, and our quality of
-          services reflects just that. In the span of over 35 years, we have
-          evolved into the largest and most client-preferred distributor of
-          luxury vehicles in the United Kingdom.
+          easy way. You can sell your used car to us or request one that
+          isn&apos;t included in our inventory. At CG International, we are
+          committed to offering the best experience to our customers, and our
+          quality of services reflects just that. In the span of over 35 years,
+          we have evolved into the largest and most client-preferred distributor
+          of luxury vehicles in the United Kingdom.
         </p>
         <div>
           <Link href="/about">
