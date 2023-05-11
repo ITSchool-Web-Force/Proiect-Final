@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
 import { useRouter } from 'next/router';
+import OrderForm from '@/components/OrderForm';
 
 
 
@@ -71,6 +72,8 @@ export default function CartScreen () {
               
             </ul>
           </div>
+
+          <OrderForm/>
         </div>
       )}
     </Layout>
