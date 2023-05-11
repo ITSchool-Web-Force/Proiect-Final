@@ -11,7 +11,7 @@ import { useRouter } from 'next/router';
 
 import styles from '../styles/container/add.module.scss';
 
-function HomePage() {
+function Add() {
 
     const user = useUser();
     const router = useRouter();
@@ -29,9 +29,10 @@ function HomePage() {
 
     const [expression, setExpression] = useState();
     const [explication, setExplication] = useState();
-    const [example, SetExample] = useState();
+    const [example, setExample] = useState();
 
     const [show, setShow] = useState(false);
+    const [theError, setTheError] = useState(false);
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -44,20 +45,26 @@ function HomePage() {
                     explication: explication,
                     example: example,
                     author: user.user_metadata.user_name,
-                    likes: '0',
-                    dislikes: '0',
                     date: theDate,
                     user_id: user.id
             }])
         
             if (add.error) {
-                alert(add.error.message);
+                console.log(add.error);
+                setTheError(true);
+                setTimeout(() => {
+                    setTheError(false);
+                }, 3000);
             } else { 
                 e.target.reset();
                 setShow(true);
                 setTimeout(() => {
                     setShow(false);
                 }, 3000);
+                setTimeout(() => {
+                    const expressionName = encodeURI(expression)
+                    router.push(`/${expressionName}`);
+                }, 3200);
             }
         } else {
             router.push('/auth');
@@ -71,55 +78,60 @@ function HomePage() {
         <div className={styles.content}>
             <div className={styles.addPage}>
                 {!user && <div>Trebuie să fii logat pentru a adăuga o expresie</div>}
-                {user && <>
-                <h2>ADAUGĂ O EXPRESIE</h2>
-                <form 
-                    onSubmit={handleSubmit}
-                    className={styles.addForm}
-                >
+                {user && 
+                    <>
+                        <h2>Adaugă o expresie</h2>
+                        <form 
+                            onSubmit={handleSubmit}
+                            className={styles.addForm}
+                        >
 
-                    <label htmlFor="expression">Expresie</label>
-                    <textarea 
-                        name="expression" 
-                        placeholder="Introdu expresia" 
-                        rows={1}
-                        cols={20} 
-                        required 
-                        onChange={(e) => setExpression(e.target.value)}
-                    > 
-                    </textarea>
-                
-                    <label htmlFor="explication">Explicație</label>
-                    <textarea 
-                        name="explication" 
-                        placeholder="Introdu explicația" 
-                        rows={2}
-                        cols={50}
-                        required
-                        onChange={(e) => setExplication(e.target.value)}
-                    >
-                    </textarea>
+                            <label htmlFor="expression">Expresie</label>
+                            <textarea 
+                                name="expression" 
+                                placeholder="Introdu expresia" 
+                                rows={1}
+                                cols={20} 
+                                required 
+                                onChange={(e) => setExpression(e.target.value)}
+                            > 
+                            </textarea>
+                        
+                            <label htmlFor="explication">Explicație</label>
+                            <textarea 
+                                name="explication" 
+                                placeholder="Introdu explicația" 
+                                rows={2}
+                                cols={50}
+                                required
+                                onChange={(e) => setExplication(e.target.value)}
+                            >
+                            </textarea>
 
-                    <label htmlFor="example">Exemplu</label>
-                    <textarea 
-                        name="example" 
-                        placeholder="Introdu un exemplul de folosire" 
-                        rows={3}
-                        cols={50} 
-                        required
-                        onChange={(e) => SetExample(e.target.value)}
-                    >
-                    </textarea>
-                    
-                    <button type="submit">Trimite</button>      
-                </form>
-                </>}
+                            <label htmlFor="example">Exemplu</label>
+                            <textarea 
+                                name="example" 
+                                placeholder="Introdu un exemplul de folosire" 
+                                rows={3}
+                                cols={50} 
+                                required
+                                onChange={(e) => setExample(e.target.value)}
+                            >
+                            </textarea>
+                            
+                            <button type="submit">Trimite</button>      
+                        </form>
+                    </>
+                }
                 {show && ( 
-                    <Modal message={'Expresia a fost adăugată cu succes'}/>
+                    <Modal message={'Expresia a fost adăugată cu succes'} status='succes'/>
+                )}
+                {theError && ( 
+                    <Modal message={'A apărut o eroare'} status='fail'/>
                 )}
             </div>
         </div>
     </>
 }
   
-export default HomePage
+export default Add

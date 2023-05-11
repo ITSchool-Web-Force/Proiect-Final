@@ -8,8 +8,7 @@ import { Modal } from '../components/container/modal';
 
 import styles from '../styles/container/auth.module.scss';
 
-
-function HomePage() {
+function Auth() {
 
     const isLogged = useUser();
     const supabaseClient = useSupabaseClient();
@@ -17,6 +16,8 @@ function HomePage() {
     const router = useRouter();
 
     const [show, setShow] = useState(false);
+    const [theError, setTheError] = useState(false);
+
     const [justLogged, setJustLogged] = useState(false);
 
     if(isLogged && !justLogged) {
@@ -47,6 +48,10 @@ function HomePage() {
     
         if (error) {
             console.log(error);
+            setTheError(true);
+            setTimeout(() => {
+                setTheError(false);
+            }, 3000);
         } else {
             setShow(true);
             setJustLogged(true);
@@ -65,7 +70,7 @@ function HomePage() {
         </Head>
         <div className={styles.content}>
             <div className={styles.loginPage}>
-                <h2>AUTENTIFICĂ-TE</h2> 
+                <h2>Autentifică-te</h2> 
                 <form 
                     onSubmit={handleSubmit}
                     className={styles.loginForm}
@@ -90,15 +95,18 @@ function HomePage() {
                     
                     <div className={styles.loginPassword}>
                         <button type="submit">Login</button>      
-                        <a className={styles.forgotPassword} href="">Ai uitat parola?</a>
+                        <a className={styles.forgotPassword} href="/forgot">Ai uitat parola?</a>
                     </div>
                 </form>
                 {show && ( 
-                    <Modal message={'Ai fost logat cu succes. Vei fi redirecționat către prima pagină'}/>
+                    <Modal message={'Ai fost logat cu succes. Vei fi redirecționat către prima pagină'} status='succes'/>
+                )}
+                {theError && ( 
+                    <Modal message={'A apărut o eroare'} status='fail'/>
                 )}
             </div>
         </div>
     </>
 }
   
-export default HomePage
+export default Auth

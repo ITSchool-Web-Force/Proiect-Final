@@ -3,16 +3,18 @@ import { supabase } from '../../utilities/supabase';
 
 import { useState, useEffect, useRef } from 'react';
 
+import { Modal } from '../../components/container/modal';
+
 import { ThreeDots  } from  'react-loader-spinner'
 
-import { ExpressionCard } from '../../components/container/index/expresionsprofile';
+import { ExpressionCard } from '../../components/container/index/expressioncard';
 
 import styles from '../../styles/container/account.module.scss';
 
-function HomePage({data}) {
+function Username(props) {
 
-    const username = data[0].username;
-    const id = data[0].id;
+    const username = props.data.username;
+    const id = props.data.id;
 
     const HowMany = 5;
 
@@ -23,7 +25,13 @@ function HomePage({data}) {
     const [from, setFrom] = useState(0);
     const [to, setTo] = useState(HowMany-1);
 
+    const [theError, setTheError] = useState(false);
+
     const elementRef = useRef(null);
+
+    if(props.error) {
+        setTheError(true)
+    }
   
     function onIntersection(entries) {
         entries.forEach((entry) => {
@@ -38,7 +46,7 @@ function HomePage({data}) {
         const observer = new IntersectionObserver(onIntersection);
 
         if (observer && elementRef.current && hasMore ) {
-        observer.observe(elementRef.current);
+            observer.observe(elementRef.current);
         }
 
         return () => {
@@ -70,7 +78,7 @@ function HomePage({data}) {
             .order('created_at',  {ascending: false} )
 
         if (error) {
-            console.log(error);
+            setTheError(true)
         }
   
         if (data.length === 0) {
@@ -88,10 +96,10 @@ function HomePage({data}) {
         </Head>
         <div className={styles.content}>
             <div className={styles.accountPage}>
-                <h2>Expresile utilizatorului {username}</h2>
+                <h2>Expresile adăugate de {username}</h2>
                 <div className={styles.expressionsList}>
                     {expressions && (expressions.map((expression) => (
-                    <ExpressionCard expressionData={expression} id={id} key={expression.id} />
+                    <ExpressionCard expressionData={expression} id={id} key={expression.id} showAuthor='false' />
                     )))}
                     {loading && ( 
                         <ThreeDots 
@@ -117,6 +125,9 @@ function HomePage({data}) {
                         >
                         </span>     
                     )}
+                    {theError && ( 
+                        <Modal message={'A apărut o eroare'} status='fail'/>
+                    )}
                 </div>
             </div>
         </div>
@@ -130,6 +141,7 @@ export async function getServerSideProps({params}) {
     .from("users")
     .select()
     .eq('username', username)
+    .single()
 
     if(error) {
         console.log(error);
@@ -137,9 +149,10 @@ export async function getServerSideProps({params}) {
 
     return {
         props: { 
-            data
+            data, 
+            error
         }
     }
 }
   
-export default HomePage
+export default Username

@@ -1,30 +1,9 @@
-import { useState, useEffect} from 'react';
-import { ExpressionWidget } from "../components/container/sidebar/expressionday";
+import { ExpressionWidget } from "../components/container/sidebar/ExpressionWidget";
 
 import styles from "../styles/container/sidebar.module.scss";
 
 function Sidebar() {
 
-    const [expressions, setExpression] = useState([]);
-
-    async function getData() {
-
-        const { data, error } = await supabase
-            .from('expressions')
-            .select()
-            .range(from, to)
-            .order('created_at',  {ascending: false} )
-    
-        if (error) {
-            throw error;
-        }
-    
-        if (data.length === 0) {
-            console.log('no more data');
-        } else {
-            setExpression((prevExpression) => [...prevExpression, ...data]);
-        }
-    }
     return <>
         <div className={styles.sidebar}>
             <ExpressionWidget/>

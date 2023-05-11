@@ -4,12 +4,11 @@ import { Modal } from '../components/container/modal';
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
 
 import { useState } from 'react';
-import { supabase } from '../utilities/supabase';
 import { useRouter } from 'next/router';
 
 import styles from '../styles/container/reg.module.scss';
 
-function HomePage() {
+function Reg() {
 
     const isLogged = useUser();
     const router = useRouter();
@@ -17,6 +16,7 @@ function HomePage() {
     const supabaseClient = useSupabaseClient();
 
     const [show, setShow] = useState(false);
+    const [theError, setTheError] = useState(false);
 
     if(isLogged) {
         router.push('/');
@@ -45,6 +45,10 @@ function HomePage() {
     
         if (error) {
             console.log(error);
+            setTheError(true);
+            setTimeout(() => {
+                setTheError(false);
+            }, 3000);
         } else {
             setShow(true);
             setTimeout(() => {
@@ -67,7 +71,7 @@ function HomePage() {
         </Head>
         <div className={styles.content}>
             <div className={styles.registerPage}>
-                <h2>INREGISTREAZĂ-TE</h2>
+                <h2>Înregistrează-te</h2>
                 <form 
                     onSubmit={handleSubmit}
                     className={styles.registerForm}
@@ -102,11 +106,14 @@ function HomePage() {
                     <button type="submit">Creează Cont</button>      
                 </form>
                 {show && ( 
-                    <Modal message={'Contul a fost create cu succes. Verifică-ți email-ul pentru a confirma contul.'}/>
+                    <Modal message={'Contul a fost create cu succes. Verifică-ți email-ul pentru a confirma contul.'} status='succes'/>
+                )}
+                {theError && ( 
+                    <Modal message={'A apărut o eroare'} status='fail'/>
                 )}
             </div>
         </div>
     </>
 }
   
-export default HomePage
+export default Reg

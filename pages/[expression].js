@@ -1,6 +1,8 @@
 import Head from 'next/head'
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
+import { Modal } from '../components/container/modal';
 
 import { ExpressionCard } from '../components/container/index/expressioncard';
 
@@ -9,17 +11,25 @@ import { supabase } from '../utilities/supabase';
 import styles from '../styles/container/expression.module.scss';
 
 
-function HomePage({data}) {
+function Expression(props) {
 
-    const expression = data[0];
+    const expression = props.data;
+    const [theError, setTheError] = useState(false);
+
+    if(props.error) {
+        setTheError(true)
+    }
 
     return <>
         <Head>
-            <title></title>
+            <title>{expression.expression}</title>
         </Head>
         <div className={styles.content}>
             <div className={styles.ExpressionPage}>
                 <ExpressionCard expressionData={expression} key={expression.id} />
+                {theError && ( 
+                    <Modal message={'A apărut o eroare'} status='fail'/>
+                )}
             </div>
         </div>
     </>
@@ -36,10 +46,7 @@ export async function getServerSideProps({params}) {
             .from('expressions')
             .select()
             .eq('expression', decodedExpression)
-
-        if (error) {
-            console.log(error);
-        }
+            .single()
 
     if (error || !data || data.length === 0) {
         return {
@@ -49,9 +56,10 @@ export async function getServerSideProps({params}) {
 
     return {
         props: { 
-            data
+            data,
+            error
         }
     }
 }
   
-export default HomePage
+export default Expression

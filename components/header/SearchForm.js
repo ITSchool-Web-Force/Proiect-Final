@@ -33,6 +33,26 @@ function SearchForm() {
         }
     }
 
+    function getLink(expression) {
+        return encodeURI(expression)
+    }
+
+    function showSummary(expression) {
+        const words = expression.split(" ");
+        const numWords = words.length;
+        let summary = '';
+        const lenght = 6;
+
+        if(numWords > lenght) {
+            for(let i=0; i < lenght; i++) {
+                summary += words[i] + ' ';
+            }
+            return `${summary}...` 
+        } else {
+            return expression;
+        }
+    }
+
     return <>
         <div className={styles.theSearch}>
             <form className={styles.searchForm}>
@@ -43,9 +63,13 @@ function SearchForm() {
             </form> 
             {value && (expressions.length > 0 && <div className={styles.dropdown}>
                     {expressions.map((item) => ( 
-                    <div className='' key={item.expression}>
-                            {item.expression}
-                    </div>
+                        <ul key={item.expression}>
+                            <a href={getLink(item.expression)}>
+                                <button>
+                                    <span>{item.expression}</span> =&gt; {showSummary(item.expression)}
+                                </button>
+                            </a>
+                        </ul>
                     ))}
             </div>)}
         </div>

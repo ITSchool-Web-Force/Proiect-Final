@@ -6,10 +6,15 @@
     border-radius: 0.5em;
     background-color: var(--third-color);
     margin-block-start: 1.5em;
+    text-align: left;
 
     .expression {
         font-weight: bold;
-        font-size: 1.4em;
+        font-size: 1.6em;
+        cursor: pointer;
+        &:hover {
+            color: var(--clickable-color);
+        }
     }          
     .explication {
         padding-block-start: 0.5em;

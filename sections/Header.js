@@ -1,7 +1,7 @@
 import { Logo } from "../components/header/Logo";
 import { Navbar } from "../components/header/Navbar";
 import { SearchForm } from "../components/header/SearchForm";
-import { ThemeSwitch } from "../components/header/switcher";
+import { ThemeSwitch } from "../components/header/ThemeSwitch";
 
 import styles from "../styles/header/header.module.scss";
 

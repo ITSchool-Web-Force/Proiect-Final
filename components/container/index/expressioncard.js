@@ -3,17 +3,17 @@ import DislikeSvg from "../../../svgs/dislike";
 
 import styles from "../../../styles/container/card.module.scss";
 
-import NoSSRWrapper from "../../../components/nossr"
+import NoSSRWrapper from "../../NoSSRWrapper"
 
 import { useEffect, useState } from 'react';
-
+ 
 import { useUser } from '@supabase/auth-helpers-react'
 
 import { useRouter } from 'next/router';
 
 import { supabase } from '../../../utilities/supabase';
 
-function ExpressionCard ( {expressionData} ) {
+function ExpressionCard ( {expressionData, showAuthor} ) {
 
     const [isLiked, setIsLiked] = useState(false);
     const [isDisliked, setIsDisliked] = useState(false);
@@ -82,11 +82,8 @@ function ExpressionCard ( {expressionData} ) {
         if(user) {
             getLikeStatus();
         }
+        getLikes();
     }, [user]);
-
-    useEffect(() => {
-            getLikes();
-    }, [likes, dislikes]);
 
     async function handleLike(e) {
         e.preventDefault();
@@ -103,7 +100,7 @@ function ExpressionCard ( {expressionData} ) {
                     .insert([{
                         post_id: expressionData.id, 
                         user_id: user.id
-                    }])
+                    }], { returning: "minimal" })
 
                 if(error) {
                     console.log(error);
@@ -114,7 +111,7 @@ function ExpressionCard ( {expressionData} ) {
 
                 const { error } = await supabase
                     .from('likes')
-                    .delete()
+                    .delete({ returning: "minimal" })
                     .eq('user_id', user.id)
                     .eq('post_id', expressionData.id)
 
@@ -142,7 +139,7 @@ function ExpressionCard ( {expressionData} ) {
                     .insert([{
                         post_id: expressionData.id, 
                         user_id: user.id
-                    }])
+                    }], { returning: "minimal" })
 
                 if(error) {
                     console.log(error);
@@ -153,7 +150,7 @@ function ExpressionCard ( {expressionData} ) {
 
                 const { error } = await supabase
                     .from('dislikes')
-                    .delete()
+                    .delete({ returning: "minimal" })
                     .eq('user_id', user.id)
                     .eq('post_id', expressionData.id)
 
@@ -182,8 +179,8 @@ function ExpressionCard ( {expressionData} ) {
             <a className={styles.expression} onClick={() => expressionClick(expressionData.expression)}>{expressionData.expression}</a>
             <div className={styles.explication}>{expressionData.explication}</div>
             <div className={styles.example}>{expressionData.example}</div>
-            <div className={styles.cardInfo}>adăugat de 
-                <span className={styles.author} onClick={() => authorClick(expressionData.author)}> {expressionData.author} </span>
+            <div className={styles.cardInfo}>adăugat {showAuthor !== 'false' && <>de 
+                <span className={styles.author} onClick={() => authorClick(expressionData.author)}> {expressionData.author} </span></>}
                 pe
                 <span className={styles.date}> {expressionData.date}</span>
             </div>

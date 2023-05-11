@@ -3,7 +3,7 @@ import styles from "../../../styles/container/expresionwidget.module.scss";
 function ExpressionWidget() {
     return <>
             <div className={styles.expressionWidget}>
-                <h2>Expresia zilei</h2>
+                <h2>Expresia săptămânii</h2>
                 <div className={styles.expressionCardButton}>
                     <div className={styles.expressionCard}>
                         <div className={styles.firstRow}>

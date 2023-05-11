@@ -1,24 +1,31 @@
 import Head from 'next/head'
 
-import { useState, useEffect, useRef } from 'react';
-import { supabase } from '../utilities/supabase';
-import { ThreeDots  } from  'react-loader-spinner'
-import { ExpressionCard } from '../components/container/index/expressioncard';
+import { Modal } from '../components/container/modal';
+import { useState } from 'react';
 
-import styles from '../styles/container/content.module.scss';
+import { supabase } from '../utilities/supabase';
+
 import { Content } from '../sections/Content';
 
-
 function HomePage(props) {
+
+    const [theError, setTheError] = useState(false);
+
+    if(props.error) {
+        setTheError(true)
+    }
 
     return <>
         <Head>
             <title>Dicționar Urban</title>
         </Head>
         <Content ssrData={props.data} posts={props.HowMany}/>
+        {theError && ( 
+            <Modal message={'A apărut o eroare'} status='fail'/>
+        )}
     </>
 }
-
+ 
 export async function getServerSideProps(context) {
 
     const HowMany = 5;
@@ -30,6 +37,7 @@ export async function getServerSideProps(context) {
             ;
 
     if (error || !data || data.length === 0) {
+
         return {
             notFound: true,
         };
@@ -38,7 +46,8 @@ export async function getServerSideProps(context) {
     return {
         props: {
             data,
-            HowMany
+            HowMany,
+            error
         }
     }
 }
