@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+
+html,
+body {
+  background-color: #000;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar-style {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 4rem;
+  height: auto;
+}
+
+/* FOOTER */
+
+.footer {
+  background-image: url("../images/footer-bg-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-block-start: 1.25rem;
+}
+
+.footer-address,
+.copyright {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+.footer-address {
+  font-size: 0.85rem;
+}
+
+.copyright {
+  display: inline-flex;
+  font-size: 0.8rem;
+  color: #989898fe;
+  justify-content: center;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.media-icon {
+  transition: filter 0.5s ease;
+}
+
+.media-icon:hover {
+  filter: opacity(50%);
+}
+
+/* CAROUSEL */
+
+.carousel-img1 {
+  height: auto;
+  width: 100vw;
+}
+
+.carousel-img2 {
+  height: auto;
+  width: 100vw;
+}
+.carousel-img3 {
+  height: auto;
+  width: 100vw;
+}
+
+/* WELCOME */
+
+.welcome-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ececec;
+  padding: 3rem 4rem;
+  gap: 2rem;
+}
+welcome-text {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.showroom-image {
+  width: 50vw;
+  height: auto;
+}
+.showroom-image-sm {
+  display: none;
+}
+
+@media (max-width: 1600px) {
+  .welcome-section {
+    padding: 3rem;
+  }
+
+  .welcome-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .showroom-image {
+    display: none;
+  }
+  .showroom-image-sm {
+    display: block;
+    width: 100vw;
+    height: auto;
+  }
+}
+
+/* CONTACT */
+
+.contact-img {
+  width: 100%;
+  height: auto;
+}
+
+/* FORM */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 2.5rem;
+}
+.form-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.label-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.send-button {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #777115;
+  background-color: #fad91e;
+  border-color: #cbcbcbfe;
+  padding-inline: 0.75rem;
+}
+
+/* CURRENT STOCK */
+
+.page-wrapper {
+  background-color: rgb(225, 225, 225);
+}
+
+.sale-img {
+  width: 100vw;
+  height: auto;
+}
+
+.card-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 2.5rem;
+}
+
+.card-structure {
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  background-color: #f3f3f3;
+  border: 2px solid #c2c2c2fe;
+  margin-block-end: 2.5rem;
+  /* padding: 1.5rem; */
+  gap: 1.5rem;
+}
+
+.car-image,
+.top-image {
+  width: 30vw;
+  height: auto;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.title-space {
+  display: flex;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.product-title,
+.price {
+  color: #989898fe;
+}
+
+.spec-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.spec-key,
+.product-title {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.spec-key {
+  margin-inline-end: 0.5rem;
+}
+
+.details-button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #989898fe;
+  background-color: #f3f3f3;
+  border-color: #cbcbcbfe;
+  padding-inline: 0.75rem;
+}
+
+.price {
+  font-size: 1.25rem;
+}
+
+/* CAR PAGE */
+
+.car-page-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  gap: 2rem;
+  margin: 3rem auto;
+}
+
+.upper-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.top-image {
+  width: 40vw;
+  height: auto;
+}
+
+.section-title {
+  font-weight: bold;
+  border-block-end: 1px solid #000;
+}
+
+.images-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.spec-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* RECENT CARS */
+
+.recent-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-block: 2rem;
+}
+
+.recent-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.recent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.recent-title {
+  margin: 0;
+}
+
+/* ABOUT*/
+
+.about-image,
+.team-image {
+  width: 100%;
+  height: auto;
+}
+
+.intro {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 3.5rem;
+}
+.about-text {
+  font-size: 1.75rem;
+  font-weight: lighter;
+  margin: 0;
+}
+.team-layout {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-block-end: 2rem;
+}
+.personal-text,
+.person-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.person-group {
+  gap: 1rem;
+}
+
+.personal-image {
+  width: 50%;
+  height: auto;
+}
+
+.name {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
