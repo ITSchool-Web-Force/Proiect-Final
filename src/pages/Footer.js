@@ -28,7 +28,7 @@ export default function Footer() {
 
         <ul className="mt-8 space-y-1 text-sm text-gray-700">
           <li>Monday to Friday: 10am - 8pm</li>
-          <li>Weekend: 10am - 10pm</li>
+          <li>Weekend: 11am - 10pm</li>
         </ul>
 
         <ul className="flex gap-6 mt-8">
@@ -106,31 +106,31 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  1on1 Coaching
+                  Partner with us 
                 </Link>
               </li>
 
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  Company Review
+                  Wholesale support
                 </Link>
               </li>
 
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  Accounts Review
+                Wholesale website
                 </Link>
               </li>
 
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  HR Consulting
+                  Corporate gifting 
                 </Link>
               </li>
 
               <li>
                 <Link href="#" className="text-gray-700 transition hover:opacity-75">
-                  SEO Optimisation
+                  FAQs
                 </Link>
               </li>
             </ul>
@@ -190,7 +190,7 @@ export default function Footer() {
         </nav>
 
         <p className="mt-8 text-xs text-gray-500 sm:mt-0">
-          &copy; 2022. Company Name. All rights reserved.
+          &copy; 2023 Java Jive Coffee. All rights reserved.
         </p>
       </div>
     </div>

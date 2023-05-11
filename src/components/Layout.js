@@ -6,6 +6,7 @@ import React, { useContext, useState} from 'react';
 import { useEffect } from 'react';
 import Image from 'next/image';
 import Footer from '../pages/Footer'
+import autoprefixer from 'autoprefixer';
 
 const Layout = ({ children }) => {
     const { state, dispatch } = useContext(Store);
@@ -32,8 +33,8 @@ const Layout = ({ children }) => {
         <div>
           
         <Image src="/image/logo.png" alt="best coffee" href="./"
-                    width={100}
-                    height={100}></Image>
+                    width={200}
+                    height={200}></Image>
         </div>
 
         <div className="hidden sm:flex sm:items-center">
