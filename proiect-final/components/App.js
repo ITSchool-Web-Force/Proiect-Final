@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
 import ProductGroup from "./ProductGroup";
-import ShoppingCart from "./ShoppingCart";
 import data from "./data";
 
 
 export default function App() {
     const [cartItems, setCartItems] = useState([]);
-    const {products} = data;
 
     const onAdd = (product) => {
         const exist = cartItems.find((item) => item.id === product.id);
@@ -14,7 +11,6 @@ export default function App() {
             const newCartItems = (
               cartItems.map((item) =>
                 item.id === product.id ? { ...exist, qty: exist.qty + 1 } : item
-              )
             );
             setCartItems(newCartItems);
             localStorage.setItem("cartItems", JSON.stringify(newCartItems));
@@ -50,16 +46,8 @@ export default function App() {
     return (
         <div>
             <ProductGroup 
-                cartItems={cartItems}
-                addProducts={addProducts} 
-                deleteProducts={deleteProducts}
                 products={products}>
             </ProductGroup>
-            <ShoppingCart
-                cartItems={cartItems}
-                addProducts={addProducts}
-                deleteProducts={deleteProducts}>                
-            </ShoppingCart>
         </div>
         );
     }

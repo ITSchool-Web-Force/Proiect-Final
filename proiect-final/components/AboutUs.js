@@ -15,7 +15,6 @@ export default function AboutUs() {
         <Image className={styles.image} src={image_florist_field} height={500} width={500} alt="florist on a field"></Image>
         <p className={styles.text}>
         My designs allow flowers to be as they are.  Fresh and pure, while being naturally whimsical. I am inspired by the way foliage, herbs, branches and fruit compliment their identity.  I may place lavender in a bouquet for luck, or rosemary in a boutonniere for love.
-
         Our team s goal:  To have flowers be an expression of who you are.  Incorporating the colors you love and the shapes you gravitate towards. We strive to accomplish your vision and to make any wedding, event, delivery, or trip to the shop personal and special.  This was the magic I was meant to create. 
         </p>
     </>
