@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Oooh+Baby&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+  --font-logo: "Oooh Baby", cursive;
+  --font-headers: "Cormorant Garamond", serif;
+  --font-body: "Biryani", sans-serif;
+  --body-text-color: #474747; /* Charcoal color for text/dark */
+  --main-color: #f5f3ed; /* Oyster color for backgrounds */
+  --color-pop: rgba(215, 181, 140, 1); /* Honey color for contrast  */
+  --secondary-color: #e2d3c0; /* Toast color for dark accents */
+  --tertiary-color: #eae3d9; /* Nude color for mid accents */
+  --accent-color: rgba(43, 51, 73, 1); /*Dark blue for contrast accent */
+  --off-white: #f9f7f4; /* Ivory color for light accents */
+  --toastify-font-family: "Biryani", sans-serif !important;
+}
+
+/* * > * {
+  font: var(--font-body);
+} */
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--tertiary-color);
+  font: var(--font-body);
+}
+h1 {
+  font: 2rem var(--font-headers);
+  color: var(--body-text-color);
+  font-weight: 600;
+}
+p {
+  font: 1rem var(--font-body);
+  color: var(--body-text-color);
+  font-weight: 300;
+}
+.auth-wrapper {
+  box-shadow: -1.5rem 1.5rem 0px var(--secondary-color);
+}
+.auth-page {
+  font: 1rem var(--font-body);
+}
+form {
+  font: 1rem var(--font-body);
+}
+.input-group {
+  @apply flex border rounded-none;
+}
+.icon {
+  position: absolute;
+  align-self: end;
+  margin-block-start: 0.85rem;
+  color: var(--accent-color);
+  opacity: 0.5;
+}
+.input-text {
+  @apply w-full py-2 px-4;
+
+  &:focus {
+    outline: 1px solid var(--accent-color);
+
+    ~ .icon {  /* Change property of sibling icon */
+      opacity: 1; 
+    }
+  }
+  &:not([type=email]) ~ span:hover * {
+    cursor: pointer;
+  }
+}
+.btn-login {
+  font: 1rem var(--font-body);
+  color: var(--off-white);
+  letter-spacing: .1em;
+  background-color: var(--accent-color);
+  text-transform: uppercase;
+  text-align: center;
+  padding: .5em;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all .3s;
+  
+  &:hover {
+    color: var(--off-white);
+    background: var(--body-text-color);
+  }
+}
+.auth-link {
+  font-weight: 700;
+  color: var(--accent-color);
+}
+.main-wrap {
+  padding-block-start: 5rem;
+  background: var(--tertiary-color);
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+.home-wrap {
+  max-width: 75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+.recipes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
