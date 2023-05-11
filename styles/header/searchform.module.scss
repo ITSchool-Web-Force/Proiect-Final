@@ -47,6 +47,7 @@
     .dropdown {
         margin-top: 0.1em;
         backdrop-filter: blur(1em);
+        -webkit-backdrop-filter: blur(1em);
         border: 0.0625em solid var(--fourth-color);
         background-color: transparent;
         border-radius: 0.5em;

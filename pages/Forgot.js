@@ -27,7 +27,7 @@ function Forgot() {
         console.log(email)
 
         const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-            redirectTo: 'http://localhost:3000/change',
+            redirectTo: 'https://main--shimmering-heliotrope-e80505.netlify.app/change',
         })
     
         if (error) {
