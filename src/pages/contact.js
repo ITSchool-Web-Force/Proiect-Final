@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Image from "next/image"
 
 const ContactPage = () => {
   const [submitterName, setSubmitterName] = useState("");
@@ -53,11 +54,11 @@ const ContactPage = () => {
         onChange={(e) => setSubmitterName(e.target.value)}
         type="text"
       />
-      <label htmlFor="company">Company *</label>
-      <input id="company" name="company" required type="text" />
-      <label htmlFor="email">E-mail Address *</label>
+      <label htmlFor="phone">Phone number </label>
+      <input id="phone" name="phone" required type="text" />
+      <label htmlFor="email">E-mail Address </label>
       <input id="email" type="email" name="email" required />
-      <label htmlFor="message">Message *</label>
+      <label htmlFor="message">Message </label>
       <textarea id="message" name="message" required />
       <button type="submit">Submit</button>
     </form>
@@ -70,6 +71,8 @@ const ContactPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Contact Us</h1>
+      <p> Got questions? We've got answers.</p>
+      <Image src= "/image/contact.jpg" alt="fresh coffee" width={600} height={600}/>
 
       <main>{formVisible ? ContactForm : ConfirmationMessage}</main>
 
@@ -99,6 +102,8 @@ const ContactPage = () => {
             flex-direction: column;
             width: 80%;
             grid-row-gap: 0.5em;
+    
+            
           }
           @media (max-width: 769px) {
             .container {
@@ -112,6 +117,7 @@ const ContactPage = () => {
           input[type="email"],
           textarea {
             font-size: 24px;
+            border: solid #5B6DCD 0.1rem;
           }
           button {
             max-width: 400px;
