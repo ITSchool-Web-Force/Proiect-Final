@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import { Modal } from '../components/container/modal';
 
-import { ExpressionCard } from '../components/container/index/expressioncard';
+import { ExpressionCard } from '../components/container/index/ExpressionCard';
 
 import { supabase } from '../utilities/supabase';
 

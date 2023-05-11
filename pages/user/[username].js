@@ -7,7 +7,7 @@ import { Modal } from '../../components/container/modal';
 
 import { ThreeDots  } from  'react-loader-spinner'
 
-import { ExpressionCard } from '../../components/container/index/expressioncard';
+import { ExpressionCard } from '../../components/container/index/ExpressionCard';
 
 import styles from '../../styles/container/account.module.scss';
 

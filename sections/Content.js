@@ -3,7 +3,7 @@ import { supabase } from '../utilities/supabase';
 
 import { ThreeDots  } from  'react-loader-spinner'
 
-import { ExpressionCard } from '../components/container/index/expressioncard';
+import { ExpressionCard } from '../components/container/index/ExpressionCard';
 
 import styles from '../styles/container/content.module.scss';
 

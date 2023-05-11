@@ -66,7 +66,7 @@ function SearchForm() {
                         <ul key={item.expression}>
                             <a href={getLink(item.expression)}>
                                 <button>
-                                    <span>{item.expression}</span> =&gt; {showSummary(item.expression)}
+                                    <span>{item.expression}</span> =&gt; {showSummary(item.explication)}
                                 </button>
                             </a>
                         </ul>

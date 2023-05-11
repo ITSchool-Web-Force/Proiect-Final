@@ -6,6 +6,7 @@ import styles from "../../../styles/container/card.module.scss";
 import NoSSRWrapper from "../../NoSSRWrapper"
 
 import { useEffect, useState } from 'react';
+
  
 import { useUser } from '@supabase/auth-helpers-react'
 
@@ -92,9 +93,6 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
 
             if(!isLiked) {
 
-                setIsLiked(true);
-                setLikes(likes + 1)
-
                 const { error } = await supabase
                     .from('likes')
                     .insert([{
@@ -104,11 +102,26 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
 
                 if(error) {
                     console.log(error);
+                } else {
+                    setIsLiked(true);
+                    setLikes(likes + 1)
+                }
+
+                if(isDisliked) {
+                    const { error } = await supabase
+                        .from('dislikes')
+                        .delete({ returning: "minimal" })
+                        .eq('user_id', user.id)
+                        .eq('post_id', expressionData.id)
+
+                    if(error) {
+                        console.log(error);
+                    } else {
+                        setIsDisliked(false);
+                        setDislikes(dislikes - 1)
+                    }
                 }
             } else {
-                setIsLiked(false);
-                setLikes(likes - 1)
-
                 const { error } = await supabase
                     .from('likes')
                     .delete({ returning: "minimal" })
@@ -117,6 +130,9 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
 
                 if(error) {
                     console.log(error);
+                } else {
+                    setIsLiked(false);
+                    setLikes(likes - 1)
                 }
             }
         } else {
@@ -131,9 +147,6 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
 
             if(!isDisliked) {
 
-                setIsDisliked(true);
-                setDislikes(dislikes + 1)
-        
                 const { error } = await supabase
                     .from('dislikes')
                     .insert([{
@@ -143,11 +156,26 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
 
                 if(error) {
                     console.log(error);
+                } else {
+                    setIsDisliked(true);
+                    setDislikes(dislikes + 1)
                 }
-            } else {
-                setIsDisliked(false);
-                setDislikes(dislikes - 1)
 
+                if(isLiked) {                   
+                    const { error } = await supabase
+                        .from('likes')
+                        .delete({ returning: "minimal" })
+                        .eq('user_id', user.id)
+                        .eq('post_id', expressionData.id)
+
+                    if(error) {
+                        console.log(error);
+                    } else {
+                        setIsLiked(false);
+                        setLikes(likes - 1)
+                    }
+                }
+            } else {                
                 const { error } = await supabase
                     .from('dislikes')
                     .delete({ returning: "minimal" })
@@ -156,6 +184,9 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
 
                 if(error) {
                     console.log(error);
+                } else {
+                    setIsDisliked(false);
+                    setDislikes(dislikes - 1)
                 }
             }
         } else {
