@@ -2,7 +2,7 @@ export default function OrderForm() {
     return (
       <div>
       <div >
-        <form name="contact"   action="/" method="POST" data-netlify="true">
+        <form name="contact"   action="/success/" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" /> <p>
             <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name" />
