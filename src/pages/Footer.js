@@ -117,7 +117,7 @@ export default function Footer() {
               </li>
 
               <li>
-                <Link href="#" className="text-gray-700 transition hover:opacity-75">
+                <Link href="/success" className="text-gray-700 transition hover:opacity-75">
                 Wholesale website
                 </Link>
               </li>
