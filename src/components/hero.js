@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-<div className="relative block h-32 lg:col-span-2 lg:h-full">
-    <div className="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
+<div class="relative z-20 flex items-center bg-white dark:bg-gray-800">
+    <div class="container relative flex flex-col items-center justify-between px-6 py-8 mx-auto">
         <div className="flex flex-col">
             <h1 className="w-full text-4xl font-light text-center text-gray-800 uppercase sm:text-5xl dark:text-white">
                 Taste the World's Finest

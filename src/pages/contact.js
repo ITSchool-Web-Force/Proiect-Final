@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Image from "next/image"
+import Layout from "@/components/Layout";
 
 
 const ContactPage = () => {
@@ -67,6 +68,7 @@ const ContactPage = () => {
   );
 
   return (
+    <Layout>
     <div className="container">
       <Head>
         <title>Java Jive Coffee Shop</title>
@@ -85,11 +87,7 @@ const ContactPage = () => {
             font-size: 18px;
             background-color: white;
             color: black;
-            padding: 1em;
-            margin: 1em;
-            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-              Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-              sans-serif;
+            
           }
 
           * {
@@ -141,7 +139,7 @@ const ContactPage = () => {
         `}
       </style>
     </div>
-    
+    </Layout>
   );
 }
 export default ContactPage
