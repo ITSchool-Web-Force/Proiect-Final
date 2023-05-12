@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-import { Modal } from '../components/container/modal';
+import { Modal } from '../components/container/Modal';
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
 
 import styles from '../styles/container/forgot.module.scss'
