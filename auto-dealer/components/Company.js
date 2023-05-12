@@ -5,6 +5,10 @@ import team from "../images/team.jpg";
 import founder from "../images/founder.jpg";
 import manager from "../images/general-manager.jpg";
 import salesexec from "../images/sales-executive.jpg";
+import finance from "../images/finance-manager.jpg";
+import facility from "../images/facility-manager.jpg";
+import marketing from "../images/marketing.jpg";
+import awards from "../images/website-badges.png";
 
 function Company() {
   return (
@@ -93,6 +97,57 @@ function Company() {
               <p>Sales Executive</p>
             </div>
           </div>
+        </div>
+        <div className="team-layout">
+          <div className="person-group">
+            <Image
+              src={finance}
+              width={600}
+              height={900}
+              alt="finance-manager"
+              className="personal-image"
+            />
+            <div className="personal-text">
+              <p className="name">Patrick Baxter</p>
+              <p>Finance Manager</p>
+            </div>
+          </div>
+          <div className="person-group">
+            <Image
+              src={facility}
+              width={600}
+              height={900}
+              alt="facility-manager"
+              className="personal-image"
+            />
+            <div className="personal-text">
+              <p className="name">Luca Davies</p>
+              <p>Facility Manager</p>
+            </div>
+          </div>
+          <div className="person-group">
+            <Image
+              src={marketing}
+              width={600}
+              height={900}
+              alt="marketing"
+              className="personal-image"
+            />
+            <div className="personal-text">
+              <p className="name">Sam Riley</p>
+              <p>Marketing</p>
+            </div>
+          </div>
+        </div>
+        <div className="awards-layout">
+          <p className="awards-title">AWARDS</p>
+          <Image
+            src={awards}
+            width={1250}
+            height={354}
+            alt="awards"
+            className="awards-icon"
+          />
         </div>
       </div>
     </div>

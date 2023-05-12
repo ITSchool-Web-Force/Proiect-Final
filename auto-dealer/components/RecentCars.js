@@ -21,7 +21,7 @@ function RecentCars() {
                     height={960}
                   />
                 </Link>
-                <p>{lastCar.name}</p>
+                <p className="recent-car-text">{lastCar.name}</p>
               </div>
             );
           })}

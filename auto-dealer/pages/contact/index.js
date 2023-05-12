@@ -1,6 +1,7 @@
 import Footer from "../../components/Footer";
 import MyNavbar from "../../components/MyNavbar";
 import MyForm from "../../components/MyForm";
+import MyLocation from "../../components/MyLocation";
 import Image from "next/image";
 import contactbanner from "../../images/showroom-contact.jpg";
 
@@ -16,6 +17,7 @@ function Contact() {
         className="contact-img"
       />
       <MyForm />
+      <MyLocation />
       <Footer />
     </div>
   );
