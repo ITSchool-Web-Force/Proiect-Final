@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Modal } from '../components/container/modal';
+import { Modal } from '../components/container/Modal';
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
 
 import { useState } from 'react';
