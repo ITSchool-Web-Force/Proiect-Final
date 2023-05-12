@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Modal } from '../components/container/modal';
+import { Modal } from '../components/container/Modal';
 import { useState } from 'react';
 
 import { supabase } from '../utilities/supabase';
