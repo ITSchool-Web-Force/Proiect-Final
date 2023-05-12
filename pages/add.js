@@ -5,7 +5,7 @@ import { supabase } from '../utilities/supabase';
 
 import { useUser } from '@supabase/auth-helpers-react'
 
-import { Modal } from '../components/container/modal';
+import { Modal } from '../components/container/Modal';
 
 import { useRouter } from 'next/router';
 
