@@ -2,7 +2,7 @@ import Head from "next/head";
 
 import { useState } from 'react';
 
-import { Modal } from '../components/container/modal';
+import { Modal } from '../components/container/Modal';
 import { useSupabaseClient } from '@supabase/auth-helpers-react'
 
 import styles from '../styles/container/forgot.module.scss'
