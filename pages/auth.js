@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useUser, useSupabaseClient } from '@supabase/auth-helpers-react'
 
-import { Modal } from '../components/container/modal';
+import { Modal } from '../components/container/Modal';
 
 import styles from '../styles/container/auth.module.scss';
 
