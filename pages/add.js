@@ -44,7 +44,7 @@ function Add() {
                     expression: expression,
                     explication: explication,
                     example: example,
-                    author: user.user_metadata.user_name,
+                    author: user.user_metadata.username,
                     date: theDate,
                     user_id: user.id
             }])
