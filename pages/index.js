@@ -33,7 +33,7 @@ export async function getServerSideProps(context) {
             .from('expressions')
             .select()
             .range(0, HowMany-1)
-            .order('created_at',  {ascending: false} )
+            .order('date',  {ascending: false} )
             ;
 
     if (error || !data || data.length === 0) {

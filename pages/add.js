@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import dayjs from 'dayjs';
 
 import { useState } from 'react';
 import { supabase } from '../utilities/supabase';
@@ -16,16 +17,7 @@ function Add() {
     const user = useUser();
     const router = useRouter();
 
-    let newDate = new Date()
-    let date = newDate.getDate();
-    let month = newDate.getMonth() + 1;
-    let year = newDate.getFullYear();
-
-    const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"]
-    
-    const theMonth = months[month - 1]
-
-    const theDate = `${date} ${theMonth} ${year}`
+    const now = dayjs().format("YYYY-MM-DD | HH:mm");
 
     const [expression, setExpression] = useState();
     const [explication, setExplication] = useState();
@@ -45,7 +37,7 @@ function Add() {
                     explication: explication,
                     example: example,
                     author: user.user_metadata.username,
-                    date: theDate,
+                    date: now,
                     user_id: user.id
             }])
         

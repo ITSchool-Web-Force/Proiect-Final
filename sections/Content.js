@@ -68,7 +68,7 @@ function Content( { ssrData, posts } ) {
             .from('expressions')
             .select()
             .range(from, to)
-            .order('created_at',  {ascending: false} )
+            .order('date',  {ascending: false} )
 
         if (error) {
             console.log(error);

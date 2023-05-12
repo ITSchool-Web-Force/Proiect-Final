@@ -22,6 +22,8 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
     const [likes, setLikes] = useState(false);
     const [dislikes, setDislikes] = useState(false);
 
+    const [data, setData] = useState();
+
     const user = useUser();
     const router = useRouter();
 
@@ -203,6 +205,16 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
 
         router.push(`/${expressionName}`);
     }
+    function getDate(data) {
+        const justDate = data.split("|")[0].trim(); 
+        const [year, month, day] = justDate.split("-");
+        const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"]
+        const theMonth = months[month - 1]
+
+        const theDate = `${day} ${theMonth} ${year}`
+
+        return theDate;
+    }
 
     return <>
         <div className={styles.expressionCard}>
@@ -213,7 +225,7 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
             <div className={styles.cardInfo}>adăugat {showAuthor !== 'false' && <>de 
                 <span className={styles.author} onClick={() => authorClick(expressionData.author)}> {expressionData.author} </span></>}
                 pe
-                <span className={styles.date}> {expressionData.date}</span>
+                <span className={styles.date}> {getDate(expressionData.date)}</span>
             </div>
                 <div className={styles.likesSystem}>
                     <NoSSRWrapper>

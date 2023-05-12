@@ -50,13 +50,16 @@
             align-content: center;
             text-decoration: none;
             border-inline-end: 0.0625em solid var(--fourth-color);
+            border-inline-start: 0.0625em solid transparent;
+            border-block: 0.0625em solid transparent;
             color: var(--text-color);
             .likes {
                 margin-block: auto;
                 font-weight: bold;
             }
             &:hover {
-                background-color: var(--button-color-hover);
+                border-inline-start: 0.0625em solid var(--fourth-color);
+                border-block: 0.0625em solid var(--fourth-color);
                 border-bottom-left-radius: 0.5em;
                 border-top-left-radius: 0.5em;
             }
@@ -75,12 +78,15 @@
             align-content: center;
             text-decoration: none;
             color: var(--text-color);
+            border-inline-end: 0.0625em solid transparent;
+            border-block: 0.0625em solid transparent;
             .dislikes {
                 margin-block: auto;
                 font-weight: bold;
             }
             &:hover {
-                background-color: var(--button-color-hover);
+                border-inline-end: 0.0625em solid var(--fourth-color);
+                border-block: 0.0625em solid var(--fourth-color);
                 border-end-end-radius: 0.5em;
                 border-top-right-radius: 0.5em;
             }
