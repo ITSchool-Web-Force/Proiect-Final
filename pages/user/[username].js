@@ -3,7 +3,7 @@ import { supabase } from '../../utilities/supabase';
 
 import { useState, useEffect, useRef } from 'react';
 
-import { Modal } from '../../components/container/modal';
+import { Modal } from '../../components/container/Modal';
 
 import { ThreeDots  } from  'react-loader-spinner'
 
