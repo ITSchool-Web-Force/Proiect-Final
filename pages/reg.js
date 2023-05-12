@@ -37,7 +37,7 @@ function Reg() {
               password: input.password,
               options: {
                 data: {
-                  user_name: input.username
+                  username: input.username
                 }
               }
             }
