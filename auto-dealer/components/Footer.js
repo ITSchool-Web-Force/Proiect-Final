@@ -6,10 +6,19 @@ import instagram from "../images/social-media/icons8-instagram.svg";
 import linkedin from "../images/social-media/icons8-linkedin.svg";
 import pinterest from "../images/social-media/icons8-pinterest.svg";
 import twitter from "../images/social-media/icons8-twitter.svg";
+import bg from "../images/footer-bg-dark.jpg";
 
 function Footer() {
   return (
-    <div className="footer">
+    <div
+      style={{
+        backgroundImage: `url('${bg.src}')`,
+        height: "15rem",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+      className="footer"
+    >
       <Image
         src={Logo}
         width={50}
