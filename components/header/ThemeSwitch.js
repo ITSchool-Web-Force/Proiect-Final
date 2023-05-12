@@ -29,8 +29,8 @@ function ThemeSwitch() {
                         onHandleColor="#000" 
                         uncheckedHandleIcon={<Darkmode/>}
                         checkedHandleIcon={<Lightmode/>}
-                        uncheckedIcon={<UnCheckedSvg/>} 
-                        checkedIcon={<CheckedSvg/>} 
+                        uncheckedIcon={null} 
+                        checkedIcon={null} 
                     />
                 </label>
             </div>
