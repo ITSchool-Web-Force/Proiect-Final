@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import { useState } from 'react';
 
-import { Modal } from '../components/container/modal';
+import { Modal } from '../components/container/Modal';
 
 import { ExpressionCard } from '../components/container/index/ExpressionCard';
 
