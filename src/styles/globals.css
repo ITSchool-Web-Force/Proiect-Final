@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .skill {
+    @apply bg-[#96b983] text-lg py-2 px-4 w-fit rounded-md;
+  }
+}
+
+@layer base {
+  .btn-projects {
+    @apply px-8 py-2 mt-4 bg-gradient-to-r from-fuchsia-800 to-violet-500 text-white rounded-md;
+  }
+}
+
+.scroll-div {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  margin-top: -5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container-skills {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 500px;
+  background: #f1f1f1;
+  margin: 100px auto 0;
+}
+
+.container-testimonials {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 100px auto 0;
+}
+
+.bloc-tabs {
+  display: flex;
+}
+.tabs {
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  background: rgb(90, 130, 186, 0.3);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+.tabs:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.active-tabs {
+  background: rgba(167, 139, 250);
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+  background: #eeec44;
+}
+
+button {
+  border: none;
+}
+.content-tabs {
+  flex-grow: 1;
+}
+.content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.active-left-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 150px 150px 200px;
+  justify-content: start;
+}
+
+.active-right-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 150px 150px 200px;
+  justify-content: end;
+}
+
+@media (max-width: 600px) {
+  .active-right-content {
+    display: block;
+    direction: rtl;
+  }
+
+  .active-left-content {
+    display: block;
+  }
+
+  .social-media {
+    display: grid;
+    grid-template-columns: 150px 50px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+
+/* white-space property */
+div {
+  white-space: pre-wrap;
+}

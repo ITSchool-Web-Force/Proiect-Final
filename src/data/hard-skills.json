@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "icon": "🚀",
+    "skill": "React, Next.Js, Parcel, Php"
+  },
+  {
+    "id": 2,
+    "icon": "💾",
+    "skill": "MySQL, JSON, Supabase"
+  },
+  {
+    "id": 3,
+    "icon": "🌐",
+    "skill": "xampp, mysql workbench, mariaDb"
+  },
+  {
+    "id": 4,
+    "icon": "🔗",
+    "skill": "Laragon, Git, Gitbash"
+  },
+  {
+    "id": 5,
+    "icon": "✏️",
+    "skill": "Vscode, Brackets, Notepad++, GIMP, Figma"
+  }
+]
