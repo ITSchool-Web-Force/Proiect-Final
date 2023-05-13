@@ -21,10 +21,14 @@
         .registerForm {
             display: grid;
             text-align: center;
+            .invalid {
+                border: 0.3em solid red;
+            }
             input {
                 border: 0;
                 text-align: center;
                 border-radius: 0.5em;
+                border: 0.3em solid transparent;
                 width: 90%;
                 max-width: 30em;
                 min-height: 2.5em;

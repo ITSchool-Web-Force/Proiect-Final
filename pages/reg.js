@@ -100,6 +100,7 @@ function Reg() {
                         minLength={5} 
                         maxLength={18}
                         pattern="[a-zA-Z]+"
+                        className={alert ? styles.invalid : "" }
                         onChange={onInputChange}
                     />
 
