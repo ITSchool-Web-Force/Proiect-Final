@@ -37,8 +37,14 @@ const chuckNorrisRandomJokeGenerator = () => {
                 <p>Project </p>
                 <h2 className="font-bold">Overview</h2>
                 <p>{description}</p>
-                <button className="mr-8 btn-projects">Code</button>
-                <button className="btn-projects">Live Demo</button>
+                <form
+                  className="inline"
+                  action="https://github.com/Octavian-Busuioc/ChuckNorrisJokeGenerator"
+                  method="get"
+                  target="_blank"
+                >
+                  <button className="mr-8 btn-projects">Code</button>
+                </form>
               </div>
               <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
                 <div className="p-2">
