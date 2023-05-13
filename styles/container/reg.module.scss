@@ -10,6 +10,14 @@
     .registerPage {
         padding-block: 1.5em; 
         text-align: center;
+        .info {
+            padding-block-end: 2em;
+            padding-block-start: 1em;
+        }
+        .infoAlert {
+            color: red;
+            font-weight: bold;
+        }
         .registerForm {
             display: grid;
             text-align: center;

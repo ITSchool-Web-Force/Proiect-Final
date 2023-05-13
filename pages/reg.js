@@ -18,6 +18,8 @@ function Reg() {
     const [show, setShow] = useState(false);
     const [theError, setTheError] = useState(false);
 
+    const [alert, setAlert] = useState(false);
+
     if(isLogged) {
         router.push('/');
     }
@@ -63,6 +65,14 @@ function Reg() {
             ...prev,
             [name]: value
         }));
+
+        if (name === "username") {
+            if(!value.match(/^[a-zA-Z]+$/)) {
+                setAlert(true);
+            } else {
+                setAlert(false);
+            }
+        }
     }
 
     return <>
@@ -72,6 +82,11 @@ function Reg() {
         <div className={styles.content}>
             <div className={styles.registerPage}>
                 <h2>Înregistrează-te</h2>
+
+                <div className={`${styles.info} ${ alert ? styles.infoAlert : ""}`}>
+                    *Numele de utilizator poate fi format doar din litere.
+                </div>
+
                 <form 
                     onSubmit={handleSubmit}
                     className={styles.registerForm}
@@ -112,8 +127,6 @@ function Reg() {
                     
                     <button type="submit">Creează Cont</button>      
                 </form>
-
-                <div>*Numele de utilizator poate fi format doar din litere.</div>
 
                 <div className={styles.login}>
                     <h2>Ai deja cont?</h2>

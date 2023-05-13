@@ -10,9 +10,20 @@
     .addPage {
         padding-block: 1.5em; 
         text-align: center;
+        .info {
+            padding-block-end: 2em;
+            padding-block-start: 1em;
+        }
+        .infoAlert {
+            color: red;
+            font-weight: bold;
+        }
         .addForm {
             display: grid;
             text-align: center;
+            .invalid {
+                border: 0.3em solid red;
+            }
             textarea {
                 border: 0;
                 resize: none; 
@@ -28,6 +39,7 @@
                 justify-self: center;
                 background-color: var(--primary-color);
                 color: var(--text-color);
+                border: 0.3em solid transparent;
                 &::placeholder{
                     color: var(--text-color);
                     font-family: 'Roboto Condensed', sans-serif;

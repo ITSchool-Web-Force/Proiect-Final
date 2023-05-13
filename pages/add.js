@@ -19,9 +19,17 @@ function Add() {
 
     const now = dayjs().format("YYYY-MM-DD | HH:mm");
 
-    const [expression, setExpression] = useState();
-    const [explication, setExplication] = useState();
-    const [example, setExample] = useState();
+    const [input, setInput] = useState({
+        expression: '',
+        explication: '',
+        example: ''
+    });
+
+    const [valid, setValid] = useState({
+        expression: true,
+        explication: true,
+        example: true
+    });
 
     const [show, setShow] = useState(false);
     const [theError, setTheError] = useState(false);
@@ -29,13 +37,17 @@ function Add() {
     async function handleSubmit(e) {
         e.preventDefault();
 
+        if(!valid.expression || !valid.explication || !valid.example) {
+            return;
+        }
+
         if(user) {
             const add = await supabase
             .from('expressions')
             .insert([{
-                    expression: expression,
-                    explication: explication,
-                    example: example,
+                    expression: input.expression,
+                    explication: input.explication,
+                    example: input.example,
                     author: user.user_metadata.username,
                     date: now,
                     user_id: user.id
@@ -54,13 +66,31 @@ function Add() {
                     setShow(false);
                 }, 3000);
                 setTimeout(() => {
-                    const expressionName = encodeURI(expression)
+                    const expressionName = encodeURI(input.expression)
                     router.push(`/${expressionName}`);
                 }, 3200);
             }
         } else {
             router.push('/auth');
         }
+    }
+
+    function onInputChange (e) {
+        const { name, value } = e.target;
+
+        const isValid = value === '' || /^[a-zA-Z0-9]+([a-zA-Z0-9\s]*)$/.test(value);
+
+        if(isValid) {
+            setInput(prev => ({
+                ...prev,
+                [name]: value
+            }));
+        }
+        setValid((prev) => ({
+            ...prev,
+            [name]: isValid,
+        }));
+
     }
 
     return <>
@@ -73,6 +103,11 @@ function Add() {
                 {user && 
                     <>
                         <h2>Adaugă o expresie</h2>
+
+                        <div className={`${styles.info} ${ valid.expression && valid.explication && valid.example ? "" : styles.infoAlert}`}>
+                            *Poți folosi doar litere și cifre.
+                        </div>
+
                         <form 
                             onSubmit={handleSubmit}
                             className={styles.addForm}
@@ -86,12 +121,12 @@ function Add() {
                                 cols={20} 
                                 minLength={2}
                                 maxLength={60}
-                                pattern="^[a-zA-Z0-9]+$"
                                 required 
-                                onChange={(e) => setExpression(e.target.value)}
+                                className={valid.expression ? '' : styles.invalid}
+                                onChange={onInputChange}
                             > 
                             </textarea>
-                        
+                         
                             <label htmlFor="explication">Explicație</label>
                             <textarea 
                                 name="explication" 
@@ -99,10 +134,10 @@ function Add() {
                                 rows={2}
                                 cols={50}
                                 minLength={12}
-                                maxLength={80}
-                                pattern="^[a-zA-Z0-9]+$"
+                                maxLength={50}
                                 required
-                                onChange={(e) => setExplication(e.target.value)}
+                                className={valid.explication ? '' : styles.invalid}
+                                onChange={onInputChange}
                             >
                             </textarea>
 
@@ -112,17 +147,16 @@ function Add() {
                                 placeholder="Introdu un exemplul de folosire" 
                                 rows={3}
                                 cols={50} 
-                                minLength={15}
-                                maxLength={90}
-                                pattern="^[a-zA-Z0-9]+$"
+                                minLength={7}
+                                maxLength={60}
                                 required
-                                onChange={(e) => setExample(e.target.value)}
+                                className={valid.example ? '' : styles.invalid}
+                                onChange={onInputChange}
                             >
                             </textarea>
                             
                             <button type="submit">Trimite</button>      
                         </form>
-                        <div>*Poți folosi doar litere și cifre.</div>
                     </>
                 }
                 {show && ( 
