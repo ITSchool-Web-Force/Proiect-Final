@@ -82,6 +82,9 @@ function Reg() {
                         type="text" 
                         placeholder="Introdu numele de utilizator" 
                         required
+                        minLength={5} 
+                        maxLength={18}
+                        pattern="[a-zA-Z]+"
                         onChange={onInputChange}
                     />
 
@@ -91,6 +94,8 @@ function Reg() {
                         type="email" 
                         placeholder="Introdu adresa de email" 
                         required
+                        minLength={5} 
+                        maxLength={60}
                         onChange={onInputChange}
                     />
 
@@ -100,11 +105,15 @@ function Reg() {
                         type="password" 
                         placeholder="Introdu parola" 
                         required
+                        minLength={5}
+                        maxLength={20} 
                         onChange={onInputChange}
                     />
                     
                     <button type="submit">Creează Cont</button>      
                 </form>
+
+                <div>*Numele de utilizator poate fi format doar din litere.</div>
 
                 <div className={styles.login}>
                     <h2>Ai deja cont?</h2>

@@ -84,6 +84,9 @@ function Add() {
                                 placeholder="Introdu expresia" 
                                 rows={1}
                                 cols={20} 
+                                minLength={2}
+                                maxLength={60}
+                                pattern="^[a-zA-Z0-9]+$"
                                 required 
                                 onChange={(e) => setExpression(e.target.value)}
                             > 
@@ -95,6 +98,9 @@ function Add() {
                                 placeholder="Introdu explicația" 
                                 rows={2}
                                 cols={50}
+                                minLength={12}
+                                maxLength={80}
+                                pattern="^[a-zA-Z0-9]+$"
                                 required
                                 onChange={(e) => setExplication(e.target.value)}
                             >
@@ -106,6 +112,9 @@ function Add() {
                                 placeholder="Introdu un exemplul de folosire" 
                                 rows={3}
                                 cols={50} 
+                                minLength={15}
+                                maxLength={90}
+                                pattern="^[a-zA-Z0-9]+$"
                                 required
                                 onChange={(e) => setExample(e.target.value)}
                             >
@@ -113,6 +122,7 @@ function Add() {
                             
                             <button type="submit">Trimite</button>      
                         </form>
+                        <div>*Poți folosi doar litere și cifre.</div>
                     </>
                 }
                 {show && ( 
