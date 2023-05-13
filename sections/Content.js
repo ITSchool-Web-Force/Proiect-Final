@@ -105,11 +105,11 @@ function Content( { ssrData, posts } ) {
                     visible={true}
                 />
             )}
-            {!hasMore && (
+            {/*!hasMore && (
                 <div className={styles.end}>
                     Astea au fost
                 </div>
-            )}
+            )*/}
             {hasMore && (
                 <span 
                     style={{visibility:'hidden'}} 

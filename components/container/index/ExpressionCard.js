@@ -7,22 +7,19 @@ import NoSSRWrapper from "../../NoSSRWrapper"
 
 import { useEffect, useState } from 'react';
 
- 
 import { useUser } from '@supabase/auth-helpers-react'
 
 import { useRouter } from 'next/router';
 
 import { supabase } from '../../../utilities/supabase';
 
-function ExpressionCard ( {expressionData, showAuthor} ) {
+function ExpressionCard ( {expressionData, showAuthor, ShowLikes} ) {
 
     const [isLiked, setIsLiked] = useState(false);
     const [isDisliked, setIsDisliked] = useState(false);
 
     const [likes, setLikes] = useState(false);
     const [dislikes, setDislikes] = useState(false);
-
-    const [data, setData] = useState();
 
     const user = useUser();
     const router = useRouter();
@@ -227,18 +224,20 @@ function ExpressionCard ( {expressionData, showAuthor} ) {
                 pe
                 <span className={styles.date}> {getDate(expressionData.date)}</span>
             </div>
-                <div className={styles.likesSystem}>
-                    <NoSSRWrapper>
-                        <a className={`${styles.likePart} ${ isLiked ? styles.likePartActive : ""} `} onClick={handleLike}>
-                            <LikeSvg/>
-                            <span className={styles.likes}>{likes}</span>
-                        </a>                        
-                        <a className={`${styles.dislikePart} ${ isDisliked ? styles.dislikePartActive : ""} `} onClick={handleDislike}>
-                            <DislikeSvg/>
-                            <span className={styles.dislikes}>{dislikes}</span>
-                        </a>
-                    </NoSSRWrapper>
-                </div>                
+                {ShowLikes !== 'false' && (
+                    <div className={styles.likesSystem}>
+                        <NoSSRWrapper>
+                            <a className={`${styles.likePart} ${ isLiked ? styles.likePartActive : ""} `} onClick={handleLike}>
+                                <LikeSvg/>
+                                <span className={styles.likes}>{likes}</span>
+                            </a>                        
+                            <a className={`${styles.dislikePart} ${ isDisliked ? styles.dislikePartActive : ""} `} onClick={handleDislike}>
+                                <DislikeSvg/>
+                                <span className={styles.dislikes}>{dislikes}</span>
+                            </a>
+                        </NoSSRWrapper>
+                    </div> 
+                )}                     
         </div>
     </>
 }

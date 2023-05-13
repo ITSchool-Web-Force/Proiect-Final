@@ -75,7 +75,7 @@ function Username(props) {
             .from('expressions')
             .select()
             .range(from, to)
-            .order('created_at',  {ascending: false} )
+            .order('date',  {ascending: false} )
 
         if (error) {
             setTheError(true)
