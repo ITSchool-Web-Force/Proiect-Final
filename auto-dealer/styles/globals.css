@@ -1,12 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
 
+:root {
+  --black: #000;
+  --white: #fff;
+  --medgrey: #989898fe;
+  --lightgr: #cbcbcbfe;
+  --darkwht: #f3f3f3;
+  --inter: "Inter", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
-  background-color: #000;
+  background-color: var(--black);
 }
 
 p {
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter);
 }
 
 /* NAVBAR */
@@ -33,13 +48,13 @@ p {
   align-items: center;
   gap: 1rem;
   padding-block-start: 1.25rem;
-  background-color: #000;
+  background-color: var(--black);
 }
 
 .footer-address,
 .copyright {
-  color: #fff;
-  font-family: "Inter", sans-serif;
+  color: var(--white);
+  font-family: var(--inter);
 }
 
 .footer-address {
@@ -49,7 +64,7 @@ p {
 .copyright {
   display: inline-flex;
   font-size: 0.8rem;
-  color: #989898fe;
+  color: var(--medgrey);
   justify-content: center;
 }
 
@@ -70,17 +85,7 @@ p {
 
 /* CAROUSEL */
 
-.carousel-img1 {
-  height: auto;
-  width: 100vw;
-}
-
-.carousel-img2 {
-  height: auto;
-  width: 100vw;
-}
-
-.carousel-img3 {
+.carousel-img {
   height: auto;
   width: 100vw;
 }
@@ -104,7 +109,7 @@ p {
 
 welcome-text {
   font-size: 1rem;
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter);
 }
 
 .showroom-image {
@@ -156,21 +161,21 @@ welcome-text {
   gap: 1rem;
   width: 100%;
   height: auto;
-  background-color: #000;
+  background-color: var(--black);
   padding: 4rem 1rem;
 }
 
 .location-title {
   font-size: 1.75rem;
   font-weight: bold;
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter);
 }
 
 .location-group-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-block-start: 1px solid #000;
+  border-block-start: 1px solid var(--black);
   padding: 2.5rem;
 }
 
@@ -227,14 +232,14 @@ welcome-text {
   font-weight: 500;
   color: #777115;
   background-color: #fad91e;
-  border-color: #cbcbcbfe;
+  border-color: var(--lightgr);
   padding-inline: 0.75rem;
 }
 
 /* CURRENT STOCK */
 
 .page-wrapper {
-  background-color: rgb(225, 225, 225);
+  background-color: #e1e1e1;
 }
 
 .sale-img {
@@ -253,10 +258,9 @@ welcome-text {
   display: flex;
   flex-direction: row;
   width: 70vw;
-  background-color: #f3f3f3;
+  background-color: var(--darkwht);
   border: 2px solid #c2c2c2fe;
   margin-block-end: 2.5rem;
-  /* padding: 1.5rem; */
   gap: 1.5rem;
 }
 
@@ -281,7 +285,7 @@ welcome-text {
 
 .product-title,
 .price {
-  color: #989898fe;
+  color: var(--medgrey);
 }
 
 .spec-group {
@@ -292,7 +296,7 @@ welcome-text {
 
 .spec-key,
 .product-title {
-  font-family: "Inter", sans-serif;
+  font-family: var(--inter);
   font-weight: bold;
 }
 
@@ -303,9 +307,9 @@ welcome-text {
 .details-button {
   font-size: 1rem;
   font-weight: 600;
-  color: #989898fe;
-  background-color: #f3f3f3;
-  border-color: #cbcbcbfe;
+  color: var(--medgrey);
+  background-color: var(--darkwht);
+  border-color: var(--lightgr);
   padding-inline: 0.75rem;
 }
 
@@ -338,7 +342,11 @@ welcome-text {
 
 .section-title {
   font-weight: bold;
-  border-block-end: 1px solid #000;
+  border-block-end: 1px solid var(--black);
+}
+
+.enquire-button {
+  margin-block-end: 1rem;
 }
 
 .images-section {
@@ -383,7 +391,7 @@ welcome-text {
 
 .recent-car-text {
   font-weight: 600;
-  color: #989898fe;
+  color: var(--medgrey);
 }
 
 /* ABOUT*/
@@ -395,7 +403,7 @@ welcome-text {
 }
 
 .intro {
-  background-color: #fff;
+  background-color: var(--white);
   display: flex;
   justify-content: center;
   padding: 3.5rem;
@@ -408,7 +416,7 @@ welcome-text {
 }
 
 .team-layout {
-  background-color: #fff;
+  background-color: var(--white);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -444,13 +452,14 @@ welcome-text {
   flex-direction: column;
   align-items: center;
   padding-block: 1.25rem;
-  /* border-block-start: 4px solid #bda96b; */
 }
+
 .awards-title {
   font-size: 1.75rem;
   font-weight: lighter;
-  color: #fff;
+  color: var(--white);
 }
+
 .awards-icon {
   width: 35%;
   height: auto;

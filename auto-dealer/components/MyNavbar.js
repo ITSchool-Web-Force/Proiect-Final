@@ -3,7 +3,6 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
-
 import Logo from "../public/gc-logo-white.png";
 
 function ColorSchemesExample() {
@@ -20,7 +19,6 @@ function ColorSchemesExample() {
             className="logo"
           />
         </Nav.Link>
-
         <div className="navbar-buttons">
           <Nav className="me-auto">
             <Nav.Link href="/current-stock" className="navbar-button">

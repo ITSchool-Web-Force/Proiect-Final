@@ -78,6 +78,7 @@ function CarDetails() {
           style={{ borderRadius: 0 }}
           variant="dark"
           onClick={() => setModalShow(true)}
+          className="enquire-button"
         >
           ENQUIRE NOW VIA EMAIL
         </Button>

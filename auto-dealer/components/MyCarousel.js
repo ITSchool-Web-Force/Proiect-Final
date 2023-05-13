@@ -9,13 +9,13 @@ function CarouselFadeExample() {
   return (
     <Carousel fade>
       <Carousel.Item>
-        <Image src={image1} alt="First slide" className="carousel-img1" />
+        <Image src={image1} alt="First slide" className="carousel-img" />
       </Carousel.Item>
       <Carousel.Item>
-        <Image src={image2} alt="Second slide" className="carousel-img2" />
+        <Image src={image2} alt="Second slide" className="carousel-img" />
       </Carousel.Item>
       <Carousel.Item>
-        <Image src={image3} alt="Third slide" className="carousel-img3" />
+        <Image src={image3} alt="Third slide" className="carousel-img" />
       </Carousel.Item>
     </Carousel>
   );
