@@ -67,7 +67,7 @@ function Reg() {
         }));
 
         if (name === "username") {
-            if(!value.match(/^[a-zA-Z]+$/)) {
+            if (!value.match(/^[a-zA-Z]*$/)) {
                 setAlert(true);
             } else {
                 setAlert(false);
