@@ -105,6 +105,12 @@ function Reg() {
                     
                     <button type="submit">Creează Cont</button>      
                 </form>
+
+                <div className={styles.login}>
+                    <h2>Ai deja cont?</h2>
+                    <a href="/reg" className={styles.loginButton}>Loghează-te</a>
+                </div>
+
                 {show && ( 
                     <Modal message={'Contul a fost create cu succes. Verifică-ți email-ul pentru a confirma contul.'} status='succes'/>
                 )}
