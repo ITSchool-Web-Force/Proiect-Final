@@ -98,6 +98,12 @@ function Auth() {
                         <a className={styles.forgotPassword} href="/forgot">Ai uitat parola?</a>
                     </div>
                 </form>
+
+                <div className={styles.register}>
+                    <h2>Nu ai incă un cont?</h2>
+                    <a href="/reg" className={styles.registerButton}>Înregistrează-te</a>
+                </div>
+
                 {show && ( 
                     <Modal message={'Ai fost logat cu succes. Vei fi redirecționat către prima pagină'} status='succes'/>
                 )}
