@@ -131,7 +131,7 @@ function Reg() {
 
                 <div className={styles.login}>
                     <h2>Ai deja cont?</h2>
-                    <a href="/reg" className={styles.loginButton}>Loghează-te</a>
+                    <a href="/auth" className={styles.loginButton}>Loghează-te</a>
                 </div>
 
                 {show && ( 

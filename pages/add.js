@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import dayjs from 'dayjs';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { supabase } from '../utilities/supabase';
 
 import { useUser } from '@supabase/auth-helpers-react'
@@ -41,8 +41,11 @@ function Add() {
             return;
         }
 
-        if(user) {
-            const add = await supabase
+        if(!user) {
+            router.push('/auth');
+        }
+
+        const add = await supabase
             .from('expressions')
             .insert([{
                     expression: input.expression,
@@ -52,26 +55,23 @@ function Add() {
                     date: now,
                     user_id: user.id
             }])
-        
-            if (add.error) {
-                console.log(add.error);
-                setTheError(true);
-                setTimeout(() => {
-                    setTheError(false);
-                }, 3000);
-            } else { 
-                e.target.reset();
-                setShow(true);
-                setTimeout(() => {
-                    setShow(false);
-                }, 3000);
-                setTimeout(() => {
-                    const expressionName = encodeURI(input.expression)
-                    router.push(`/${expressionName}`);
-                }, 3200);
-            }
-        } else {
-            router.push('/auth');
+    
+        if (add.error) {
+            console.log(add.error);
+            setTheError(true);
+            setTimeout(() => {
+                setTheError(false);
+            }, 3000);
+        } else { 
+            e.target.reset();
+            setShow(true);
+            setTimeout(() => {
+                setShow(false);
+            }, 3000);
+            setTimeout(() => {
+                const expressionName = encodeURI(input.expression)
+                router.push(`/${expressionName}`);
+            }, 3200);
         }
     }
 
@@ -99,7 +99,18 @@ function Add() {
         </Head>
         <div className={styles.content}>
             <div className={styles.addPage}>
-                {!user && <div>Trebuie să fii logat pentru a adăuga o expresie</div>}
+                {!user && <>
+                <div>Trebuie să fii logat pentru a adăuga o expresie</div>
+                <div className={styles.alternative}>
+                    <h2>Ai deja cont?</h2>
+                    <a href="/auth" className={styles.alternativeButton}>Loghează-te</a>
+                </div>
+                sau
+                <div className={styles.alternative}>
+                    <h2>Nu ai incă un cont?</h2>
+                    <a href="/reg" className={styles.alternativeButton}>Înregistrează-te</a>
+                </div>
+                </>}
                 {user && 
                     <>
                         <h2>Adaugă o expresie</h2>

@@ -61,5 +61,22 @@
                 }
             }
         }
+        .alternative {
+            text-align: center;
+            padding-block: 2.5em;
+            .alternativeButton{
+                text-decoration: none;
+                font-weight: bold;
+                text-transform: uppercase;
+                background-color: var(--button-color);
+                color: var(--text-color);
+                border-radius: 0.5em;
+                padding: 0.5em;
+                &:hover {
+                    background-color: var(--button-color-hover);;
+                }
+                
+            }
+        }
     }
 }
