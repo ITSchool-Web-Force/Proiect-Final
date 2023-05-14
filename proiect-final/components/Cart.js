@@ -15,7 +15,7 @@ export default function Cart ({products}) {
           if (cartItems[product.id] !== 0) {
             return <div>
               <CartItem 
-                key={product.id}
+                key={product.nr}
                 id={product.id}
                 product={product} 
                 image={product.image}
