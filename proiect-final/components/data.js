@@ -26,6 +26,7 @@ const data = {
         price: 25,
         image: freesias,
         basket_image: basket_icon,
+        nr: '1',
       },
       {
         id: '2',
@@ -33,6 +34,7 @@ const data = {
         price: 45,
         image: pink_roses,
         basket_image: basket_icon,
+        nr: '2',
       },
       {
         id: '3',
@@ -40,6 +42,7 @@ const data = {
         price: 30,
         image: gerbera,
         basket_image: basket_icon,
+        nr: '3',
       },
       {
         id: '4',
@@ -47,6 +50,7 @@ const data = {
         price: 65,
         image: white_roses_freesia,
         basket_image: basket_icon,
+        nr: '4',
       },
       {
         id: '5',
@@ -54,6 +58,7 @@ const data = {
         price: 68,
         image: chrisantemum,
         basket_image: basket_icon,
+        nr: '5',
       },
       {
         id: '6',
@@ -61,6 +66,7 @@ const data = {
         price: 70,
         image: pink_tulips,
         basket_image: basket_icon,
+        nr: '6',
       },
       {
         id: '7',
@@ -68,6 +74,7 @@ const data = {
         price: 75,
         image: pink_peonies,
         basket_image: basket_icon,
+        nr: '7',
       },
       {
         id: '8',
@@ -75,6 +82,7 @@ const data = {
         price: 48,
         image: red_roses,
         basket_image: basket_icon,
+        nr: '8',
       },
       {
         id: '9',
@@ -82,6 +90,7 @@ const data = {
         price: 75,
         image: pink_roses_2,
         basket_image: basket_icon,
+        nr: '9',
       },
       {
         id: '10',
@@ -89,6 +98,7 @@ const data = {
         price: 60,
         image: sunflower,
         basket_image: basket_icon,
+        nr: '10',
       },
       {
         id: '11',
@@ -96,6 +106,7 @@ const data = {
         price: 67,
         image: white_hidrangea,
         basket_image: basket_icon,
+        nr: '11',
       },
       {
         id: '12',
@@ -103,6 +114,7 @@ const data = {
         price: 100,
         image: wed_bouquet,
         basket_image: basket_icon,
+        nr: '12',
       },
       {
         id: '13',
@@ -110,6 +122,7 @@ const data = {
         price: 60,
         image: colored_tulips,
         basket_image: basket_icon,
+        nr: '13',
       },
       {
         id: '14',
@@ -117,6 +130,7 @@ const data = {
         price: 87,
         image: colored_chrisantemum,
         basket_image: basket_icon,
+        nr: '14',
       },
       {
         id: '15',
@@ -124,6 +138,7 @@ const data = {
         price: 70,
         image: white_peonies,
         basket_image: basket_icon,
+        nr: '15',
       },
       {
         id: '16',
@@ -131,6 +146,7 @@ const data = {
         price: 95,
         image: colored_freesia,
         basket_image: basket_icon,
+        nr: '16',
       },
       {
         id: '17',
@@ -138,6 +154,7 @@ const data = {
         price: 95,
         image: yellow_roses,
         basket_image: basket_icon,
+        nr: '17',
       },
     ],
   };
