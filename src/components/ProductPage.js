@@ -2,13 +2,13 @@ import React from 'react';
 
 const products = [
   { id: 1, name: 'PopIt', price: 10, image: "/produs1.jpg" },
-  { id: 2, name: 'Proiector', price: 15, image: "/produs2.jpg" },
+  { id: 2, name: 'Proiector', price: 60, image: "/produs2.jpg" },
   { id: 3, name: 'Figurine AmongUs', price: 20, image: "/produs3.jpg" },
   { id: 4, name: 'Tractor de ferma', price: 25, image: "/produs4.jpg" },
   { id: 5, name: 'Figurina Thor', price: 30, image: "/produs5.jpg" },
   { id: 6, name: 'Controller Bebelusi', price: 35, image: "/produs6.jpg" },
-  { id: 7, name: 'Masina Clasica', price: 40, image: "/produs7.jpg" },
-  { id: 8, name: 'Figurina Spiderman', price: 45, image: "/produs8.jpg" },
+  { id: 7, name: 'Masina Clasica', price: 50, image: "/produs7.jpg" },
+  { id: 8, name: 'Figurina Spiderman', price: 35, image: "/produs8.jpg" },
   { id: 9, name: 'Masina cu telecomanda', price: 50, image: "/produs9.jpg" },
 ];
 
