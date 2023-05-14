@@ -21,11 +21,11 @@ export default function Nav() {
             <a className="block mt-2 lg:inline-block lg:mt-0 text-black hover:text-gray-400 mx-2 lg:mx-4 text-lg text-gray-800">
               Jucarii
             </a>
-          </Link>
+          {/* </Link>
           <Link href="/cadouri" legacyBehavior>
             <a className="block mt-2 lg:inline-block lg:mt-0 text-black hover:text-gray-400 mx-2 lg:mx-4 text-lg text-gray-800">
               Cadouri
-            </a>
+            </a> */}
           </Link>
           <Link href="/retur" legacyBehavior>
             <a className="block mt-2 lg:inline-block lg:mt-0 text-black hover:text-gray-400 mx-2 lg:mx-4 text-lg text-gray-800">
