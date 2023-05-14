@@ -8,7 +8,7 @@ function MyForm() {
       </p>
       <form name="contact-form" method="POST" data-netlify="true">
         <div className="form-layout">
-          <div className="form-row">
+          <div className="form-group">
             <label className="label-group">
               NAME
               <input type="text" name="name" />

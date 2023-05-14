@@ -121,36 +121,10 @@ welcome-text {
   display: none;
 }
 
-@media (max-width: 1600px) {
-  .welcome-section {
-    padding: 3rem;
-  }
-
-  .welcome-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .showroom-image {
-    display: none;
-  }
-
-  .showroom-image-sm {
-    display: block;
-    width: 100vw;
-    height: auto;
-  }
-}
-
 /* CONTACT */
 
 .contact-img {
   width: 100%;
-  height: auto;
-}
-
-.showroom-img-contact {
-  width: 35%;
   height: auto;
 }
 
@@ -163,12 +137,6 @@ welcome-text {
   height: auto;
   background-color: var(--black);
   padding: 4rem 1rem;
-}
-
-.location-title {
-  font-size: 1.75rem;
-  font-weight: bold;
-  font-family: var(--inter);
 }
 
 .location-group-text {
@@ -221,7 +189,7 @@ welcome-text {
   flex-direction: column;
 }
 
-.form-row {
+.form-group {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -419,6 +387,7 @@ welcome-text {
   background-color: var(--white);
   display: flex;
   flex-direction: row;
+  gap: 5rem;
   justify-content: center;
   padding-block-end: 2rem;
 }
@@ -435,7 +404,7 @@ welcome-text {
 }
 
 .personal-image {
-  width: 50%;
+  width: 15vw;
   height: auto;
 }
 
@@ -463,4 +432,98 @@ welcome-text {
 .awards-icon {
   width: 35%;
   height: auto;
+}
+
+/* MEDIA */
+
+@media (min-width: 250px) and (max-width: 680px) {
+  .recent-group {
+    flex-direction: column;
+  }
+  .car-image {
+    width: 70vw;
+    height: auto;
+  }
+  .recent-car-text {
+    font-size: 0.85rem;
+  }
+  .footer-address,
+  .copyright {
+    font-size: 0.55rem;
+  }
+  .form-container {
+    justify-content: center;
+    padding-inline: 3rem;
+  }
+  .form-layout {
+    justify-content: center;
+  }
+  .form-group {
+    flex-direction: column;
+  }
+  .location-layout {
+    padding-inline: 3rem;
+  }
+
+  .location-subtitle {
+    font-size: 1.25rem;
+  }
+  .logo-black {
+    width: 5.5rem;
+  }
+
+  .small-group p {
+    font-size: 0.85rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+  .team-layout {
+    flex-direction: column;
+    gap: 0;
+  }
+  .personal-image {
+    width: 50%;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .personal-text p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 680px) {
+  .name {
+    font-size: 1.5rem;
+  }
+  .personal-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1600px) {
+  .welcome-section {
+    padding: 3rem;
+  }
+
+  .welcome-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showroom-image {
+    display: none;
+  }
+
+  .showroom-image-sm {
+    display: block;
+    width: 100vw;
+    height: auto;
+  }
+
+  .form-container {
+    padding-inline: 3rem;
+  }
 }
