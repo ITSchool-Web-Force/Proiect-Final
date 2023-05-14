@@ -9,7 +9,7 @@ import { ThreeDots  } from  'react-loader-spinner'
 
 import { ExpressionCard } from '../../components/container/index/ExpressionCard';
 
-import styles from '../../styles/container/account.module.scss';
+import styles from '../../styles/container/users.module.scss';
 
 function Username(props) {
 

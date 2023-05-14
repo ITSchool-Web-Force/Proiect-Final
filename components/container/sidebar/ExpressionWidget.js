@@ -64,19 +64,21 @@ function ExpressionWidget() {
             console.error(error);
         } 
 
-        const countLikes = data.reduce((expression, like) => {
-            const post_id = like.post_id;
-            if (post_id in expression) {
-                expression[post_id] += 1;
-            } else {
-                expression[post_id] = 1;
-            }
-            return expression;
-        }, {});
+        if(data.length > 0) {
+            const countLikes = data.reduce((expression, like) => {
+                const post_id = like.post_id;
+                if (post_id in expression) {
+                    expression[post_id] += 1;
+                } else {
+                    expression[post_id] = 1;
+                }
+                return expression;
+            }, {});
 
-        const theMostLikedExpression = (Object.entries(countLikes).sort((a, b) => b[1] - a[1]))[0][0];
+            const theMostLikedExpression = (Object.entries(countLikes).sort((a, b) => b[1] - a[1]))[0][0];
 
-        setThePostId(theMostLikedExpression)
+            setThePostId(theMostLikedExpression)
+        }
     }
 
     useEffect(() => { 
@@ -108,7 +110,7 @@ function ExpressionWidget() {
     return <>
         <div className={styles.expressionWidget}>
             <h2>Expresia săptămânii</h2>    
-            {thePostData && <ExpressionCard expressionData={thePostData} ShowLikes='false' />}
+            {thePostData && <ExpressionCard expressionData={thePostData} ShowLikes='false'/>}
         </div>
     </>
 }

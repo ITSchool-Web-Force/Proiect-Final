@@ -8,11 +8,14 @@
         grid-column: 1/2;
     }
 }
+.accountPage {
+    padding-block-start: 1.5em; 
+    text-align: center;
+}
 .expressionsList {
     display: grid;
-    justify-items: center;
-    margin-block-end: 1.5em;
-    .end {
-        margin-block: 1.5em;
-    }
+    justify-items: center; 
 }
+.end {
+    margin-block: 1.5em;
+}  
