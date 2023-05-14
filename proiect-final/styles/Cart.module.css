@@ -1,0 +1,24 @@
+.text {
+    width: 100vw;
+    text-align: center;
+    border-block: 1px solid black;
+    padding: 0.5rem;
+    background-color: rgb(241, 239, 239);
+}
+.total_pay {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-inline: auto;
+}
+.final_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.checkout_button {
+    background-color: white;
+    border: none;
+}

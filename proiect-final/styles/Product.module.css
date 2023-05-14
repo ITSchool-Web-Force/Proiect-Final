@@ -79,3 +79,37 @@
     width: 2.5rem;
     border-radius: 50%;
 }
+.add_remove_button {
+    height: 2rem;
+    background-color: pink;
+    text-align: center;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    font-size: 0.8rem;
+}
+.add_remove_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+.input {
+    width: 2.5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart_product {
+    height: auto;
+    width: auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}
+.cart_product:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem rgba(139, 141, 141, 0.5);
+}

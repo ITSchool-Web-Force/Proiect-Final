@@ -1,4 +1,3 @@
-
 import style from "../styles/Logo.module.css"
 import logo from "../images/logo.png"
 import Image from "next/image";
