@@ -2,6 +2,7 @@ import { ShoppingCartContext } from "@/context/ShoppingCartContext";
 import { useContext } from "react";
 import Product from "./Product"
 import CartItem from "./CartItem";
+import CheckoutForm from "./CheckoutForm"
 import style from "../styles/Cart.module.css"
 
 export default function Cart ({products}) {
@@ -27,8 +28,8 @@ export default function Cart ({products}) {
         <div>
           <div className={style.final_price}>
             <p className={style.total_pay}> Total: {totalAmount}$</p>
-            <button className={style.total_pay}>
-              Checkout
+            <button className={style.checkout_button}>
+              <CheckoutForm totalAmount={totalAmount}/>
             </button>
           </div>
         </div>

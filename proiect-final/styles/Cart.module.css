@@ -18,3 +18,7 @@
     align-items: center;
     padding: 1rem;
 }
+.checkout_button {
+    background-color: white;
+    border: none;
+}
