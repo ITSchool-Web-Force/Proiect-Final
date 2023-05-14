@@ -4,7 +4,6 @@ const ReturnPage = () => {
   return (
     <div>
       <nav>
-        {/* Adăugați aici codul pentru bara de navigare, dacă este necesar */}
       </nav>
       <div className="container mx-auto my-10 p-6 bg-gray-100 rounded-md shadow-lg">
         <div className="mb-6">
@@ -15,7 +14,7 @@ const ReturnPage = () => {
             <li>Returnarea trebuie să fie făcută în termen de 30 de zile de la data achiziționării.</li>
             <li>Clientul trebuie să suporte costurile de returnare, cu excepția cazurilor în care produsul este defect sau greșit livrat.</li>
           </ul>
-          <p className="text-gray-600">Vă rugăm să completați formularul de mai jos pentru a ne anunța despre faptul ca doriti un retur</p>
+          <p className="text-gray-600">Vă rugăm să completați formularul de mai jos pentru a ne anunța ca doriti sa faceti un retur</p>
         </div>
         <form>
           <div className="mb-4">
