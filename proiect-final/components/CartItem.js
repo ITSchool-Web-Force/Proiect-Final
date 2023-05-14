@@ -10,7 +10,6 @@ export default function CartItem ({price, name, image, id, key}) {
     <div className={style.cart_product}>
       <div className={style.name_price}>
       <div className={style.product_name}></div>
-      {key}
         <div className={style.product_name}>{name}</div>
         <div className={style.product_price}>{price}$</div>
       </div>
