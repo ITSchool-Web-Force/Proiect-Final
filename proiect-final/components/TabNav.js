@@ -1,5 +1,5 @@
 import style from "../styles/TabNav.module.css";
-import{ useState } from "react";
+import { useState } from "react";
 import Description from "./Description";
 import Promotions from "./Promotions";
 

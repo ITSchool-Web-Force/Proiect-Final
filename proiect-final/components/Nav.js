@@ -1,6 +1,6 @@
 import style from "../styles/Nav.module.css";
 import Logo from "./Logo"
-
+import index from "../pages/index"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
