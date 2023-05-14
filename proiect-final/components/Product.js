@@ -1,4 +1,3 @@
-import {Fragment }  from "react"
 import style from "../styles/Product.module.css"
 import Image from "next/image";
 
