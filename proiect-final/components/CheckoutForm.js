@@ -6,7 +6,6 @@ import Cart from './Cart';
 import style from "../styles/CheckoutForm.module.css"
 
 export default function CheckoutForm (props) {
-  const [visible, setVisible] = useState(true);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -65,7 +64,7 @@ export default function CheckoutForm (props) {
             Cancel
           </Button>
           <Button className={style.button_style} type="submit" id="submit" value="Send"
-            onClick={(event) => setVisible(!visible)}>
+            variant="secondary" onClick={handleClose}>
             Send
           </Button>
         </Modal.Footer>
