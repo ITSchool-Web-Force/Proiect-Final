@@ -74,6 +74,7 @@ function Username(props) {
         const { data, error } = await supabase
             .from('expressions')
             .select()
+            .eq('user_id', props.data.id)
             .range(from, to)
             .order('date',  {ascending: false} )
 
