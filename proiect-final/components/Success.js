@@ -1,5 +1,9 @@
+import style from "../styles/Success.module.css"
+
 export default function Success() {
     return <>
-    <div>Thank you for your order</div>
+    <div className={style.success_message}>
+        Thank you for your order
+    </div>
     </>
 }
