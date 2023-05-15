@@ -73,6 +73,10 @@ p {
 .auth-wrapper {
   @apply rounded;
   box-shadow: -1.5rem 1.5rem 0px var(--secondary-color);
+
+  @media (max-width: 32rem){
+    width: 85%;
+  }
 }
 .auth-page {
   font: 1rem var(--font-body);
@@ -157,6 +161,9 @@ form {
 }
 .logo-scale {
   scale: 1.5;
+  @media (max-width:32rem) {
+    scale: 1;
+  }
 }
 .username-home {
   color: var(--font-body);
