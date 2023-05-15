@@ -13,8 +13,8 @@ export default function CheckoutForm (props) {
 
   return (
     <>
-    <form method="POST" name="checkout-contact-form" action="contact/?success=true" data-netlify="true">
-      <input type="hidden" name="form-name" value="checkout-contact-form" />
+    <form method="POST" name="contact-form" action="contact/?success=true" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact-form" />
       <Button variant="success" onClick={handleShow}>
         Checkout
       </Button>
