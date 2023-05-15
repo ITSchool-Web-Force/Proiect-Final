@@ -29,9 +29,9 @@ function MyForm() {
               NAME
               <input required type="text" name="name" />
             </label>
-            <label for="emailInput" className="label-group">
+            <label htmlFor="email" className="label-group">
               EMAIL
-              <input required type="email" name="email" id="emailInput" />
+              <input required type="email" name="email" />
             </label>
             <label className="label-group">
               PHONE
