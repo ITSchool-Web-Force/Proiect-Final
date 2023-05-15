@@ -20,7 +20,7 @@ function MyForm() {
               NAME
               <input required type="text" name="name" />
             </label>
-            <label htmlFor="email" className="label-group">
+            <label className="label-group">
               EMAIL
               <input required type="email" name="email" />
             </label>
