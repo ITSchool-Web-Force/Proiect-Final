@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Luminari&display=swap');
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav li {
+    list-style: none;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .font-luminari-custom {
+    font-family: 'Luminari', cursive;
+  }
+
+  .gradient-bg-nav {
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2, #e5e5e5, #d9d9d9, #cccccc);
+  }
