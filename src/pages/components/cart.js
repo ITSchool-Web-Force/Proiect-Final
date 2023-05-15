@@ -1,38 +1,28 @@
-import React, { useContext } from 'react';
-import CartContext from './CartContext';
+import React from "react";
+import style from "./Cart.module.css";
 
-function ShoppingCart() {
-  const { cart, setCart } = useContext(CartContext);
+function Cart({ cart, removeFromCart, clearCart }) {
+  const totalPrice = cart.reduce((total, product) => total + product.price, 0);
 
-  const handleRemoveFromCart = (productId) => {
-    const newCart = cart.filter((product) => product.id !== productId);
-    setCart(newCart);
-  };
-
-  const handleClearCart = () => {
-    setCart([]);
-  };
 
   return (
     <div>
-      <h2>Coș de cumpărături</h2>
-      {cart.length === 0 ? (
-        <p>Coșul dvs. de cumpărături este gol.</p>
-      ) : (
-        <div>
-          {cart.map((product) => (
-            <div key={product.id}>
-              <h3>{product.title}</h3>
-              <img alt={product.title} src={product.image} />
-              <p>{product.price}</p>
-              <button onClick={() => handleRemoveFromCart(product.id)}>Eliminați</button>
-            </div>
-          ))}
-          <button onClick={handleClearCart}>Goliți coșul</button>
-        </div>
-      )}
+      <h2>Cart</h2>
+      <ul>
+        {cart.map((product) => (
+          <div className="wrapper">
+            <li key={product.id} className={style.li}>
+              <img src={product.image} alt={product.title} className={style.image} />
+              {product.title} - {product.price}$
+              <button onClick={() => removeFromCart(product)} className={style.remove}>Remove</button>
+            </li>
+          </div>
+        ))}
+      </ul>
+      <p>Total Price: {totalPrice}$</p>
+      <button onClick={clearCart}>Clear Cart</button>
     </div>
   );
 }
 
-export default ShoppingCart;
+export default Cart;
