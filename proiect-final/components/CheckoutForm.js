@@ -6,8 +6,9 @@ export default function CheckoutForm() {
    
   return <>
     <form method="POST" name="contact-form" action="contact/?success=true" data-netlify="true" data-netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact-form" />
-      <h1 className={style.title}>Fill in the details of your order</h1>
+      <input type="hidden" name="form-name" value="contact-form"/>
+        <div className={style.form_style}>
+        <h1 className={style.title}>Fill in the details of your order</h1>
           <label className={style.form_group}>
               Name
               <input type="text" name="name" placeholder="Name" required/>
@@ -31,11 +32,12 @@ export default function CheckoutForm() {
           </div>
           <div className={style.btn_group}>
               <button className={style.button_style} type="reset" value="Reset the form">Reset the form</button>
-              <button className={style.button_style} type="submit" id="submit" value="Send"
-              onClick={(event) => setVisible(!visible)}>
+              <button className={style.button_style} type="submit" value="Send"
+                onClick={(event) => setVisible(!visible)}>
                 Send
               </button>
           </div>
+        </div>
       </form>
   </>
 }
