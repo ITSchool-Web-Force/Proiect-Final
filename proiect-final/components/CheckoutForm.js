@@ -11,15 +11,15 @@ export default function CheckoutForm() {
         <h1 className={style.title}>Fill in the details of your order</h1>
           <label className={style.form_group}>
               Name
-              <input type="text" name="name" placeholder="Name" required/>
+              <input type="text" name="checkbox_name" placeholder="Name" required/>
           </label>
           <label className={style.form_group}>
               Address
-              <input type="text" name="address" placeholder="Address" required/>
+              <input type="text" name="checkbox_address" placeholder="Address" required/>
           </label>
           <label class={style.form_group}>
               Email
-          <input type="email" name="email" placeholder="user@domain.ext" required/>
+          <input type="email" name="checkbox_email" placeholder="user@domain.ext" required/>
           </label>
           <label className={style.form_group}>
               Message
@@ -27,12 +27,12 @@ export default function CheckoutForm() {
           </textarea>
           </label>
           <div className={style.checkbox_group}>
-              <input type="checkbox" id="val1" name="accept" required/>
+              <input type="checkbox" name="checkbox_accept" required/>
               <label for="val1">I read the terms and conditions</label>
           </div>
           <div className={style.btn_group}>
               <button className={style.button_style} type="reset" value="Reset the form">Reset the form</button>
-              <button className={style.button_style} type="submit" value="Send"
+              <button className={style.button_style} type="submit" value="Send order"
                 onClick={(event) => setVisible(!visible)}>
                 Send
               </button>
