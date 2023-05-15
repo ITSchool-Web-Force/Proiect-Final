@@ -1,12 +1,4 @@
-import { useState } from "react";
-
 function MyForm() {
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsFormSubmitted(true);
-  };
   return (
     <div className="form-container">
       <h3>GET IN TOUCH</h3>
@@ -20,7 +12,6 @@ function MyForm() {
         data-netlify="true"
         action="contact/?success=true"
         data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit}
       >
         <div className="form-layout">
           <div className="form-group">
@@ -48,13 +39,6 @@ function MyForm() {
             <button className="send-button" type="submit">
               SEND MESSAGE
             </button>
-            {isFormSubmitted ? (
-              <h4>
-                Thank you for your message. We will get back to you shortly.
-              </h4>
-            ) : (
-              ""
-            )}
           </div>
         </div>
       </form>
