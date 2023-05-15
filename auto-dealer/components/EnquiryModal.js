@@ -15,15 +15,15 @@ function EnquiryModal(props) {
       </Modal.Header>
       <Modal.Body>
         <form
-          name="enqiury-form"
+          name="enquire-form"
           method="POST"
           data-netlify="true"
-          action="currents-stock/?success=true"
+          // action="currents-stock/?success=true"
           data-netlify-honeypot="bot-field"
         >
           <div className="form-layout">
             <div className="form-group">
-              <input type="hidden" name="form-name" value="contact-form" />
+              <input type="hidden" name="form-name" value="enquire-form" />
               <label className="label-group">
                 NAME
                 <input required type="text" name="name" />
