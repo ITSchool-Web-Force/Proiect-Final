@@ -166,6 +166,7 @@ export default function createRecipe() {
                         id="imageUrl"
                         name="imageUrl"
                         required
+                        onChange={handleChange}
                         onBlur={handleBlur} />
                   </div>
                   <div className={styles["form-element"]}>
