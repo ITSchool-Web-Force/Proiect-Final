@@ -29,7 +29,7 @@ function MyForm() {
               NAME
               <input required type="text" name="name" />
             </label>
-            <label htmlFor="email" className="label-group">
+            <label for="email" className="label-group">
               EMAIL
               <input required type="email" name="email" />
             </label>
@@ -50,10 +50,10 @@ function MyForm() {
             </button>
             {isFormSubmitted ? (
               <h4>
-                Thank you for your message. We will get back to you shortly
+                Thank you for your message. We will get back to you shortly.
               </h4>
             ) : (
-              ""
+              "Oops, something went wrong. Please try again later."
             )}
           </div>
         </div>
