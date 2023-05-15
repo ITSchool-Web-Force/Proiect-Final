@@ -1,7 +1,7 @@
 import style from "../styles/Form.module.css"
 
 export default function CheckoutForm() {
-  
+   
   return <>
     <form method="POST" name="checkout-contact-form" action="contact/?success=true" data-netlify="true" data-netlify-honeypot="bot-field">
     <input type="hidden" name="checkout-form-name" value="checkout-contact-form" />
