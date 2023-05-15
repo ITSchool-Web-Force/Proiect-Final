@@ -25,8 +25,7 @@ export default function CheckoutForm() {
         </div>
         <div className={style.btn_group}>
             <button className={style.button_style} type="reset" value="Reset the form">Reset the form</button>
-            <button className={style.button_style} type="submit" id="submit" value="Send"
-              onClick={(event) => setVisible(!visible)}>
+            <button className={style.button_style} type="submit" id="submit" value="Send">
               Send
             </button>
         </div>
