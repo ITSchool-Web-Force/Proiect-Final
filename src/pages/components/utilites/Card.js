@@ -1,8 +1,11 @@
 import React from 'react';
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
-import style from "./card.module.css"
+import style from "./card.module.css";
+
 
 const CardComponent = ({ product, handleAddToCart }) => { 
+ 
+  console.log(handleAddToCart, "salut")
   return ( 
     <Card className={style.card}>
       <img alt={product.title} src={product.image} />

@@ -35,7 +35,7 @@ function NavBar(args) {
             </NavItem>
             
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+        
         </Collapse>
       </Navbar>
     </div>

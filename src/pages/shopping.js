@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavBar from './components/utilites/navbar';
 import ShoppingCart from './components/cart';
-import CartContext from './components/CartContext';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/utilites/footer';
 
-function ShopCart() {
-  const [cart, setCart] = useState([]);
-
+const ShopCart = () => {
   return (
     <div>
-      <CartContext.Provider value={{ cart, setCart }}>
+  
         <NavBar />
         <ShoppingCart />
-      </CartContext.Provider>
+        <Footer />
+     
     </div>
   );
-}
+};
 
 export default ShopCart;

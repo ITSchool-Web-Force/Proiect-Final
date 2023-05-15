@@ -5,21 +5,21 @@ import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCa
 
 const items = [
   {
-    src: 'https://picsum.photos/id/123/1200/400',
-    altText: 'Slide 1',
-    caption: 'Slide 1',
+    src: 'https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg',
+    altText: 'SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s',
+    caption: '109$',
     key: 1,
   },
   {
-    src: 'https://picsum.photos/id/456/1200/400',
-    altText: 'Slide 2',
-    caption: 'Slide 2',
+    src: 'https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg',
+    altText: 'Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor',
+    caption: '999.99$',
     key: 2,
   },
   {
-    src: 'https://picsum.photos/id/678/1200/400',
-    altText: 'Slide 3',
-    caption: 'Slide 3',
+    src: 'https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg',
+    altText: 'Solid Gold Petite Micropave',
+    caption: '168$',
     key: 3,
   },
 ];
@@ -47,40 +47,43 @@ function Slider(args) {
 
   const slides = items.map((item) => {
     return (
+      
       <CarouselItem className={styles.carouselItem}
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.src}
       >
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
+        <CarouselCaption className={styles.caption}
+
         />
+        <div className={styles.altText}>{item.altText}</div>
+      <div className={styles.captionText}>{item.caption}</div>
       </CarouselItem>
+     
     );
   });
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} >
       <Carousel 
         activeIndex={activeIndex}
         next={next}
         previous={previous}
         {...args}
       >
-        <CarouselIndicators
+        <CarouselIndicators 
           items={items}
           activeIndex={activeIndex}
           onClickHandler={goToIndex}
         />
         {slides}
-        <CarouselControl
+        <CarouselControl 
           direction="prev"
           directionText="Previous"
           onClickHandler={previous}
         />
-        <CarouselControl
+        <CarouselControl 
           direction="next"
           directionText="Next"
           onClickHandler={next}
