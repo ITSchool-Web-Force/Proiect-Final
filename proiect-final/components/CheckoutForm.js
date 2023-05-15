@@ -1,9 +1,7 @@
 import style from "../styles/Form.module.css"
-import { useState } from "react";
 
 export default function CheckoutForm() {
-  const [visible, setVisible] = useState(true);
-   
+     
   return <>
     <form className={style.contact_form} form name="contact-form" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact-form"/>
@@ -31,9 +29,10 @@ export default function CheckoutForm() {
               <label for="val1">I read the terms and conditions</label>
           </div>
           <div className={style.btn_group}>
-              <button className={style.button_style} type="reset" value="Reset the form">Reset the form</button>
-              <button className={style.button_style} type="submit" value="Send order"
-                onClick={(event) => setVisible(!visible)}>
+              <button className={style.button_style} type="reset" value="Reset the form">
+                Reset the form
+              </button>
+              <button className={style.button_style} type="submit" value="Send order">
                 Send
               </button>
           </div>
