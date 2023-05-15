@@ -71,6 +71,12 @@ p.logo-p:before {
 .showNav {
   display: flex;
 }
+.logoutLinkLarge {
+  display: none;
+}
+.logoutLinkSmall {
+  display: block;
+}
 
 @media (min-width: 48rem) {
     .header {
@@ -91,27 +97,34 @@ p.logo-p:before {
     .nav ul {
       display: flex;
       gap: 3rem;
+      align-items: center;
     }
     .nav a {
       color: var(--body-text-color);
       width: fit-content;
       padding-inline: 0;
       height: 3rem;
-      border-block-end: 0.25rem solid rgba(255, 255, 255, 0);
+      border-block-end: 1px solid rgba(255, 255, 255, 0);
       transition: none;
     }
     .nav a:hover {
       color: var(--body-text-color);
-      border-block-end: 0.25rem solid var(--color-pop);
+      border-block: 1px solid var(--color-pop);
       background: transparent;
       box-shadow: none;
       transition: none;
     }
     a.active {
-      border-block-end: 0.25rem solid var(--color-pop);
+      border-block: 1px solid var(--color-pop);
       height: 3rem;
     }
     .mobile-menu-button {
+      display: none;
+    }
+    .logoutLinkLarge {
+      display: block;
+    }
+    .logoutLinkSmall {
       display: none;
     }
 }

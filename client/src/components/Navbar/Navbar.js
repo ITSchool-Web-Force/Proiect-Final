@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import styles from "./Navbar.module.scss";
 import { FaBars } from "react-icons/fa";
 import { useCookies } from "react-cookie";
+import Button from "../Button/Button";
 
 const pages = [
   { title: "Home", path: "/" },
@@ -20,7 +21,8 @@ export default function Navbar() {
     setShowNav(!showNav);
   };
 
-  const [cookies, setCookies] = useCookies(["access_token"]);
+  const [_, setCookies] = useCookies(["access_token"]);
+
   const Logout = () => {
     setCookies("access_token", "")
     window.localStorage.removeItem("userID");
@@ -60,19 +62,14 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
-          {!cookies.access_token ? (
-            <li>
-              <Link href="/login" legacyBehavior>
-                <a className={styles.link}>Login</a>
-              </Link>
-            </li>
-            ) : (
-            <li>
+            <li className={styles.logoutLinkSmall}>
               <Link href="/" legacyBehavior>
                 <a onClick={Logout} className={styles.link}>Logout</a>
               </Link>
             </li>
-          )}
+            <li className={styles.logoutLinkLarge}>
+                <Button onClick={Logout} buttonType="tertiary">Logout</Button>
+            </li>
         </ul>
       </nav>
     </header>

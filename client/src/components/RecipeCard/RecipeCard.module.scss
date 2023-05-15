@@ -1,0 +1,58 @@
+.recipeCard {
+    @apply pb-4 max-w-md mx-auto rounded shadow-md space-y-2;
+
+    background: var(--accent-color);
+    color: var(--off-white);
+    font: 1rem var(--font-body);
+    font-weight: 200;
+    word-wrap: break-word;
+    box-shadow: -1.25rem 1.25rem 0px var(--secondary-color);
+    overflow: hidden;
+
+    img {
+        @apply block mx-auto rounded-md rounded-bl-none rounded-br-none;
+
+        cursor: pointer;
+        height: 20rem;
+        width: 30rem;
+        object-fit: cover;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1) ;
+        }
+    }
+}
+.recipeCardImage {
+    overflow: hidden;
+}
+.recipeName {
+    color: var(--color-pop);
+    font: 1.75rem var(--font-logo);
+    letter-spacing: .1em;
+    font-weight: 600;
+    padding: 1rem;
+}
+.recipeAuthor {
+    color: var(--off-white);
+    font: 1.5rem var(--font-logo);
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    padding-inline: 0.1em;
+    word-wrap: break-word;
+}
+.spanInteract {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    word-wrap: break-word;
+}
+.Fa {
+    margin-block-end: 0.3em;
+    color: red;
+}
+.likeButton {
+    align-items: center;
+    scale: 0.75;
+}
