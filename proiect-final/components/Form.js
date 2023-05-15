@@ -5,8 +5,8 @@ export default function Form() {
     const [visible, setVisible] = useState(true);
     
     return <>
-        <form className={style.contact_form} form name="my-form-contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="contact-form-name" value="my-form-contact" />
+        <form className={style.contact_form} form name="form-contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="contact-form-name" value="form-contact" />
             <h1 className={style.title}>Contact us</h1>
             <label className={style.form_group}>
                 Name
