@@ -44,6 +44,20 @@ export default function createRecipe() {
         setRecipe({ ...recipe, [name]: value });
       };
 
+      // if (name === "imageUrl") {
+      //   const isImageFormatSupported = imageFormats.some((format) =>
+      //     value.endsWith(`.${format}`)
+      //   );
+      //   if (!isImageFormatSupported) {
+      //     notifyError("Invalid image format. Supported formats: " + imageFormats.join(", "));
+      //     return;
+      //   }
+      // };
+    };
+
+    const handleBlur = (event) => {
+      const { name, value } = event.target;
+    
       if (name === "imageUrl") {
         const isImageFormatSupported = imageFormats.some((format) =>
           value.endsWith(`.${format}`)
@@ -52,8 +66,10 @@ export default function createRecipe() {
           notifyError("Invalid image format. Supported formats: " + imageFormats.join(", "));
           return;
         }
-      };
+      }
     };
+
+
     
     const handleIngredientChange  = (event, index) => {
       const { value } = event.target;
@@ -150,7 +166,7 @@ export default function createRecipe() {
                         id="imageUrl"
                         name="imageUrl"
                         required
-                        onChange={handleChange} />
+                        onBlur={handleBlur} />
                   </div>
                   <div className={styles["form-element"]}>
                     <label className={styles["label"]} htmlFor="ingredients">Ingredients (1 per line)</label>
