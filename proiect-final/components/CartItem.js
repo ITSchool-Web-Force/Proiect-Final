@@ -3,7 +3,7 @@ import Image from "next/image"
 import { ShoppingCartContext } from "@/context/ShoppingCartContext";
 import { useContext } from "react";
 
-export default function CartItem ({price, name, image, id, key}) {
+export default function CartItem ({price, name, image, id}) {
   const {addProducts, removeProducts, cartItems} = useContext(ShoppingCartContext);
   return <>
     <div className={style.product_container}>

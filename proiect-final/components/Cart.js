@@ -13,15 +13,14 @@ export default function Cart ({products}) {
         <h1 className={style.text}>Your cart items</h1>
         {products.map((product) => {
           if (cartItems[product.id] !== 0) {
-            return <div>
-              <CartItem 
-                key={product.nr}
+            return 
+              <CartItem key={product.nr}>
                 id={product.id}
                 product={product} 
                 image={product.image}
                 name={product.name}
-                price={product.price}/>
-            </div>
+                price={product.price}
+                </CartItem>
           }          
         })}
       </div>
