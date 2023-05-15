@@ -10,11 +10,12 @@ function MyForm() {
         name="contact-form"
         method="POST"
         data-netlify="true"
-        onSubmit="submit"
+        action="contact/?success=true"
+        data-netlify-honeypot="bot-field"
       >
         <div className="form-layout">
           <div className="form-group">
-            <input type="hidden" name="form-name" />
+            <input type="hidden" name="form-name" value="contact-form" />
             <label className="label-group">
               NAME
               <input required type="text" name="name" />
