@@ -5,8 +5,6 @@ export default function Form() {
     const [visible, setVisible] = useState(true);
     
     return <>
-    {visible &&
-        <div className={style.background}>
         <form className={style.contact_form} form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
             <h1 className={style.title}>Contact us</h1>
@@ -35,15 +33,5 @@ export default function Form() {
                 </button>
             </div>
         </form>
-        </div>}
-        {!visible &&
-            <div className={style.form_message}>
-                <div className={style.thanks_message}>Thank you, your message was sent</div>
-                <button className={style.button_style} type="submit" id="submit" value="Send"
-                onClick={(event) => setVisible(!visible)}>
-                Back to a new form
-                </button>
-            </div>
-        }
     </>
 }
