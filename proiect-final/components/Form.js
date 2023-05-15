@@ -7,7 +7,7 @@ export default function Form() {
     return <>
     {visible &&
         <div className={style.background}>
-        <form className={style.contact_form} method="POST" name="contact-form" action="contact/?success=true" data-netlify="true">
+        <form className={style.contact_form} method="POST" name="contact-form" action="contact/?success=true" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact-form" />
             <h1 className={style.title}>Contact us</h1>
             <label className={style.form_group}>
