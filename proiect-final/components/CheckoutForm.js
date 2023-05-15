@@ -4,11 +4,15 @@ export default function CheckoutForm() {
    
   return <>
     <form method="POST" name="checkout-contact-form" action="contact/?success=true" data-netlify="true" data-netlify-honeypot="bot-field">
-    <input type="hidden" name="checkout-form-name" value="checkout-contact-form" />
-    <h1 className={style.title}>Contact us</h1>
+    <input type="hidden" name="form-name" value="checkout-contact-form" />
+    <h1 className={style.title}>Fill in the details of your order</h1>
         <label className={style.form_group}>
             Name
             <input type="text" name="name" placeholder="Name" required/>
+        </label>
+        <label className={style.form_group}>
+            Address
+            <input type="text" name="address" placeholder="Address" required/>
         </label>
         <label class={style.form_group}>
             Email
@@ -16,7 +20,7 @@ export default function CheckoutForm() {
         </label>
         <label className={style.form_group}>
             Message
-        <textarea placeholder="Contact us" name="message" required>
+        <textarea placeholder="fill in your remarks" name="message" required>
         </textarea>
         </label>
         <div className={style.checkbox_group}>
