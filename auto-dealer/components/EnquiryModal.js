@@ -18,7 +18,7 @@ function EnquiryModal(props) {
           name="enquire-form"
           method="POST"
           data-netlify="true"
-          // action="currents-stock/?success=true"
+          action="currents-stock/1/?success=true"
           data-netlify-honeypot="bot-field"
         >
           <div className="form-layout">
