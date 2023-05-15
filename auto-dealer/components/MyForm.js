@@ -53,7 +53,7 @@ function MyForm() {
                 Thank you for your message. We will get back to you shortly.
               </h4>
             ) : (
-              "Oops, something went wrong. Please try again later."
+              ""
             )}
           </div>
         </div>
