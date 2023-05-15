@@ -1,14 +1,11 @@
-import Footer from "../../components/Footer";
 import Company from "../../components/Company";
-import MyNavbar from "../../components/MyNavbar";
+import Layout from "@/components/Layout";
 
 function About() {
   return (
-    <div>
-      <MyNavbar />
+    <Layout>
       <Company />
-      <Footer />
-    </div>
+    </Layout>
   );
 }
 

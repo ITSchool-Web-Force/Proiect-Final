@@ -5,7 +5,6 @@ import Button from "react-bootstrap/Button";
 const { TextArea } = Input;
 
 function EnquiryModal(props) {
-  console.log(props);
   return (
     <Modal
       {...props}

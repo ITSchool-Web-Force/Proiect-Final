@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import data from "../../components/data";
+import specs from "@/components/specs";
 import Image from "next/image";
 import MyNavbar from "../../components/MyNavbar";
 import Footer from "../../components/Footer";
@@ -33,42 +34,14 @@ function CarDetails() {
 
           <div className="spec-section">
             <p className="section-title">SPECIFICATION</p>
-            <div className="spec-group">
-              <p className="spec-key">Colour:</p>
-              <p>{car.colour}</p>
-            </div>
-            <div className="spec-group">
-              <p className="spec-key">Interior:</p>
-              <p>{car.interior}</p>
-            </div>
-            <div className="spec-group">
-              <p className="spec-key">Year:</p>
-              <p>{car.year}</p>
-            </div>
-            <div className="spec-group">
-              <p className="spec-key">Mileage:</p>
-              <p>{car.mileage}</p>
-            </div>
-            <div className="spec-group">
-              <p className="spec-key">Engine:</p>
-              <p>{car.engine}</p>
-            </div>
-            <div className="spec-group">
-              <p className="spec-key">Power:</p>
-              <p>{car.power}</p>
-            </div>
-            <div className="spec-group">
-              <p className="spec-key">Transmision:</p>
-              <p>{car.transmission}</p>
-            </div>
-            <div className="spec-group">
-              <p className="spec-key">Body Style:</p>
-              <p>{car.bodyStyle}</p>
-            </div>
-            <div className="spec-group">
-              <p className="spec-key">Fuel:</p>
-              <p>{car.fuel}</p>
-            </div>
+            {specs.map((spec) => {
+              return (
+                <div key={spec.key} className="spec-group">
+                  <p className="spec-key">{spec.label}:</p>
+                  <p>{car[spec.key]}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
         <p className="section-title">DESCRIPTION</p>
