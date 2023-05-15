@@ -43,16 +43,6 @@ export default function createRecipe() {
       } else {
         setRecipe({ ...recipe, [name]: value });
       };
-
-      // if (name === "imageUrl") {
-      //   const isImageFormatSupported = imageFormats.some((format) =>
-      //     value.endsWith(`.${format}`)
-      //   );
-      //   if (!isImageFormatSupported) {
-      //     notifyError("Invalid image format. Supported formats: " + imageFormats.join(", "));
-      //     return;
-      //   }
-      // };
     };
 
     const handleBlur = (event) => {
@@ -69,13 +59,16 @@ export default function createRecipe() {
       }
     };
 
-
-    
     const handleIngredientChange  = (event, index) => {
       const { value } = event.target;
-      const ingredients = recipe.ingredients;
-      ingredients[index] = value;
-      setRecipe({ ...recipe, ingredients });
+      const ingredients = [...recipe.ingredients];
+
+      if(!value) {
+        notifyError("Ingredient field cannot be empty");
+      } else {
+        ingredients[index] = value;
+        setRecipe({ ...recipe, ingredients });
+      }
     };
 
     // sets recipe obj same as it was before but adds the ingredients
@@ -85,9 +78,13 @@ export default function createRecipe() {
 
     const handleInstructionsChange  = (event, index) => {
       const { value } = event.target;
-      const instructions = recipe.instructions;
-      instructions[index] = value;
-      setRecipe({ ...recipe, instructions });
+      const instructions = [...recipe.instructions];
+      if(!value) {
+        notifyError("Instruction field cannot be empty");
+      } else {
+        instructions[index] = value;
+        setRecipe({ ...recipe, instructions });
+      }
     };
 
     // sets recipe obj same as it was before but adds the instructions
@@ -100,6 +97,18 @@ export default function createRecipe() {
 
     const handleSubmit = async (event) => {
       event.preventDefault();
+          
+      // check if there is at least one non-empty ingredient
+      const hasIngredient = recipe.ingredients.some((ingredient) => ingredient.trim() !== '');
+        
+      // check if there is at least one non-empty instruction
+      const hasInstruction = recipe.instructions.some((instruction) => instruction.trim() !== '');
+      
+      // check if both ingredients and instructions are not empty
+      if (!hasIngredient || !hasInstruction) {
+        notifyError('Please add at least one ingredient and one instruction');
+        return;
+      }
       try {
         await axios.post("https://baricare-app.herokuapp.com/recipes", recipe);
         notifySuccess();
@@ -110,7 +119,7 @@ export default function createRecipe() {
         notifyError(error.response.data.message);
       }
     };
-
+    
   return (
     <>
       <AppLayout>
@@ -179,6 +188,7 @@ export default function createRecipe() {
                             name="ingredients"
                             value={ingredient}
                             id="ingredients"
+                            required
                             onChange={(event) => handleIngredientChange(event, index)} />
                     ))}
                     <Button type="button" buttonType="secondary" onClick={addIngredient} >Add Ingredient</Button>
@@ -204,6 +214,7 @@ export default function createRecipe() {
                             key={index}
                             name="instructions"
                             value={instructions}
+                            required
                             id="instructions"
                             onChange={(event) => handleInstructionsChange(event, index)} />
                     ))}
