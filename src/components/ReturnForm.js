@@ -19,6 +19,7 @@ const ReturnPage = () => {
         </div>
 
         <form name="retur"  netlify>
+        <input type="hidden" name="form-name" value="retur" />
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
               Nume:
