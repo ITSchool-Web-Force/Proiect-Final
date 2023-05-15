@@ -7,6 +7,8 @@ import { supabase } from '../utilities/supabase';
 
 import { Content } from '../sections/Content';
 
+const HOW_MANY = 5;
+
 function HomePage(props) {
 
     const [theError, setTheError] = useState(false);
@@ -19,7 +21,7 @@ function HomePage(props) {
         <Head>
             <title>Dicționar Urban</title>
         </Head>
-        <Content ssrData={props.data} posts={props.HowMany}/>
+        <Content ssrData={props.data} posts={HOW_MANY}/>
         {theError && ( 
             <Modal message={'A apărut o eroare'} status='fail'/>
         )}
@@ -28,11 +30,10 @@ function HomePage(props) {
  
 export async function getServerSideProps(context) {
 
-    const HowMany = 5;
     const { data, error } = await supabase
             .from('expressions')
             .select()
-            .range(0, HowMany-1)
+            .range(0, HOW_MANY-1)
             .order('date',  {ascending: false} )
             ;
 
@@ -46,7 +47,6 @@ export async function getServerSideProps(context) {
     return {
         props: {
             data,
-            HowMany,
             error
         }
     }
