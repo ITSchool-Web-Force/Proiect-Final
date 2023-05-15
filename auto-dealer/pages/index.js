@@ -1,17 +1,14 @@
-import MyNavbar from "../components/MyNavbar";
 import MyCarousel from "../components/MyCarousel";
-import Footer from "../components/Footer";
 import Welcome from "../components/Welcome";
 import RecentCars from "../components/RecentCars";
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <>
-      <MyNavbar />
+    <Layout>
       <MyCarousel />
       <Welcome />
       <RecentCars />
-      <Footer />
-    </>
+    </Layout>
   );
 }
