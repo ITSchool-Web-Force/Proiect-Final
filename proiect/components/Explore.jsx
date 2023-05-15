@@ -14,12 +14,12 @@ const Explore = () => {
         <p className='text-2xl font-bold'>Follow me on Instagram</p>
         <p className='pb-4'>@adelinvisuals</p>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 p-4'>
-            <InstagramImg socialImg={IgImg1} />
-            <InstagramImg socialImg={IgImg2} />
-            <InstagramImg socialImg={IgImg3} />
-            <InstagramImg socialImg={IgImg4} />
-            <InstagramImg socialImg={IgImg5} />
-            <InstagramImg socialImg={IgImg6} />
+           <Link href='https://www.instagram.com/p/CpGQMNmrlSm/' ><InstagramImg socialImg={IgImg1} /></Link>
+           <Link href='https://www.instagram.com/p/CpGQMNmrlSm/' ><InstagramImg socialImg={IgImg2} /></Link>
+           <Link href='https://www.instagram.com/p/CpGQMNmrlSm/' ><InstagramImg socialImg={IgImg3} /></Link>
+           <Link href='https://www.instagram.com/p/CpGQMNmrlSm/' ><InstagramImg socialImg={IgImg4} /></Link>
+           <Link href='https://www.instagram.com/p/CpGQMNmrlSm/' ><InstagramImg socialImg={IgImg5} /></Link>
+           <Link href='https://www.instagram.com/p/CpGQMNmrlSm/' ><InstagramImg socialImg={IgImg6} /></Link>
         </div>
     </div>
   )
