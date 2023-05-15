@@ -23,7 +23,7 @@ export default function CartScreen () {
                 Cart is empty. <Link href = "/ Continue shopping" ></Link>
                 </div>
       ) : (
-        <div className="grid md:grid-cols-4 md:gap-5 mb-20">
+        <div className="grid md:grid-cols-3 md:gap-4 mb-20">
           <div className="overflow-x-auto md:col-span-3">
             <table className="min-w-full ">
               <thead className="border-b">
@@ -61,13 +61,23 @@ export default function CartScreen () {
               </tbody>
             </table>
           </div>
-          <div className="card p-5">
+          <div className="card p-8">
             <ul>
               <li>
-                <div className="pb-3 text-xl">
+                <div className="pb-5 text-xl">
                   Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : $
                   {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
                 </div>
+                <h1> Order details </h1>
+                <input className = "p-2 placeholder-gray-500 border" placeholder = "Name"/> 
+                <input className = "p-2 placeholder-gray-500 border"  placeholder = "Address"/>
+                <h1> **All payments will be made cash at delivery </h1>
+                <div className="flex flex-row mx-auto">
+                <button onClick={() => router.push('/shipping')}
+                className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                  Send Order
+                </button>
+                  </div>
               </li>
               
             </ul>

@@ -6,6 +6,7 @@ import Testimonial from '@/components/testimonials';
 import Hero from '@/components/hero';
 
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {

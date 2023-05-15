@@ -5,7 +5,7 @@ import { Store } from '@/utils/Store';
 import React, { useContext, useState} from 'react';
 import { useEffect } from 'react';
 import Image from 'next/image';
-import Footer from '../pages/Footer'
+import Footer from './Footer'
 
 
 
