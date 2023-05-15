@@ -1,9 +1,6 @@
-import { useState } from "react"
 import style from "../styles/Form.module.css"
 
 export default function Form() {
-    const [visible, setVisible] = useState(true);
-    
     return <>
         <form className={style.contact_form} form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
@@ -14,7 +11,7 @@ export default function Form() {
             </label>
             <label class={style.form_group}>
                 Email
-            <input type="email" name="email" placeholder="user@domain.ext" required/>
+                <input type="email" name="email" placeholder="user@domain.ext" required/>
             </label>
             <label className={style.form_group}>
                 Message
@@ -27,9 +24,8 @@ export default function Form() {
             </div>
             <div className={style.btn_group}>
                 <button className={style.button_style} type="reset" value="Reset the form">Reset the form</button>
-                <button className={style.button_style} type="submit" id="submit" value="Send"
-                 onClick={(event) => setVisible(!visible)}>
-                 Send
+                <button className={style.button_style} type="submit" id="submit" value="Send">
+                    Send
                 </button>
             </div>
         </form>
