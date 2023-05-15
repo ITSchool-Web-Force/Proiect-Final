@@ -22,27 +22,28 @@ function MyForm() {
               NAME
               <input required type="text" name="name" />
             </label>
-            <label htmlFor="email" className="label-group">
+            <label className="label-group">
               EMAIL
-              <input id="email" required type="email" name="email" />
+              <input required type="email" name="email" />
             </label>
             <label className="label-group">
               PHONE
               <input required type="text" name="phone" />
             </label>
           </div>
-          <div>
-            <label htmlFor="select-option">CAR</label>
+          <label className="label-group">
+            SELECT CAR
             <select id="select-option" name="select-option">
               {data.map((car) => (
                 <option key={car.id}>{car.name}</option>
               ))}
             </select>
-            <label className="label-group">
-              MESSAGE
-              <textarea required name="message"></textarea>
-            </label>
-          </div>
+          </label>
+          <label className="label-group">
+            MESSAGE
+            <textarea required name="message"></textarea>
+          </label>
+
           <div>
             <button className="send-button" type="submit">
               SEND MESSAGE

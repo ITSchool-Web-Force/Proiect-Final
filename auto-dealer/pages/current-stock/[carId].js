@@ -1,10 +1,9 @@
+import Layout from "../../components/Layout";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import data from "../../components/data";
 import specs from "@/components/specs";
 import Image from "next/image";
-import MyNavbar from "../../components/MyNavbar";
-import Footer from "../../components/Footer";
 import Button from "react-bootstrap/Button";
 
 function CarDetails() {
@@ -19,91 +18,90 @@ function CarDetails() {
 
   return (
     <div className="page-wrapper">
-      <MyNavbar />
-      <div className="car-page-layout">
-        <h2 className="product-title">{car.name}</h2>
-        <div className="upper-group">
-          <Image
-            className="top-image"
-            src={car.photo}
-            alt={car.name}
-            width={1280}
-            height={960}
-          />
-
-          <div className="spec-section">
-            <p className="section-title">SPECIFICATION</p>
-            {specs.map((spec) => {
-              return (
-                <div key={spec.key} className="spec-group">
-                  <p className="spec-key">{spec.label}:</p>
-                  <p>{car[spec.key]}</p>
-                </div>
-              );
-            })}
+      <Layout>
+        <div className="car-page-layout">
+          <h2 className="product-title">{car.name}</h2>
+          <div className="upper-group">
+            <Image
+              className="top-image"
+              src={car.photo}
+              alt={car.name}
+              width={1280}
+              height={960}
+            />
+            <div className="spec-section">
+              <p className="section-title">SPECIFICATION</p>
+              {specs.map((spec) => {
+                return (
+                  <div key={spec.key} className="spec-group">
+                    <p className="spec-key">{spec.label}:</p>
+                    <p>{car[spec.key]}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <p className="section-title">DESCRIPTION</p>
+          <p>{car.description}</p>
+          <p className="price">{car.price}</p>
+          <Button
+            style={{ borderRadius: 0 }}
+            variant="dark"
+            onClick={() => router.push("/contact")}
+            className="enquire-button"
+          >
+            ENQUIRE NOW VIA EMAIL
+          </Button>
+          <div>
+            <div className="images-section">
+              <Image
+                className="car-image"
+                src={car.photo2}
+                alt={car.name}
+                width={1280}
+                height={960}
+              />
+              <Image
+                className="car-image"
+                src={car.photo3}
+                alt={car.name}
+                width={1280}
+                height={960}
+              />
+              <Image
+                className="car-image"
+                src={car.photo4}
+                alt={car.name}
+                width={1280}
+                height={960}
+              />
+            </div>
+            <div className="images-section">
+              <Image
+                className="car-image"
+                src={car.photo5}
+                alt={car.name}
+                width={1280}
+                height={960}
+              />
+              <Image
+                className="car-image"
+                src={car.photo6}
+                alt={car.name}
+                width={1280}
+                height={960}
+              />
+              <Image
+                className="car-image"
+                src={car.photo7}
+                alt={car.name}
+                width={1280}
+                height={960}
+              />
+            </div>
           </div>
         </div>
-        <p className="section-title">DESCRIPTION</p>
-        <p>{car.description}</p>
-        <p className="price">{car.price}</p>
-        <Button
-          style={{ borderRadius: 0 }}
-          variant="dark"
-          onClick={() => router.push("/contact")}
-          className="enquire-button"
-        >
-          ENQUIRE NOW VIA EMAIL
-        </Button>
-        <div>
-          <div className="images-section">
-            <Image
-              className="car-image"
-              src={car.photo2}
-              alt={car.name}
-              width={1280}
-              height={960}
-            />
-            <Image
-              className="car-image"
-              src={car.photo3}
-              alt={car.name}
-              width={1280}
-              height={960}
-            />
-            <Image
-              className="car-image"
-              src={car.photo4}
-              alt={car.name}
-              width={1280}
-              height={960}
-            />
-          </div>
-          <div className="images-section">
-            <Image
-              className="car-image"
-              src={car.photo5}
-              alt={car.name}
-              width={1280}
-              height={960}
-            />
-            <Image
-              className="car-image"
-              src={car.photo6}
-              alt={car.name}
-              width={1280}
-              height={960}
-            />
-            <Image
-              className="car-image"
-              src={car.photo7}
-              alt={car.name}
-              width={1280}
-              height={960}
-            />
-          </div>
-        </div>
-      </div>
-      <Footer />
+      </Layout>
     </div>
   );
 }

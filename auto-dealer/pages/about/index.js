@@ -1,5 +1,5 @@
 import Company from "../../components/Company";
-import Layout from "@/components/Layout";
+import Layout from "../../components/Layout";
 
 function About() {
   return (
