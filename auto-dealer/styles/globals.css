@@ -349,13 +349,13 @@ welcome-text {
   }
 }
 
-@media (min-width: 275px) and (max-width: 570px) {
+@media (min-width: 275px) and (max-width: 569px) {
   .product-title {
     font-size: 1.2rem;
   }
   .card-structure {
     flex-direction: column;
-    width: auto;
+    width: 70vw;
     align-items: center;
   }
   .card-info {
@@ -368,9 +368,6 @@ welcome-text {
   .spec-group .spec-key {
     margin: 0;
     font-size: 0.85rem;
-  }
-  .car-image {
-    width: 60vw;
   }
 }
 
