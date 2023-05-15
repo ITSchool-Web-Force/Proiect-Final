@@ -18,7 +18,7 @@ const ReturnPage = () => {
           <p className="text-gray-600">Vă rugăm să completați formularul de mai jos pentru a ne anunța ca doriti sa faceti un retur</p>
         </div>
 
-        <form name="retur" netlify>
+        <form name="retur" method="POST" netlify>
           <div className="mb-4">
             <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
               Nume:
