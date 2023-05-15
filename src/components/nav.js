@@ -33,11 +33,11 @@ export default function Nav() {
             </a>
           </Link>
         </div>
-        <div className="flex items-center">
+        {/* <div className="flex items-center">
           <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full">
             <FontAwesomeIcon icon={faShoppingCart} />
           </button>
-        </div>
+        </div> */}
       </div>
     </nav>
   );

@@ -6,12 +6,12 @@ export default function Retur() {
   return (
     <div>
       <Nav />
-      <div className="my-8 mx-auto w-10/12 md:w-9/12 lg:w-7/12 xl:w-6/12 border border-black">
+      <div className="my-8 mx-auto w-10/12 md:w-9/12 lg:w-7/12 xl:w-6/12 border-none">
         <h1 className="text-center text-2xl font-bold my-4">
           Politica de retur
         </h1>
         <p className="text-center text-lg mb-8">
-          Daca nu sunteti multumiti de achizitia dumneavoastra, va rugam sa ne contactati in maxim 30 de zile de la data achizitiei.
+          Daca nu sunteti multumiti de achizitia dumneavoastra, va rugam sa ne contactati in <strong>maxim 30 de zile</strong> de la data achizitiei.
         </p>
         <ReturnForm />
       </div>
