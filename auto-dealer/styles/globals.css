@@ -248,7 +248,7 @@ welcome-text {
 
 .title-space {
   display: flex;
-  border-bottom: 1px solid #c3c3c3;
+  border-block-end: 1px solid #c3c3c3;
 }
 
 .product-title,
@@ -285,7 +285,7 @@ welcome-text {
   font-size: 1.25rem;
 }
 
-@media (min-width: 400px) and (max-width: 1810px) {
+@media (min-width: 1600px) and (max-width: 1810px) {
   .product-title {
     font-size: 1.5rem;
   }
@@ -294,6 +294,54 @@ welcome-text {
   }
   .card-info {
     gap: 0.75rem;
+  }
+  .spec-group {
+    gap: 1rem;
+  }
+  .spec-group p,
+  .spec-group .spec-key {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1370px) and (max-width: 1599px) {
+  .product-title {
+    font-size: 1.2rem;
+  }
+  .card-structure {
+    width: 60vw;
+  }
+  .card-info {
+    gap: 0.75rem;
+  }
+  .spec-group {
+    gap: 1rem;
+  }
+  .spec-group p,
+  .spec-group .spec-key {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 1369px) {
+  .product-title {
+    font-size: 1.2rem;
+  }
+  .card-structure {
+    flex-direction: column;
+    width: auto;
+  }
+  .card-info {
+    gap: 0.75rem;
+  }
+  .spec-group {
+    gap: 1rem;
+  }
+  .spec-group p,
+  .spec-group .spec-key {
+    margin: 0;
+    font-size: 0.85rem;
   }
 }
 

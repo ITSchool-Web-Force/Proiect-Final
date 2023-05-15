@@ -1,14 +1,10 @@
 import Modal from "react-bootstrap/Modal";
-import { Form, Input } from "antd";
-import Button from "react-bootstrap/Button";
-
-const { TextArea } = Input;
 
 function EnquiryModal(props) {
   return (
     <Modal
       {...props}
-      size="lg"
+      size="xl"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -18,31 +14,42 @@ function EnquiryModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Form
-          labelCol={{
-            span: 4,
-          }}
-          wrapperCol={{
-            span: 14,
-          }}
-          layout="horizontal"
+        <form
+          name="enqiury-form"
+          method="POST"
+          data-netlify="true"
+          action="currents-stock/?success=true"
+          data-netlify-honeypot="bot-field"
         >
-          <Form.Item label="Name">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Email">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Phone Number">
-            <Input />
-          </Form.Item>
-          <Form.Item label="Message">
-            <TextArea rows={4} />
-          </Form.Item>
-          <Button style={{ borderRadius: 0 }} variant="dark">
-            SUBMIT
-          </Button>
-        </Form>
+          <div className="form-layout">
+            <div className="form-group">
+              <input type="hidden" name="form-name" value="contact-form" />
+              <label className="label-group">
+                NAME
+                <input required type="text" name="name" />
+              </label>
+              <label htmlFor="email" className="label-group">
+                EMAIL
+                <input required type="email" name="email" />
+              </label>
+              <label className="label-group">
+                PHONE
+                <input required type="text" name="phone" />
+              </label>
+            </div>
+            <div>
+              <label className="label-group">
+                MESSAGE
+                <textarea required name="message"></textarea>
+              </label>
+            </div>
+            <div>
+              <button className="send-button" type="submit">
+                SEND MESSAGE
+              </button>
+            </div>
+          </div>
+        </form>
       </Modal.Body>
     </Modal>
   );
