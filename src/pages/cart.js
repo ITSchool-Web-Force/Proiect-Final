@@ -9,19 +9,19 @@ import { useRouter } from 'next/router';
 
 
 export default function CartScreen () {
-    const router = useRouter();
-    const { state, dispatch } = useContext(Store); 
-    const {
-        cart: { cartItems },
-    } = state; 
+  const router = useRouter();
+  const { state, dispatch } = useContext(Store); 
+  const {
+    cart: { cartItems },
+  } = state; 
 
-    return (
-        <Layout title = " Shopping Cart"> 
-            < h1 className = " mb-4 text-xl" > Shopping Cart</h1>
-            {cartItems.lenght === 0 ? (
-             <div>
-                Cart is empty. <Link href = "/ Continue shopping" ></Link>
-                </div>
+  return (
+    <Layout title = " Shopping Cart"> 
+      < h1 className = " mb-4 text-xl" > Shopping Cart</h1>
+        {cartItems.lenght === 0 ? (
+          <div>
+          Cart is empty. <Link href = "/ Continue shopping" ></Link>
+          </div>
       ) : (
         <div className="grid md:grid-cols-3 md:gap-4 mb-20">
           <div className="overflow-x-auto md:col-span-3">

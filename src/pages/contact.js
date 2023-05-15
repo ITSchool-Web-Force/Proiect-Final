@@ -10,7 +10,7 @@ const ContactPage = () => {
   const [submitterName, setSubmitterName] = useState("");
   const router = useRouter();
   const confirmationScreenVisible =
-    router.query?.success && router.query.success === "true";
+  router.query?.success && router.query.success === "true";
   const formVisible = !confirmationScreenVisible;
 
   const ConfirmationMessage = (

@@ -11,8 +11,8 @@ html, body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    padding: 0;
-   margin: 0;
+  padding: 0;
+  margin: 0;
 }
 a {
   color: black; 
@@ -30,7 +30,6 @@ a {
 .default-button {
   @apply rounded bg-red-200 py-2  px-4 text-black shadow outline-none hover:bg-gray-200  active:bg-gray-300;
 }
-
 .carousel {
   display: inline-flex;
   overflow-x: hidden;
