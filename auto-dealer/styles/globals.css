@@ -324,7 +324,32 @@ welcome-text {
   }
 }
 
-@media (min-width: 280px) and (max-width: 1369px) {
+@media (min-width: 570px) and (max-width: 1369px) {
+  .product-title {
+    font-size: 1.2rem;
+  }
+  .card-structure {
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+  }
+  .card-info {
+    gap: 0.75rem;
+  }
+  .spec-group {
+    gap: 1rem;
+  }
+  .spec-group p,
+  .spec-group .spec-key {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .car-image {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 275px) and (max-width: 570px) {
   .product-title {
     font-size: 1.2rem;
   }

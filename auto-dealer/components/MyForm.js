@@ -1,3 +1,5 @@
+import data from "./data";
+
 function MyForm() {
   return (
     <div className="form-container">
@@ -22,7 +24,7 @@ function MyForm() {
             </label>
             <label htmlFor="email" className="label-group">
               EMAIL
-              <input required type="email" name="email" />
+              <input id="email" required type="email" name="email" />
             </label>
             <label className="label-group">
               PHONE
@@ -30,6 +32,12 @@ function MyForm() {
             </label>
           </div>
           <div>
+            <label htmlFor="select-option">CAR</label>
+            <select id="select-option" name="select-option">
+              {data.map((car) => (
+                <option key={car.id}>{car.name}</option>
+              ))}
+            </select>
             <label className="label-group">
               MESSAGE
               <textarea required name="message"></textarea>
