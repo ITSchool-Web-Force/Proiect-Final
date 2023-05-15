@@ -46,7 +46,6 @@ export default function Navbar() {
       <div className={styles["mobile-menu-button"]} onClick={handleMenuClick}>
         <FaBars size={24} />
       </div>
-      
       <nav className={`${styles.nav} ${showNav ? styles.showNav : ""}`}>
         <ul>
           {pages.map((page) => (

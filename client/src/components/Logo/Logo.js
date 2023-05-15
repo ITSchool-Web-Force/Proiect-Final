@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styles from './Logo.module.scss';
 
-
 export default function Logo({ href = null }) {
   const router = useRouter();
 

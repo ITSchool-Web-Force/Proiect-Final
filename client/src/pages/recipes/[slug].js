@@ -4,11 +4,12 @@ import Head from "next/head";
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import axios from "axios";
-import { FaClock, FaHeart, FaRegHeart, FaRegClock  } from "react-icons/fa";
+import { FaRegClock  } from "react-icons/fa";
 import { useGetUserID } from "@/hooks/useGetUserID";
 import Loader from "@/components/Loader/Loader";
 import { motion } from "framer-motion";
 import LikeButton from "@/components/Button/LikeButton";
+import Image from "next/image";
 
 export default function RecipeDetailPage() {
   const router = useRouter();
@@ -55,7 +56,6 @@ export default function RecipeDetailPage() {
     }
   }, [slug]);
   
-
   useEffect(() => {
     if (recipe && savedRecipes) {
       setIsRecipeSaved(savedRecipes.includes(recipe._id));
@@ -115,57 +115,63 @@ export default function RecipeDetailPage() {
             {recipe ? (
             <>
               <motion.div
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 0.5,
-                delay: 0.2,
-                ease: "easeOut"
-              }}
-            >
-              <div className="home-wrap">
-
-                {/* recipe title, info and save button container */}
-                <div className="home-intro">
-
-                  <span className={`username-home ${styles.title}`}>
-                    {recipe.name}
-                  </span>
-                  <img src={recipe.imageUrl} width="auto" height="auto" alt={recipe.name} className={styles.img} />
-                  <div className={`flex flex-col sm:flex-row justify-between sm:gap-2 gap-4 ${styles.intro}`}>
-
-                    {/* recipe title and author  */}
-                    <div className="flex flex-col">
-                      <span className={styles.spanInteract}>
-                        <FaRegClock className={styles.Fa} />
-                        {recipe.cookingTime} mins
-                      </span>
-                      <span className={styles.spanAuthor}>From: <span className={styles.recipeAuthor}>{recipeAuthor}</span> </span>
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.2,
+                  ease: "easeOut"
+                }}
+              >
+                <div className="home-wrap">
+                  {/* recipe title, info and save button container */}
+                  <div className="home-intro">
+                    <span className={`username-home ${styles.title}`}>
+                      {recipe.name}
+                    </span>
+                    <Image
+                      unoptimized
+                      className={styles.img}
+                      src={recipe.imageUrl}
+                      width="960"
+                      height="320"
+                      alt={recipe.name}
+                      placeholder="blur"
+                      blurDataURL="https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1784&q=80"
+                    />
+                    <div className={`flex flex-col sm:flex-row justify-between sm:gap-2 gap-4 ${styles.intro}`}>
+                      {/* recipe title and author  */}
+                      <div className="flex flex-col">
+                        <span className={styles.spanInteract}>
+                          <FaRegClock className={styles.Fa} />
+                          {recipe.cookingTime} mins
+                        </span>
+                        <span className={styles.spanAuthor}>From: <span className={styles.recipeAuthor}>{recipeAuthor}</span> </span>
+                      </div>
+                      {/* add recipe to saved list button */}
+                      <LikeButton isSaved={isRecipeSaved} handleClick={handleSaveClick} />
                     </div>
-                    {/* add recipe to saved list button */}
-                    <LikeButton isSaved={isRecipeSaved} handleClick={handleSaveClick} />
+                    <p>{recipe.description}</p>
+                    <h1>Ingredients</h1>
+                    <ol className={`list-decimal list-inside ${styles.ol}`}>
+                      {recipe.ingredients.map((ingredient) => (
+                        <li key={ingredient}>{ingredient}</li>
+                      ))}
+                    </ol>
+                    <h1>Instructions</h1>
+                    <ol className={styles.ol}>
+                      {recipe.instructions.map((instruction) => (
+                        <li key={instruction}>{instruction}</li>
+                      ))}
+                    </ol>
+                    <h1>Enjoy!</h1>
                   </div>
-                  <p>{recipe.description}</p>
-                  <h1>Ingredients</h1>
-                  <ol className={`list-decimal list-inside ${styles.ol}`}>
-                    {recipe.ingredients.map((ingredient) => (
-                      <li key={ingredient}>{ingredient}</li>
-                    ))}
-                  </ol>
-                  <h1>Instructions</h1>
-                  <ol className={styles.ol}>
-                    {recipe.instructions.map((instruction) => (
-                      <li key={instruction}>{instruction}</li>
-                    ))}
-                  </ol>
-                  <h1>Enjoy!</h1>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
             </>
-          ) : (
-            <div>Recipe details not found...</div>
-          )}
+            ) : (
+              <div>Recipe details not found...</div>
+            )}
           </>
         )}
         </div>

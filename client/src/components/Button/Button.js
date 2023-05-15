@@ -2,6 +2,7 @@ import styles from "./Button.module.scss";
 import React from "react";
 
 function Button({ buttonType, children, onClick, type }, ref) {
+    
     const getButtonType = (buttonType) => {
         switch (buttonType) {
             case 'primary':

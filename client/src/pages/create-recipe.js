@@ -138,105 +138,105 @@ export default function createRecipe() {
               }}
             >
               <div className="home-wrap">
-              <div className="create-recipe-wrap">
-                <div className="home-intro">
-                  <h1>Create Recipe</h1>
-                  <p>Fill out the form below to submit your very own bariatric-friendly recipe. </p>
-                </div>
-                <form className={styles["create-recipe-form"]} onSubmit={handleSubmit}>
-                  <div className={styles["form-element"]}>
-                    <label className={styles["label"]} htmlFor="name" >Name</label>
-                    <input className={styles["input"]}
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        onChange={handleChange}
-                        maxLength={80}
+                <div className="create-recipe-wrap">
+                  <div className="home-intro">
+                    <h1>Create Recipe</h1>
+                    <p>Fill out the form below to submit your very own bariatric-friendly recipe. </p>
+                  </div>
+                  <form className={styles["create-recipe-form"]} onSubmit={handleSubmit}>
+                    <div className={styles["form-element"]}>
+                      <label className={styles["label"]} htmlFor="name" >Name</label>
+                      <input className={styles["input"]}
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          onChange={handleChange}
+                          maxLength={80}
+                        />
+                    </div>
+                    <div className={styles["form-element"]}>
+                      <label className={styles["label"]} htmlFor="description" >Description (optional)</label>
+                      <textarea className={styles["textarea"]}
+                          type="text"
+                          id="description"
+                          name="description"
+                          onChange={handleChange} />
+                    </div>
+                    <input
+                      type="hidden"
+                      name="slug"
+                      value={recipe.slug}
+                    />
+                    <div className={styles["form-element"]}>
+                      <label className={styles["label"]} htmlFor="imageURL">Image URL</label>
+                      <input className={styles["input"]}
+                          type="text"
+                          id="imageUrl"
+                          name="imageUrl"
+                          required
+                          onChange={handleChange}
+                          onBlur={handleBlur} />
+                    </div>
+                    <div className={styles["form-element"]}>
+                      <label className={styles["label"]} htmlFor="ingredients">Ingredients (1 per line)</label>
+                      {recipe.ingredients.map((ingredient, index) => (
+                          <input
+                              className={styles["input"]}
+                              type="text"
+                              key={index}
+                              name="ingredients"
+                              value={ingredient}
+                              id="ingredients"
+                              required
+                              onChange={(event) => handleIngredientChange(event, index)} />
+                      ))}
+                      <Button type="button" buttonType="secondary" onClick={addIngredient} >Add Ingredient</Button>
+                    </div>
+                    <div className={styles["form-element"]}>
+                      <label className={styles["label"]} htmlFor="cookingTime">Cooking time (in minutes)</label>
+                      <input className={styles["input"]}
+                          type="number"
+                          id="cookingTime"
+                          name="cookingTime"
+                          required
+                          onChange={handleChange}
+                          min="2"
+                          max="600"
+                      />
+                    </div>
+                    <div className={styles["form-element"]}>
+                      <label className={styles["label"]} htmlFor="instructions">Instructions (1 per line)</label>
+                      {recipe.instructions.map((instructions, index) => (
+                          <input
+                              className={styles["input"]}
+                              type="text"
+                              key={index}
+                              name="instructions"
+                              value={instructions}
+                              required
+                              id="instructions"
+                              onChange={(event) => handleInstructionsChange(event, index)} />
+                      ))}
+                      <Button type="button" buttonType="secondary" onClick={addInstruction} >Add Instruction</Button>
+                    </div>
+                    <Button type="submit" buttonType="primary">Submit Recipe</Button>
+                  </form>
+                  <div>
+                      <ToastContainer
+                          position="top-center"
+                          autoClose={5000}
+                          hideProgressBar={false}
+                          newestOnTop={false}
+                          closeOnClick
+                          rtl={false}
+                          pauseOnFocusLoss
+                          draggable
+                          pauseOnHover
+                          theme="light"
                       />
                   </div>
-                  <div className={styles["form-element"]}>
-                    <label className={styles["label"]} htmlFor="description" >Description (optional)</label>
-                    <textarea className={styles["textarea"]}
-                        type="text"
-                        id="description"
-                        name="description"
-                        onChange={handleChange} />
-                  </div>
-                  <input
-                    type="hidden"
-                    name="slug"
-                    value={recipe.slug}
-                  />
-                  <div className={styles["form-element"]}>
-                    <label className={styles["label"]} htmlFor="imageURL">Image URL</label>
-                    <input className={styles["input"]}
-                        type="text"
-                        id="imageUrl"
-                        name="imageUrl"
-                        required
-                        onChange={handleChange}
-                        onBlur={handleBlur} />
-                  </div>
-                  <div className={styles["form-element"]}>
-                    <label className={styles["label"]} htmlFor="ingredients">Ingredients (1 per line)</label>
-                    {recipe.ingredients.map((ingredient, index) => (
-                        <input
-                            className={styles["input"]}
-                            type="text"
-                            key={index}
-                            name="ingredients"
-                            value={ingredient}
-                            id="ingredients"
-                            required
-                            onChange={(event) => handleIngredientChange(event, index)} />
-                    ))}
-                    <Button type="button" buttonType="secondary" onClick={addIngredient} >Add Ingredient</Button>
-                  </div>
-                  <div className={styles["form-element"]}>
-                    <label className={styles["label"]} htmlFor="cookingTime">Cooking time (in minutes)</label>
-                    <input className={styles["input"]}
-                        type="number"
-                        id="cookingTime"
-                        name="cookingTime"
-                        required
-                        onChange={handleChange}
-                        min="2"
-                        max="600"
-                    />
-                  </div>
-                  <div className={styles["form-element"]}>
-                    <label className={styles["label"]} htmlFor="instructions">Instructions (1 per line)</label>
-                    {recipe.instructions.map((instructions, index) => (
-                        <input
-                            className={styles["input"]}
-                            type="text"
-                            key={index}
-                            name="instructions"
-                            value={instructions}
-                            required
-                            id="instructions"
-                            onChange={(event) => handleInstructionsChange(event, index)} />
-                    ))}
-                    <Button type="button" buttonType="secondary" onClick={addInstruction} >Add Instruction</Button>
-                  </div>
-                  <Button type="submit" buttonType="primary">Submit Recipe</Button>
-                </form>
-                <div>
-                    <ToastContainer
-                        position="top-center"
-                        autoClose={5000}
-                        hideProgressBar={false}
-                        newestOnTop={false}
-                        closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover
-                        theme="light"
-                    />
                 </div>
-              </div>
               </div>
             </motion.div>
           </>

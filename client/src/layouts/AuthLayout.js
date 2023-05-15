@@ -1,7 +1,6 @@
 import styles from "@/layouts/AuthLayout.module.scss";
 import { motion } from "framer-motion";
 
-
 export default function Layout( { children }) {
     return (
     <motion.div

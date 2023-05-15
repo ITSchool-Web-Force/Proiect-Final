@@ -54,7 +54,6 @@ export default function Home() {
         console.log(error || "Couldn't find username");
       }
     }
-
     fetchRecipes();
     fetchSavedRecipes();
     fetchUsername();

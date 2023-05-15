@@ -120,7 +120,6 @@ export default function AuthForm(props) {
                         </div>
                         <Button type="submit" buttonType="primary">{ formSubmitButtonText }</Button>
                     </form>
-
                     <div>
                         <ToastContainer
                             position="top-center"
@@ -143,7 +142,5 @@ export default function AuthForm(props) {
                 </p>
             </section>
         </Layout>
-
     );
-
 }

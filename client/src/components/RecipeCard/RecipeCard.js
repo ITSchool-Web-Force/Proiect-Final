@@ -5,6 +5,7 @@ import axios from "axios";
 import styles from "./RecipeCard.module.scss";
 import LikeButton from "../Button/LikeButton";
 import Button from "../Button/Button";
+import Image from "next/image";
 
 export default function RecipeCard({ recipe, savedRecipes, userID,  }) {
   const [isRecipeSaved, setIsRecipeSaved] = useState(savedRecipes.includes(recipe._id));
@@ -21,7 +22,6 @@ export default function RecipeCard({ recipe, savedRecipes, userID,  }) {
         console.log(error || "Couldn't find username");
       }
     };
-
     setIsRecipeSaved(savedRecipes.includes(recipe._id));
     fetchRecipeAuthor();
   }, [savedRecipes, recipe._id]);
@@ -60,18 +60,24 @@ export default function RecipeCard({ recipe, savedRecipes, userID,  }) {
     }
   };
 
-
   return (
     <li key={recipe._id}>
       <div className={styles.recipeCard}>
         <div className={styles.recipeCardImage}>
           <Link className="image-link" href={`/recipes/${recipe.slug}`} legacyBehavior>
-            <img src={recipe.imageUrl} width="auto" height="auto" alt={recipe.name} />
+            <Image
+              unoptimized
+              className={styles.imageUrl}
+              src={recipe.imageUrl}
+              width="450"
+              height="320"
+              alt={recipe.name}
+              placeholder="blur"
+              blurDataURL="https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1784&q=80"
+            />
           </Link>
         </div>
-
         <h2 className={styles.recipeName}>{recipe.name}</h2>
-
         {/* display recipe cooking time and author */}
         <div className="flex flex-col sm:flex-row justify-between sm:gap-2 gap-4 p-4 sm:items-center">
           <div className="flex flex-col">
