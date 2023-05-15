@@ -331,6 +331,7 @@ welcome-text {
   .card-structure {
     flex-direction: column;
     width: auto;
+    align-items: center;
   }
   .card-info {
     gap: 0.75rem;
@@ -342,6 +343,9 @@ welcome-text {
   .spec-group .spec-key {
     margin: 0;
     font-size: 0.85rem;
+  }
+  .car-image {
+    width: 60vw;
   }
 }
 

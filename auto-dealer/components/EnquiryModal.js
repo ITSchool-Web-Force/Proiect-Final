@@ -1,6 +1,10 @@
 import Modal from "react-bootstrap/Modal";
+import { useRouter } from "next/router";
 
 function EnquiryModal(props) {
+  const router = useRouter();
+  const param = router.query.carId;
+
   return (
     <Modal
       {...props}
@@ -18,7 +22,7 @@ function EnquiryModal(props) {
           name="enquire-form"
           method="POST"
           data-netlify="true"
-          action="current-stock/1/?success=true"
+          action={`/currents-stock/${param}/?success=true`}
           data-netlify-honeypot="bot-field"
         >
           <div className="form-layout">
