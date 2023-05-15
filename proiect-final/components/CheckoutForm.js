@@ -63,7 +63,7 @@ export default function CheckoutForm (props) {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="success" onClick={handleClose}>
+          <Button variant="success" type="submit" id="submit" value="submit">
             Send
           </Button>
         </Modal.Footer>
