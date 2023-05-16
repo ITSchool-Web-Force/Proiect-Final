@@ -35,9 +35,8 @@ const Layout = ({ children }) => {
             </div>
           <div className="hidden sm:flex sm:items-center">
             <Link href="/" className="text-gray-800 text-sm font-semibold hover:text-red-600 mr-4">Home</Link>
-            <Link href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mr-4">About us</Link>
+            <Link href="/about" className="text-gray-800 text-sm font-semibold hover:text-red-600 mr-4">About us</Link>
             <Link href="/contact" className="text-gray-800 text-sm font-semibold hover:text-red-600 mr-4">Contact</Link>
-            <Link href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600">Shop</Link>
           </div>
           <div className="flex items-center z-10">
             <Link href="/cart" className="p-2">
@@ -58,9 +57,8 @@ const Layout = ({ children }) => {
           <div className="block sm:hidden bg-white ">
             <div className="flex flex-col">
               <Link href="/index" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">Home</Link>
-              <Link href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">About us</Link>
+              <Link href="/about" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">About us</Link>
               <Link href="/contact" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1"> Contact</Link>
-              <Link href="#" className="text-gray-800 text-sm font-semibold hover:text-red-600 mb-1">Shop</Link>
             <div className="flex justify-between items-center border-t-2 pt-2"></div>
             </div>
           </div>
