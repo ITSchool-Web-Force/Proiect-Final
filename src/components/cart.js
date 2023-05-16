@@ -13,7 +13,7 @@ function Cart({ cart, removeFromCart, clearCart }) {
           <div className="wrapper">
             <li key={product.id} className={style.li}>
               <img src={product.image} alt={product.title} className={style.image} />
-              {product.title} - {product.price}$
+              {product.title} - {product.price} $
               <button onClick={() => removeFromCart(product)} className={style.remove}>Remove</button>
             </li>
           </div>
