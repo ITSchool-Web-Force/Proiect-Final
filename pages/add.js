@@ -78,7 +78,7 @@ function Add() {
     function onInputChange (e) {
         const { name, value } = e.target;
 
-        const isValid = value === '' || /^[a-zA-Z0-9\s\-,.':;șățâ]+$/u.test(value);
+        const isValid = value === '' || /^[a-zA-Z0-9\s\-,.':;șățâî]+$/u.test(value);
 
         if(isValid) {
             setInput(prev => ({
