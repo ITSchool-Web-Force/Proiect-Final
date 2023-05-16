@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css';
 import MyHeader from '../components/header';
 import TypesTranslation from '../components/service';
 import MyJobs from '../components/job';

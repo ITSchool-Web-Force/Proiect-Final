@@ -7,7 +7,10 @@ export default function ContactSubmission()  {
              <h1> Vino sa lucrezi pentru noi!</h1>
             <p>Completeaza formularul: </p>
             <div className={styles.form}>
-            <form name="contact"  id="the-form" method="POST" data-netlify="true">
+            <form name="contact"        
+                    action="/success"
+                    method="POST" 
+                    data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <div>
                     <label>Nume: <input 

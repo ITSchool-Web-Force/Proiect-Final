@@ -7,7 +7,7 @@ export default function TypesTranslation () {
     <div className={styles.translation}>
         <h1>Servicii</h1>
         <p>Traducem orice text din orice limbă cu traducători nativi și specialiști lingviști, respectând standardele internaționale din domeniu pentru rezultate ideale.</p>
-        <Link href="/form" className={styles.button}>
+        <Link href="/application" className={styles.button}>
                 Cotație online
         </Link>
         <div className={styles.services}>

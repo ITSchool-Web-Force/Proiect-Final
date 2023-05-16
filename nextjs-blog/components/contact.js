@@ -1,6 +1,6 @@
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
-
+import icon from '../public/icon.jpg';
 
 
 export default function ContactInformation() {
@@ -10,10 +10,10 @@ export default function ContactInformation() {
         <p className={styles.contactboxes}>Str. Traduceri nr. 5, Timisoara, Timis </p>
         <p className={styles.contactboxes}> Tel: +407500500 
        <br></br> Email: traduceri@gmail.com 
-         Social: Traduceri Legale Ro</p>
+        <br></br> Social: Traduceri Legale Ro</p>
        <div >      
        <Image className={styles.contact}
-        src="public/icon.jpg"
+        src={icon}
         width={300}
         height={300}
         alt="Translation Icon"/>  
