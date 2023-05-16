@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar/Navbar";
 import Head from "next/head";
 import AppLayout from "@/layouts/AppLayout";
 import { useState, useEffect } from "react";

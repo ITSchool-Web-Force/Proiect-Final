@@ -2,7 +2,6 @@ import AppLayout from "@/layouts/AppLayout";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Button from "@/components/Button/Button";
 import { useGetUserID } from "@/hooks/useGetUserID";
 import RecipeCard from "@/components/RecipeCard/RecipeCard";
 import Loader from "@/components/Loader/Loader";
