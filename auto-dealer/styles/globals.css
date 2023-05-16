@@ -347,6 +347,18 @@ welcome-text {
   .car-image {
     width: 60vw;
   }
+  .upper-group .top-image {
+    width: 60vw;
+  }
+  .car-page-layout .images-section {
+    flex-direction: column;
+  }
+  .images-section .car-image-det {
+    width: 60vw;
+  }
+  .car-page-layout .upper-group {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 275px) and (max-width: 569px) {
@@ -357,6 +369,7 @@ welcome-text {
     flex-direction: column;
     width: 70vw;
     align-items: center;
+    gap: 0;
   }
   .card-info {
     gap: 0.75rem;
@@ -368,6 +381,18 @@ welcome-text {
   .spec-group .spec-key {
     margin: 0;
     font-size: 0.85rem;
+  }
+  .car-page-layout .images-section {
+    flex-direction: column;
+  }
+  .images-section .car-image-det {
+    width: 70vw;
+  }
+  .car-page-layout .upper-group {
+    flex-direction: column;
+  }
+  .upper-group .top-image {
+    width: 70vw;
   }
 }
 
@@ -406,6 +431,11 @@ welcome-text {
 .images-section {
   display: flex;
   flex-direction: row;
+}
+
+.car-image-det {
+  width: 30vw;
+  height: auto;
 }
 
 .spec-section {
@@ -543,6 +573,7 @@ welcome-text {
   }
   .form-layout {
     justify-content: center;
+    width: 85vw;
   }
   .form-group {
     flex-direction: column;
@@ -593,22 +624,18 @@ welcome-text {
   .welcome-section {
     padding: 3rem;
   }
-
   .welcome-wrapper {
     flex-direction: column;
     align-items: center;
   }
-
   .showroom-image {
     display: none;
   }
-
   .showroom-image-sm {
     display: block;
     width: 100vw;
     height: auto;
   }
-
   .form-container {
     padding-inline: 3rem;
   }

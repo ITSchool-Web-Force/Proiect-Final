@@ -55,21 +55,21 @@ function CarDetails() {
           <div>
             <div className="images-section">
               <Image
-                className="car-image"
+                className="car-image-det"
                 src={car.photo2}
                 alt={car.name}
                 width={1280}
                 height={960}
               />
               <Image
-                className="car-image"
+                className="car-image-det"
                 src={car.photo3}
                 alt={car.name}
                 width={1280}
                 height={960}
               />
               <Image
-                className="car-image"
+                className="car-image-det"
                 src={car.photo4}
                 alt={car.name}
                 width={1280}
@@ -78,21 +78,21 @@ function CarDetails() {
             </div>
             <div className="images-section">
               <Image
-                className="car-image"
+                className="car-image-det"
                 src={car.photo5}
                 alt={car.name}
                 width={1280}
                 height={960}
               />
               <Image
-                className="car-image"
+                className="car-image-det"
                 src={car.photo6}
                 alt={car.name}
                 width={1280}
                 height={960}
               />
               <Image
-                className="car-image"
+                className="car-image-det"
                 src={car.photo7}
                 alt={car.name}
                 width={1280}
