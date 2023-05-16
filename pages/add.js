@@ -131,7 +131,7 @@ function Add() {
                                 rows={1}
                                 cols={20} 
                                 minLength={2}
-                                maxLength={60}
+                                maxLength={90}
                                 required 
                                 className={valid.expression ? '' : styles.invalid}
                                 onChange={onInputChange}
@@ -145,7 +145,7 @@ function Add() {
                                 rows={2}
                                 cols={50}
                                 minLength={12}
-                                maxLength={50}
+                                maxLength={140}
                                 required
                                 className={valid.explication ? '' : styles.invalid}
                                 onChange={onInputChange}
@@ -159,7 +159,7 @@ function Add() {
                                 rows={3}
                                 cols={50} 
                                 minLength={7}
-                                maxLength={60}
+                                maxLength={90}
                                 required
                                 className={valid.example ? '' : styles.invalid}
                                 onChange={onInputChange}
