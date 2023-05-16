@@ -22,7 +22,7 @@ function Expression(props) {
 
     return <>
         <Head>
-            <title>Ce înseamnă {expression.expression}?</title>
+            <title>Ce înseamnă "{expression.expression}"?</title>
         </Head>
         <div className={styles.content}>
             <div className={styles.ExpressionPage}>
