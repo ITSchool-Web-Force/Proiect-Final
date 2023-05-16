@@ -72,56 +72,44 @@ export default function CartScreen () {
                   Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : $
                   {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
                 </div>
-                
-                
-  
-  
-    <form
-      className="container"
-      method="POST"
-      name="order-form"
-      action="shipping/?success=true"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
-      <input
-        type="hidden"
-        name="subject"
-        value={`You've got mail from ${submitterName}`}
-      />
-      <input type="hidden" name="form-name" value="order-form" />
-
-    
-      <label htmlFor="name">Full Name</label>
-      <input
-        id="name"
-        name="name"
-        required
-        onChange={(e) => setSubmitterName(e.target.value)}
-        type="text"
-      />
-      <label htmlFor="order">Order </label>
-      <input type="hidden" Subtotal></input>
-      <label htmlFor="phone">Phone number </label>
-      <input id="phone" name="phone" required type="text" />
-      <label htmlFor="email">E-mail Address </label>
-      <input id="email" type="email" name="email" required />
-      <label htmlFor="message">Message </label>
-      <textarea id="message" name="message" required />
-      <button> Submit </button>
-      
-    </form>
-  
-
-  
-                  
+                <div class="w-full max-w-xs">
+                  <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+                    className="container"
+                    method="POST"
+                    name="order-form"
+                    action="shipping/?success=true"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                  >
+                <div className="mb-4">
+                <input type="hidden"
+                      name="subject"
+                      value={`You've got mail from ${submitterName}`}
+                />
+                <input type="hidden" name="form-name" value="order-form" />
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">Full Name</label>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       id="name"
+                       name="name"
+                       required
+                       onChange={(e) => setSubmitterName(e.target.value)}
+                       type="text"
+                />
+                <label htmlFor="phone">Phone number </label>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" name="phone" required type="text" />
+                <label htmlFor="email">E-mail Address </label>
+                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"id="email" type="email" name="email" required />
+                <label htmlFor="message">Message </label>
+                <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"id="message" name="message" required />
+                <button> Submit </button>
+                </div>
+                  </form>
+                </div>
               </li>
-              
             </ul>
           </div>
         </div>
       )}
-     
     </Layout>
   );
 }

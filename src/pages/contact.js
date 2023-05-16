@@ -29,14 +29,17 @@ const ContactPage = () => {
   );
 
   const ContactForm = (
-    <form
-      className="container"
+    <div className="relative flex flex-wrap lg:h-screen lg:items-center">
+    <form 
+      className="mx-auto mb-0 mt-8 max-w-md space-y-4"
       method="POST"
       name="contact-form"
       action="contact/?success=true"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
     >
+      <div class="mb-6">
+  
       <input
         type="hidden"
         name="subject"
@@ -49,23 +52,26 @@ const ContactPage = () => {
         </label>
       </p>
 
-      <label htmlFor="name">Name *</label>
-      <input
+      <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">Name *</label>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         id="name"
         name="name"
         required
         onChange={(e) => setSubmitterName(e.target.value)}
         type="text"
       />
-      <label htmlFor="phone">Phone number </label>
-      <input id="phone" name="phone" required type="text" />
-      <label htmlFor="email">E-mail Address </label>
-      <input id="email" type="email" name="email" required />
-      <label htmlFor="message">Message </label>
-      <textarea id="message" name="message" required />
-      <button> Submit </button>
+      <label className="block text-gray-700 text-sm font-bold mb-2"htmlFor="phone">Phone number </label>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" name="phone" required type="text" />
+      <label className="block text-gray-700 text-sm font-bold mb-2"htmlFor="email">E-mail Address </label>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" name="email" required />
+      <label className="block text-gray-700 text-sm font-bold mb-2"htmlFor="message">Message </label>
+      <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" required />
+      <button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"> Submit </button>
       <Link href="/">  Back </Link>
+      </div>
+      
     </form>
+    </div>
   );
 
   return (
@@ -75,70 +81,16 @@ const ContactPage = () => {
         <title>Java Jive Coffee Shop</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Contact Us</h1>
-      <p> Got questions? We've got answers.</p>
-      <Image src= "/image/contact.jpg" alt="fresh coffee" width={600} height={600}/>
-
-      <main>{formVisible ? ContactForm : ConfirmationMessage}</main>
-
-      <style jsx global>
-        {`
-          html,
-          body {
-            font-size: 18px;
-            background-color: white;
-            color: black;
-            
-          }
-
-          * {
-            box-sizing: border-box;
-          }
-
-          h1 {
-            text-transform: uppercase;
-          }
-          .container {
-            display: flex;
-            flex-direction: column;
-            width: 80%;
-            grid-row-gap: 0.5em;
-    
-            
-          }
-          @media (max-width: 769px) {
-            .container {
-              width: 100%;
-            }
-          }
-          label {
-            font-size: 1.2em;
-          }
-          input[type="text"],
-          input[type="email"],
-          textarea {
-            font-size: 24px;
-            border: solid #5B6DCD 0.1rem;
-          }
-          button {
-            max-width: 400px;
-            margin: 0 auto;
-            color: black;
-            background-color: gray;
-            border: none;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            text-transform: uppercase;
-            border-radius: 10px;
-          }
-          button:hover {
-            background-color: gray;
-          }
-        `}
-      </style>
+      <section className="relative flex flex-wrap lg:h-screen lg:items-center">
+        <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+          <div className="mx-auto max-w-lg text-center">
+            <h1 className="text-2xl font-bold sm:text-3xl">Contact us</h1>
+              <p> Got questions? We've got answers.</p>
+                <Image   className=" inset-0 h-full w-full object-cover"src= "/image/banner7.jpg" alt="fresh coffee" width={600} height={600}/>
+                  <main>{formVisible ? ContactForm : ConfirmationMessage}</main>
+          </div>
+        </div>
+      </section>
     </div>
     </Layout>
   );
