@@ -35,7 +35,7 @@ function Content( { ssrData, posts } ) {
         const observer = new IntersectionObserver(onIntersection);
 
         if (observer && elementRef.current && hasMore ) {
-        observer.observe(elementRef.current);
+            observer.observe(elementRef.current);
         }
 
         return () => {

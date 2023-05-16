@@ -9,7 +9,7 @@ import Lightmode from "../../svgs/light";
 import styles from "../../styles/header/switcher.module.scss";
 
 function ThemeSwitch() {
-    const { theme, setTheme } = useTheme("dark");
+    const { theme, setTheme } = useTheme();
     const toggle = () => {
         setTheme(theme === "light" ? "dark" : "light")
     }
