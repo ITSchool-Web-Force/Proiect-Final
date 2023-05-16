@@ -1,11 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Layout from '../components/Layout';
 import { Store } from '../utils/Store';
 import { useRouter } from 'next/router';
-
-
 
 
 export default function CartScreen () {
@@ -14,6 +12,12 @@ export default function CartScreen () {
   const {
     cart: { cartItems },
   } = state; 
+  const [submitterName, setSubmitterName] = useState("");
+
+  const confirmationScreenVisible =
+  router.query?.success && router.query.success === "true";
+  const formVisible = !confirmationScreenVisible;
+
 
   return (
     <Layout title = " Shopping Cart"> 
@@ -68,22 +72,56 @@ export default function CartScreen () {
                   Subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}) : $
                   {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)}
                 </div>
-                <h1> Order details </h1>
-                <input className = "p-2 placeholder-gray-500 border" placeholder = "Name"/> 
-                <input className = "p-2 placeholder-gray-500 border"  placeholder = "Address"/>
-                <h1> **All payments will be made cash at delivery </h1>
-                <div className="flex flex-row mx-auto">
-                <button onClick={() => router.push('/shipping')}
-                className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                  Send Order
-                </button>
-                  </div>
+                
+                
+  
+  
+    <form
+      className="container"
+      method="POST"
+      name="order-form"
+      action="shipping/?success=true"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input
+        type="hidden"
+        name="subject"
+        value={`You've got mail from ${submitterName}`}
+      />
+      <input type="hidden" name="form-name" value="order-form" />
+
+    
+      <label htmlFor="name">Full Name</label>
+      <input
+        id="name"
+        name="name"
+        required
+        onChange={(e) => setSubmitterName(e.target.value)}
+        type="text"
+      />
+      <label htmlFor="order">Order </label>
+      <input type="hidden" Subtotal></input>
+      <label htmlFor="phone">Phone number </label>
+      <input id="phone" name="phone" required type="text" />
+      <label htmlFor="email">E-mail Address </label>
+      <input id="email" type="email" name="email" required />
+      <label htmlFor="message">Message </label>
+      <textarea id="message" name="message" required />
+      <button> Submit </button>
+      
+    </form>
+  
+
+  
+                  
               </li>
               
             </ul>
           </div>
         </div>
       )}
+     
     </Layout>
   );
 }
