@@ -13,7 +13,7 @@ export default function Hero() {
                         Our goal is to make our coffee a memorable addition to any experience, and to make the act of preparing and enjoying a cup of our coffee an experience in and of itself.
                     </h2>
                     <div className="flex items-center justify-center mt-4">
-                        <a href="#" className="px-4 py-2 mr-4 text-white uppercase bg-gray-800 border-2 border-transparent text-md hover:bg-gray-900">
+                        <a href="/about" className="px-4 py-2 mr-4 text-white uppercase bg-gray-800 border-2 border-transparent text-md hover:bg-gray-900">
                             Find more 
                         </a>
                     </div>
