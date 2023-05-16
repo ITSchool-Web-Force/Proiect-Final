@@ -26,8 +26,6 @@ export default function ContactSubmission()  {
                             type="text" 
                             name="language" ></input>
                     </label>
-                </div>
-                <div>
                     <label>Experienta/Autorizatie: 
                         <textarea></textarea>
                     </label>
