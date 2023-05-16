@@ -5,7 +5,6 @@ import Image from "next/image"
 import Layout from "@/components/Layout";
 import Link from "next/link";
 
-
 const ContactPage = () => {
   const [submitterName, setSubmitterName] = useState("");
   const router = useRouter();
@@ -95,4 +94,5 @@ const ContactPage = () => {
     </Layout>
   );
 }
+
 export default ContactPage

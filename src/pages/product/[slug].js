@@ -6,8 +6,6 @@ import Layout from '../../components/Layout';
 import data from '../../utils/data';
 import { Store } from '../../utils/Store';
 
-
-
 export default function ProductScreen() {
   const { state, dispatch } = useContext(Store);
 
