@@ -15,11 +15,6 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  background-color: var(--black);
-}
-
 p {
   font-family: var(--inter);
 }
@@ -285,117 +280,6 @@ welcome-text {
   font-size: 1.25rem;
 }
 
-@media (min-width: 1600px) and (max-width: 1810px) {
-  .product-title {
-    font-size: 1.5rem;
-  }
-  .card-structure {
-    width: 60vw;
-  }
-  .card-info {
-    gap: 0.75rem;
-  }
-  .spec-group {
-    gap: 1rem;
-  }
-  .spec-group p,
-  .spec-group .spec-key {
-    margin: 0;
-  }
-}
-
-@media (min-width: 1370px) and (max-width: 1599px) {
-  .product-title {
-    font-size: 1.2rem;
-  }
-  .card-structure {
-    width: 60vw;
-  }
-  .card-info {
-    gap: 0.75rem;
-  }
-  .spec-group {
-    gap: 1rem;
-  }
-  .spec-group p,
-  .spec-group .spec-key {
-    margin: 0;
-    font-size: 0.85rem;
-  }
-}
-
-@media (min-width: 570px) and (max-width: 1369px) {
-  .product-title {
-    font-size: 1.2rem;
-  }
-  .card-structure {
-    flex-direction: column;
-    width: auto;
-    align-items: center;
-  }
-  .card-info {
-    gap: 0.75rem;
-  }
-  .spec-group {
-    gap: 1rem;
-  }
-  .spec-group p,
-  .spec-group .spec-key {
-    margin: 0;
-    font-size: 0.85rem;
-  }
-  .car-image {
-    width: 60vw;
-  }
-  .upper-group .top-image {
-    width: 60vw;
-  }
-  .car-page-layout .images-section {
-    flex-direction: column;
-  }
-  .images-section .car-image-det {
-    width: 60vw;
-  }
-  .car-page-layout .upper-group {
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 275px) and (max-width: 569px) {
-  .product-title {
-    font-size: 1.2rem;
-  }
-  .card-structure {
-    flex-direction: column;
-    width: 70vw;
-    align-items: center;
-    gap: 0;
-  }
-  .card-info {
-    gap: 0.75rem;
-  }
-  .spec-group {
-    gap: 1rem;
-  }
-  .spec-group p,
-  .spec-group .spec-key {
-    margin: 0;
-    font-size: 0.85rem;
-  }
-  .car-page-layout .images-section {
-    flex-direction: column;
-  }
-  .images-section .car-image-det {
-    width: 70vw;
-  }
-  .car-page-layout .upper-group {
-    flex-direction: column;
-  }
-  .upper-group .top-image {
-    width: 70vw;
-  }
-}
-
 /* CAR PAGE */
 
 .car-page-layout {
@@ -471,6 +355,11 @@ welcome-text {
 
 .recent-title {
   margin: 0;
+}
+
+.car-image-rec {
+  width: 30vw;
+  height: auto;
 }
 
 .recent-car-text {
@@ -638,5 +527,125 @@ welcome-text {
   }
   .form-container {
     padding-inline: 3rem;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1810px) {
+  .product-title {
+    font-size: 1.5rem;
+  }
+  .card-structure {
+    width: 60vw;
+  }
+  .card-info {
+    gap: 0.75rem;
+  }
+  .spec-group {
+    gap: 1rem;
+  }
+  .spec-group p,
+  .spec-group .spec-key {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1370px) and (max-width: 1599px) {
+  .product-title {
+    font-size: 1.2rem;
+  }
+  .card-structure {
+    width: 60vw;
+  }
+  .card-info {
+    gap: 0.75rem;
+  }
+  .spec-group {
+    gap: 1rem;
+  }
+  .spec-group p,
+  .spec-group .spec-key {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .recent-layout {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 570px) and (max-width: 1369px) {
+  .product-title {
+    font-size: 1.2rem;
+  }
+  .card-structure {
+    flex-direction: column;
+    width: auto;
+    align-items: center;
+  }
+  .card-info {
+    gap: 0.75rem;
+  }
+  .spec-group {
+    gap: 1rem;
+  }
+  .spec-group p,
+  .spec-group .spec-key {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .car-image {
+    width: 60vw;
+  }
+  .upper-group .top-image {
+    width: 60vw;
+  }
+  .car-page-layout .images-section {
+    flex-direction: column;
+  }
+  .images-section .car-image-det {
+    width: 60vw;
+  }
+  .car-page-layout .upper-group {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 275px) and (max-width: 569px) {
+  .product-title {
+    font-size: 1.2rem;
+  }
+  .card-structure {
+    flex-direction: column;
+    width: 70vw;
+    align-items: center;
+    gap: 0;
+  }
+  .card-info {
+    gap: 0.75rem;
+  }
+  .spec-group {
+    gap: 1rem;
+  }
+  .spec-group p,
+  .spec-group .spec-key {
+    margin: 0;
+    font-size: 0.85rem;
+  }
+  .car-page-layout .images-section {
+    flex-direction: column;
+  }
+  .images-section .car-image-det {
+    width: 70vw;
+  }
+  .car-page-layout .upper-group {
+    flex-direction: column;
+  }
+  .upper-group .top-image {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 275px) and (max-width: 685px) {
+  .recent-group .car-image-rec {
+    width: 80vw;
   }
 }

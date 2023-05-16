@@ -14,7 +14,7 @@ function RecentCars() {
               <div className="recent-card" key={lastCar.name}>
                 <Link href={`/current-stock/${lastCar.id}`}>
                   <Image
-                    className="car-image"
+                    className="car-image-rec"
                     src={lastCar.photo}
                     alt={lastCar.name}
                     width={1280}

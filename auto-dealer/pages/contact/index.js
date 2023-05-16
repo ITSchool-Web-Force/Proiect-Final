@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+import Layout from "../../components/Layout";
 import MyForm from "../../components/MyForm";
 import MyLocation from "../../components/MyLocation";
 import Image from "next/image";

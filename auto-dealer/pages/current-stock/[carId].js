@@ -1,13 +1,11 @@
 import Layout from "../../components/Layout";
-import React, { useState } from "react";
 import { useRouter } from "next/router";
 import data from "../../components/data";
-import specs from "@/components/specs";
+import specs from "../../components/specs";
 import Image from "next/image";
 import Button from "react-bootstrap/Button";
 
 function CarDetails() {
-  const [modalShow, setModalShow] = useState(false);
   const router = useRouter();
   const { carId } = router.query;
   const car = data.find((car) => car.id === carId);
