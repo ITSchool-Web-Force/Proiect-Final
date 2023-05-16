@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
 import style from "./AllProducts.module.css";
-import Cart from "./Cart";
+import Cart from "./cart";
 
 function AllProducts() {
   const [products, setProducts] = useState([]);
