@@ -9,7 +9,7 @@ import styles from '../styles/Home.module.css';
             <Link href="/">
                 Acasă
             </Link>
-            <Link href="/form">
+            <Link href="/application">
                 Traduceri online
             </Link>
             <Link href="/contactinfo">

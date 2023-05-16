@@ -13,7 +13,7 @@ export default function ContactInformation() {
          Social: Traduceri Legale Ro</p>
        <div >      
        <Image className={styles.contact}
-        src="/icon.jpg"
+        src="public/icon.jpg"
         width={300}
         height={300}
         alt="Translation Icon"/>  
