@@ -39,7 +39,7 @@ export default function SavedRecipes() {
         );
         const responses = await Promise.all(promises);
         const recipeDetails = responses.map((response) => response.data);
-        setRecipeDetails(recipeDetails);
+        setRecipeDetails(recipeDetails.reverse());
       } catch (error) {
         console.log(error);
       }
