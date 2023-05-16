@@ -114,11 +114,6 @@ function Username(props) {
                             visible={true}
                         />
                     )}
-                    {!hasMore && (
-                        <div className={styles.end}>
-                            Astea au fost
-                        </div>
-                    )}
                     {hasMore && (
                         <span 
                             style={{visibility:'hidden'}} 
