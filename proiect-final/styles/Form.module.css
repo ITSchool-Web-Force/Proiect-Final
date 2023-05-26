@@ -1,0 +1,105 @@
+.background {
+    background-image:url("../images/pink_peonies.png");
+    object-fit: contain;
+    background-repeat: no-repeat;
+    margin-inline: auto;
+    height: 100%;
+}
+.title {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 2rem;  
+    gap: 2rem;
+    margin-inline: auto;
+}
+.contact_form:hover {
+    background-color: rgb(239, 236, 236, 0.8);
+}
+.form_group {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90vw;
+    gap: 0.2rem;
+}
+.textarea {
+    width: 100%;
+    min-height: 30%;
+    max-height: 40%;
+    resize: vertical;
+    border-radius: 0.3rem;
+}
+.button_style {
+    background-color: pink;
+    border-radius: 0.3rem;
+    padding: 0.2rem 0.8rem;
+    font-weight: bold;
+    height: auto;
+}
+.thanks_message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.form_message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 65vh;
+}
+.form_style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn_group, .checkbox_group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+@media (min-width: 400px) {
+    .form_group {
+        width: 80vw;
+    }
+  }
+@media (min-width: 600px) {
+    .contact_form {
+        width: 70vw;;
+    }
+    .form_group {
+        width: 60vw;
+    }
+}
+@media (min-width: 800px) {
+    .contact_form {
+        width: 60vw;;
+    }
+    .form_group {
+        width: 50vw;
+    }
+}
+@media (min-width: 1000px) {
+    .contact_form {
+        width: 40vw;;
+    }
+    .form_group {
+        width: 28vw;
+    }
+}

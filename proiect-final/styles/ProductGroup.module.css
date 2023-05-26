@@ -1,0 +1,92 @@
+.product_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.2rem;
+    flex-wrap: wrap;
+    padding-block: 1rem 2rem;
+}
+.title_products {
+    text-align: center;
+    color: palevioletred;
+    font-family: cursive;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+}
+.prod {
+    height: auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}
+.prod:hover {
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.2rem rgba(139, 141, 141, 0.5);
+}
+.name_price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    padding-block: 1rem;
+}
+.button_counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem;
+}
+.product_name, .product_price {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.image_size {
+    object-fit: contain;
+}
+.basket_image_size {
+    height: 1.5rem;
+    width: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+.mybutton {
+    background-color:white;
+    padding: 0;
+    border: none;
+}
+.basket_image_size:active {
+    height: 1.7rem;
+    width: auto;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    border: 2px solid black;
+}
+.image_properties {
+    height: 15rem;
+    width: 15rem;
+    object-fit: cover;
+}
+.image_name {
+    font-size: large;
+    font-weight: bold;
+}
+.image_price {
+    font-size: medium;
+}
+.basket_image_properties {
+    width: 2.5rem;
+    border-radius: 50%;
+}
+@media (min-width: 400px) {
+    .product {
+        width: 40%;
+    }
+}

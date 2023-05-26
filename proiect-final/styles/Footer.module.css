@@ -1,0 +1,31 @@
+.footer {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    margin-block-start: 1rem;
+    margin-block-end: 0rem;
+    background-color: #de82a2;
+    object-fit: contain;
+}
+.heart {
+    font-size: 0.8rem;
+    animation: heart 2s infinite;
+    color: red;
+}
+
+@keyframes heart {
+    0% {
+        animation-timing-function: linear;
+        font-size: 1rem;
+    }
+    
+    100% {
+        animation-timing-function: linear;
+        font-size: 1.3rem;
+    }
+    
+}
