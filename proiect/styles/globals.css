@@ -10,9 +10,8 @@
   scroll-behavior: smooth;
 }
 
-
 .custom-img {
-  background-image: url(https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80)
+  background-image: url(https://images.unsplash.com/photo-1544207729-90a7d8d6f17a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
 }
 
 .poze-site {
@@ -22,9 +21,22 @@
 }
 
 .custom-img-workpage {
-  background-image: url(https://images.unsplash.com/photo-1554828370-46e3aee12c81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1936&q=80);
+  background-image: url(https://images.unsplash.com/photo-1663345905520-5e2a13f994c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80);
 }
 
 .custom-img-contact {
   background-image: url(https://images.unsplash.com/photo-1643115022315-742bb771a8ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+}
+
+form > div {
+  @apply flex flex-col gap-2;
+}
+
+input,
+textarea {
+  @apply shadow-md px-6 py-2 border border-slate-300;
+}
+
+.custom-contact-bg {
+  background-image: url(https://images.unsplash.com/photo-1653289755854-a41949e96282?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
 }

@@ -1,15 +1,12 @@
-import React from 'react'
-import { Navbar,ContactWork } from '../components'
+import ContactWork from "@/components/ContactWork";
+import React from "react";
 
 function Contact() {
   return (
     <div>
-      <Navbar />
-      <ContactWork heading='Contact Me On Instagram' 
-      instagram='https://www.instagram.com/adelinvisuals/' 
-      message='Message Me At adetuduri@yahoo.com'/>
+      <ContactWork />
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

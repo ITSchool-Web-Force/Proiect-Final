@@ -1,14 +1,15 @@
-import React from 'react'
-import { Navbar, MyWork,PortofolioData } from '../components'
+import React from "react";
+import Navbar from "@/components/Navbar";
+import MyWork from "@/components/MyWork";
+import WorkImage from "@/components/WorkImages";
 
-
-function work() {
+function Work() {
   return (
-    <div>
+    <div className="bg-gradient-to-r from-white to-slate-200 h-full">
       <Navbar />
-      <MyWork heading='My Work' message='Acestea sunt pozele mele recente'/>
-      <PortofolioData />
+      <MyWork />
+      <WorkImage />
     </div>
-  )
+  );
 }
-export default work
+export default Work;
