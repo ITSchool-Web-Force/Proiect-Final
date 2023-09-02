@@ -1,12 +1,5 @@
-import ContactWork from "@/components/ContactWork";
-import React from "react";
-
 function Contact() {
-  return (
-    <div>
-      <ContactWork />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default Contact;
