@@ -49,13 +49,13 @@ const Navbar = () => {
           className="hidden sm:flex"
         >
           <li className="p-4 hover:text-gray-500">
-            <Link href="/">Home</Link>
+            <Link href="#">Home</Link>
           </li>
           <li className="p-4 hover:text-gray-500">
             <Link href="/work">Work</Link>
           </li>
           <li className="p-4 hover:text-gray-500">
-            <Link href="/contact">Contact</Link>
+            <Link href="#">Contact</Link>
           </li>
         </ul>
         {/* Mobile Button */}
@@ -85,13 +85,13 @@ const Navbar = () => {
         >
           <ul>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/">Home</Link>
+              <Link href="#">Home</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
               <Link href="/work">Work</Link>
             </li>
             <li className="p-4 text-4xl hover:text-gray-500">
-              <Link href="/Contact">Contact</Link>
+              <Link href="#">Contact</Link>
             </li>
           </ul>
         </div>
