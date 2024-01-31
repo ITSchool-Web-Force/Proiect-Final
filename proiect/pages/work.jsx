@@ -5,7 +5,7 @@ import WorkImage from "@/components/WorkImages";
 
 function Work() {
   return (
-    <div className="bg-gradient-to-r from-white to-slate-200 h-full">
+    <div>
       <Navbar />
       <MyWork />
       <WorkImage />

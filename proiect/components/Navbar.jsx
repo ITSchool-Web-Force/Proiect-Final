@@ -37,42 +37,27 @@ const Navbar = () => {
       items-center p-4 text-white"
       >
         <Link href="/">
-          <h1
-            style={{ color: `${textColor}` }}
-            className="font-bold text-2xl "
-          >
+          <h1 style={{ color: `${textColor}` }} className="font-bold text-2xl ">
             Photography
           </h1>
         </Link>
-        <ul
-          style={{ color: `${textColor}` }}
-          className="hidden sm:flex"
-        >
+        <ul style={{ color: `${textColor}` }} className="hidden sm:flex">
           <li className="p-4 hover:text-gray-500">
-            <Link href="#">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li className="p-4 hover:text-gray-500">
             <Link href="/work">Work</Link>
           </li>
           <li className="p-4 hover:text-gray-500">
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
         {/* Mobile Button */}
-        <div
-          onClick={handleNav}
-          className="block sm:hidden z-10"
-        >
+        <div onClick={handleNav} className="block sm:hidden z-10">
           {nav ? (
-            <AiOutlineClose
-              size={20}
-              style={{ color: `${textColor}` }}
-            />
+            <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
           ) : (
-            <AiOutlineMenu
-              size={20}
-              style={{ color: `${textColor}` }}
-            />
+            <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
           )}
         </div>
         {/* Mobile Menu*/}

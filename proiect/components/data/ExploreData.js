@@ -1,42 +1,20 @@
 export const ExploreData = [
   {
-    image:
-      "https://images.unsplash.com/photo-1601850494422-3cf14624b0b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image: "/b1.jpg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1554049264-8ff0bee7eacd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80",
+    image: "/b2.jpg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1591647273840-8826c6cfab8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80",
+    image: "/b3.jpg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1552647311-9b41a4f001a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    image: "/b6.jpg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1521815049196-8a76f26a2135?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+    image: "/b9.jpg",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1584044283481-9b18070011e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1536061345835-e7f2e53a3b19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1529245856630-f4853233d2ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1583144568008-76743354fa5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1586871309494-e05cd95c3cfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+    image: "/b8.jpg",
   },
 ];
